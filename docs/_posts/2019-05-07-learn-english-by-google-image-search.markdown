@@ -1,9 +1,11 @@
 ---
-layout: postclass: post-templatenavigation: True
+layout: post
+class: post-template
+navigation: True
 title: 使用Google图片搜索学英语
 date: '2019-05-07 08:25:29'
 tags:
-- English
+- english
 ---
 
 学习英文单词，经常困惑一些近义词，尤其是翻译成中文都差不多的情况，真是傻傻分不清楚。最近我发现如果用Google图片搜索，直接搜这个单词，经常一下子就醍醐灌顶了。

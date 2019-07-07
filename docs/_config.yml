@@ -9,12 +9,12 @@ words_per_minute: 200
 baseurl: /
 
 # Website info
-title: Ghost
-description: The professional publishing platform
+title: 毛帅的博客
+description: Code, Thoughts, Sharing
 cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
+logo: assets/images/blog-icon.jpg
 logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
+favicon: favicon.ico
 production_url: https://jekyller.github.io/jasper2/
 source_url: https://github.com/jekyller/jasper2/
 CNAME: #add cname for website to be created

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week1）：Practical aspects of deep learning
 date: '2018-06-17 15:40:17'
 tags:

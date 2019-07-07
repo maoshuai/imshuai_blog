@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: Sonatype Nexus maven私服group仓库构件下载缓慢问题
 date: '2018-08-07 02:22:09'
 tags:

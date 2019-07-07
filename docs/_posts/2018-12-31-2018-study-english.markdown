@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 2018年英语学习经验及工具总结
 date: '2018-12-31 15:50:00'
 tags:

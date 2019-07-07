@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course5 Week2）：Natural Language Processing & Word Embeddings
 date: '2018-07-29 09:48:12'
 tags:

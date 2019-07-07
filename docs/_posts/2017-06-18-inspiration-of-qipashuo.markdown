@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: "《奇葩说》感悟：理解这个世界，变得从容、平和、睿智和自由"
 date: '2017-06-18 05:20:05'
 tags:

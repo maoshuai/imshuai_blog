@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 关于词汇量的陷阱
 date: '2019-04-07 19:33:29'
 tags:

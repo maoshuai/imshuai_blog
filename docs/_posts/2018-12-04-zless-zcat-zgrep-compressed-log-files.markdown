@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: zless/zcat/zgrep查看压缩日志
 date: '2018-12-04 13:58:22'
 tags:

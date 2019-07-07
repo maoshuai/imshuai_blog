@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course3 Week1）：ML Strategy (1)
 date: '2018-06-27 14:39:19'
 tags:

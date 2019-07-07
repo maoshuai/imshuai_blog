@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: GB与GiB的名分之争
 date: '2017-04-14 00:49:40'
 tags:

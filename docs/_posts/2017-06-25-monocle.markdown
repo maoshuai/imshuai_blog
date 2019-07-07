@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 聊一聊装逼的单片眼镜
 date: '2017-06-25 08:52:04'
 tags:

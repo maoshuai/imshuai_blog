@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 'WIN10 IE11 下BIRT报表报org.xml.sax.SAXParseException: Premature end of file.'
 date: '2018-06-05 07:50:20'
 tags:

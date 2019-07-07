@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 直男程序员的Windows使用偏好
 date: '2018-05-23 13:23:20'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course5 Week1）：Recurrent Neural Networks
 date: '2018-07-22 10:04:39'
 tags:

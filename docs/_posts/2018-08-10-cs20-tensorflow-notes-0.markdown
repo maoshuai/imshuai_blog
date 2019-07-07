@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 斯坦福CS20 TensorFlow学习笔记(0)：开篇
 date: '2018-08-10 06:23:43'
 tags:

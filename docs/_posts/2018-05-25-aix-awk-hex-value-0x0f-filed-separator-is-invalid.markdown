@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: AIX下awk使用16进制分隔0x0f符无效
 date: '2018-05-25 07:33:31'
 ---

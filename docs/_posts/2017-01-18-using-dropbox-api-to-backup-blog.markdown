@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 使用Dropbox API备份Ghost博客
 date: '2017-01-18 14:10:39'
 tags:

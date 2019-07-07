@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: Linux查看和修改时区
 featured: true
 date: '2017-01-17 14:23:47'

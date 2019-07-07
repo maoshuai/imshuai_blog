@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 氢OS3.0开启Google服务
 date: '2017-04-12 09:25:51'
 ---

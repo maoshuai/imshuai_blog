@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 机器学习/深度学习资料（持续更新）
 date: '2018-06-05 14:00:46'
 tags:

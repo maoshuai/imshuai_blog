@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 读《傅雷家书》
 date: '2015-11-05 14:20:00'
 tags:

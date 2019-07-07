@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: Jupyter Notebook简介和配置说明
 date: '2017-08-31 13:54:39'
 tags:

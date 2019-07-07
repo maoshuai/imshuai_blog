@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: grep日志：Java Exception异常堆栈显示不全问题
 date: '2019-01-23 14:10:44'
 tags:

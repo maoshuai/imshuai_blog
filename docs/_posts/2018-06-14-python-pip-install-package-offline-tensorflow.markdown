@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: Python pip离线安装package方法总结（以TensorFlow为例）
 date: '2018-06-14 09:54:00'
 tags:

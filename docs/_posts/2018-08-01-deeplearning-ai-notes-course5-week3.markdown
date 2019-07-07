@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course5 Week3）：Sequence models & Attention mechanism
 date: '2018-08-01 14:02:34'
 tags:

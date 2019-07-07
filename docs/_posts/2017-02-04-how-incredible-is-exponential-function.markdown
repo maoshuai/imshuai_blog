@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 指数函数的可怕性
 date: '2017-02-04 13:41:33'
 tags:

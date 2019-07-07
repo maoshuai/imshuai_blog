@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 从码农的30岁陷阱，谈技术→管理→资本
 date: '2017-03-19 14:38:06'
 tags:

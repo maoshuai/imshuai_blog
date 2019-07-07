@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 吐槽：macOS拙劣的窗口管理
 date: '2017-06-16 11:55:49'
 tags:

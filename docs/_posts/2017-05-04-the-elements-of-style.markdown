@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: The Elements of Style写作原则
 date: '2017-05-04 10:30:27'
 tags:

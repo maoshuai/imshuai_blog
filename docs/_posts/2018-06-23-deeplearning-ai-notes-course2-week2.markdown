@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week2）：Optimization algorithms
 date: '2018-06-23 07:55:06'
 tags:

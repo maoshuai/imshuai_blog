@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course4 Week3）：Object detection
 date: '2018-07-15 07:32:54'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: Coursera Machine Learning机器学习课程总结
 date: '2018-05-21 13:28:40'
 tags:

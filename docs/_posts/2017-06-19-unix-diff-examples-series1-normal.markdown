@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 超详细举例看懂Unix的diff格式(1/3)：diff的常规模式
 date: '2017-06-19 12:28:19'
 tags:

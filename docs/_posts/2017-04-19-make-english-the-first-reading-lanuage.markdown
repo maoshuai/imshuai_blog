@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 英语学习方针（使英语成为第一阅读语言）
 date: '2017-04-19 13:50:26'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 简单shell日志框架simpleLog4sh
 date: '2015-08-26 13:17:00'
 tags:

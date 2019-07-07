@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: React技术栈学习路线图
 date: '2017-05-27 06:21:05'
 tags:

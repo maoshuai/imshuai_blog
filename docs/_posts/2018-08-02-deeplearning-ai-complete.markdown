@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 吴恩达deeplearning.ai学完总结
 date: '2018-08-02 13:27:16'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 为什么要用正版
 date: '2017-07-05 12:13:02'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 使用有道API在线批量翻译单词
 date: '2017-04-23 13:41:22'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 使用Docker构建Ghost博客(2/2)：备份和更新
 date: '2017-01-15 11:45:00'
 tags:

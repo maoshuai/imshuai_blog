@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 使用Google图片搜索学英语
 date: '2019-05-07 08:25:29'
 tags:

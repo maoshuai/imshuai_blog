@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week3）：Hyperparameter tuning, Batch Normalization
   and Programming Frameworks
 date: '2018-06-24 09:17:17'

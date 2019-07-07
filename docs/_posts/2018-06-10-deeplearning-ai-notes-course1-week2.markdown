@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course1 Week2）：Neural Networks Basics
 date: '2018-06-10 13:16:22'
 tags:

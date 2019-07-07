@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 2017年英语学习经验总结
 date: '2017-10-30 14:25:23'
 tags:

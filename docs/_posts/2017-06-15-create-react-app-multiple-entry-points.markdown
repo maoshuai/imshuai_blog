@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 修改create-react-app支持多入口
 date: '2017-06-15 11:59:53'
 tags:

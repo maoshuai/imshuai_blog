@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postclass: post-templatenavigation: True
 title: 2018到2019机器学习中期计划
 date: '2018-07-05 07:50:18'
 tags:

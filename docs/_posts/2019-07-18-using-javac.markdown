@@ -6,8 +6,6 @@ title: 第1期：抛开IDE，了解一下javac如何编译【转】
 date: '2019-7-25 20:25:23'
 tags:
 - Java与Linux学习周刊
-- Java
-- Linux
 ---
 
 > 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第1期：抛开IDE，了解一下javac如何编译》](https://zhuanlan.zhihu.com/p/74229762)。以下为正文：

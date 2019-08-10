@@ -1,5 +1,7 @@
 ---
-layout: postclass: post-templatenavigation: True
+layout: post
+class: post-template
+navigation: True
 title: 使用Docker构建Ghost博客(1/2)：安装
 date: '2017-01-15 11:33:34'
 tags:
@@ -62,3 +64,6 @@ Ghost是一款年轻而轻量的博客系统，使用Node.js技术实现。相�
 
 ## 时区设置
 对于部署在海外服务器上的用户来说，时区可能不正确，到Ghost的后台Panel点击General页签可以设置
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNzI5MTI0MDE0XX0=
+-->

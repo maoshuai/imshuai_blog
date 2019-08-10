@@ -1,5 +1,7 @@
 ---
-layout: postclass: post-templatenavigation: True
+layout: post
+class: post-template
+navigation: True
 title: 使用七牛做图床的备份和应急方案
 date: '2017-01-21 11:51:11'
 tags:
@@ -31,3 +33,6 @@ http://ok4jsyu7n.bkt.clouddn.com/**content/qiniu/images/xxx.jpg**
 不过，经过我的验证，七牛的CNAME默认是无法指向的，必须是经过后台配置，并要求源域名在==中国大陆备案==，所以我还是要用前者的方案。
 
 上述方案的程序，将在后续提供。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTc3MDE4NjA4MV19
+-->

@@ -1,5 +1,7 @@
 ---
-layout: postclass: post-templatenavigation: True
+layout: post
+class: post-template
+navigation: True
 title: Holy Cow和Mix and Match
 date: '2019-01-27 10:45:29'
 tags:
@@ -30,3 +32,6 @@ tags:
 人的大脑是有限的，尤其是工作记忆是很局限的，将低层次的技能熟练化，实际上是将其从“工作记忆”里让位，将宝贵的工作记忆空间腾给高层次的行为。打个简单的比方，熟练的学会了骑自行车后，你就可以边骑自行车边打电话，谈笑风生。因为骑自行车已经不需要占用你的工作记忆。
 
 所谓，磨刀不误砍柴工，达芬奇画蛋的事情大抵如此吧。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3NjQwMDg4NjVdfQ==
+-->

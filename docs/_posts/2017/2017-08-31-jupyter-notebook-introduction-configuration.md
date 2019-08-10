@@ -20,7 +20,7 @@ ipython倒是一个很不错的REPL，除了像python命令一样可以执行Pyt
 如果用一句话描述，那就是：jupyter notebook==就像一张“草稿纸”一样==。
 
 它的样子是这样的：
-![jupyter notebook snapshot](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/08/jupyter-snapshot.png)
+![jupyter notebook snapshot](https://cdn.imshuai.com/images/2017/08/jupyter-snapshot.png)
 
 它可以记录你的所有命令和输出结果，每个命令都可以方便修改执行；整个“演算过程”可以直接保存成一个.ipynb文件，直接分享给另一个有jupyter环境的用户==完整再现你的演算过程==。
 

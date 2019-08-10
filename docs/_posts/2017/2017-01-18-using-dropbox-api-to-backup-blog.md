@@ -17,11 +17,11 @@ tags:
 ### 1. 创建 Dropbox App
 
 Dropbox 除了提供客户端程序外，还开放了 API 供开发者使用。登录 Dropbox 后在左下角会有“开发人员”的选项，点击进入：
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/dropbox_developer-1.jpg)
+![](https://cdn.imshuai.com/images/2017/01/dropbox_developer-1.jpg)
 
 依次点击My Apps → Create App → Dropbox API → App folder
 
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/Dropbox-guid.png)
+![](https://cdn.imshuai.com/images/2017/01/Dropbox-guid.png)
 
 （为了安全，**建议第二步选择App folder**，将操作限制在一个单独的文件夹内）
 

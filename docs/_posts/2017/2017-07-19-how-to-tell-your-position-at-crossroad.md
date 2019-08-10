@@ -17,7 +17,7 @@ tags:
 
 下图是一个十字路口，而乘客可能的存在8个位置，同时司机可能从马路的四个方向赶到十字路口。
 
-![十字路口位置](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/crossroad-position.png)
+![十字路口位置](https://cdn.imshuai.com/images/2017/07/crossroad-position.png)
 
 
 如果，简单的说“我就在人民路和淮海路的十字路口”，其实很不准确。而司机一旦找错很可能就要到很远的地方掉头。我就曾经遇到为此等了司机半个小时（掉头的路堵车太严重）。
@@ -36,11 +36,11 @@ tags:
 
 上颚牙齿位置:
 
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/FDI-1.jpg)
+![](https://cdn.imshuai.com/images/2017/07/FDI-1.jpg)
 
 下颚牙齿位置：
 
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/FDI-2.jpg)
+![](https://cdn.imshuai.com/images/2017/07/FDI-2.jpg)
 
 但现实生活，很难做到大家统一一个描述规则，除非有权威来推动。除非你不想被当二逼，你可以这样描述。
 
@@ -48,7 +48,7 @@ tags:
 
 将十字路口看成一个直角坐标系，东西向定义为x轴，南北向定义为y轴，并且东、北为正，那么十字路口其实是被分为了4个象限，如下图：
 
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/Quadrant-crossroad.png)
+![](https://cdn.imshuai.com/images/2017/07/Quadrant-crossroad.png)
 
 如果我在2位置，那就可以描述为：
 >我在人民路和淮海路十字路口的**第一象限**里，并站在**淮海路**上。

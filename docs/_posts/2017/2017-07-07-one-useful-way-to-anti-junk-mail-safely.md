@@ -22,7 +22,7 @@ tags:
 1. 所有垃圾邮件可以被自动删除，因为==绝对放心==垃圾邮件肯定是垃圾邮件。
 3. 非垃圾邮件肯定不会漏网。
 
-![误判vs漏判](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/balance.png)
+![误判vs漏判](https://cdn.imshuai.com/images/2017/07/balance.png)
 这个目标就是：**零误判和零漏判**，但从算法上几乎是不可能实现的。不过，我最近想到的这个办法，谈不上高科技，但很有用，可以达到这个目标。
 
 先思考这个原理：如果邮箱不被泄露，那么就永远不会有垃圾邮件。所以，**控源头是根本**。就是这么简单。
@@ -43,7 +43,7 @@ tags:
 1. 对首次从网上看到你邮箱，又希望跟你沟通的陌生朋友，需要在主题上带上**指定关键字**。
 2. A邮箱的转发规则是：仅将==含有关键字==的邮件都转发到B。
 
-![双重转发](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/ab-forward.png)
+![双重转发](https://cdn.imshuai.com/images/2017/07/ab-forward.png)
 
 这样，你的私人邮箱B就能收到陌生朋友的邮件。同时，所有垃圾邮件都不能被转发到B上。进一步沟通的时候，你可以直接用私人邮箱B跟这位陌生朋友沟通。
 
@@ -73,7 +73,7 @@ tags:
 2. B邮箱，一个月的某一天统一查看一下即可。大多数看到的应该都是服务商的推广邮件；快速、大致浏览一下标题即可。
 3. C邮箱，永远不会主动去查看。
 
-![多个专用邮箱](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/three-level-mail.png)
+![多个专用邮箱](https://cdn.imshuai.com/images/2017/07/three-level-mail.png)
 当然，随着服务的重要性变更，注册账号可以升级。比如原来用C邮箱注册的服务，发现会经常使用了，可以重新用B邮箱注册。
 
 ### 针对Gmail的优化
@@ -99,7 +99,7 @@ Gmail有个别名邮箱，即如果你有个名为`tom@gmail.com`的邮箱，那
 
 汇总起来如下图，希望对您有帮助。
 
-![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/07/anti-junk-mail.png)
+![](https://cdn.imshuai.com/images/2017/07/anti-junk-mail.png)
 
 
 另外，关于防范骚扰电话和垃圾短信的办法，我也总结了一些经验，下次分享给你。

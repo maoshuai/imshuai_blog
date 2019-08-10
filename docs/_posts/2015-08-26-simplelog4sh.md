@@ -1,5 +1,7 @@
 ---
-layout: postclass: post-templatenavigation: True
+layout: post
+class: post-template
+navigation: True
 title: 简单shell日志框架simpleLog4sh
 date: '2015-08-26 13:17:00'
 tags:
@@ -113,3 +115,6 @@ throw "ParamsNumberException: need 2 params"
 -rw-r--r--  1 maoshuai  wheel  1839  8 26 20:32 log_20150826.log  
 ```
 当然，你可以通过export变量`SIMPLE_LOG_4_SH_DIR`指定你的日志路径，替换上述默认值。比如：`export SIMPLE_LOG_4_SH_DIR=/var/log`，则所有日志都打印到`/var/log`目录下面
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTgwOTcxODY3M119
+-->

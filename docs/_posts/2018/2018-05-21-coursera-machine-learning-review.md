@@ -16,7 +16,7 @@ Andrew Ng在Coursera上的[Machine Learning](https://www.coursera.org/learn/mach
 编程方面使用了MATLAB，但也极为简单，不用担心。基本上是在一个搭好的框架上实现几个函数，而这些函数基本上都是几行代码即可搞定。
 真正的难度不在于编码（尤其是对码农而言），主要是如何将运算矩阵化，尤其是多年不摸线性代数的情况下，有必要复习一下。比如下面的两个求梯度的函数，还是挺绕的。
 
-![Coursera-translate-matrix](/content/images/2018/05/Coursera-translate-matrix.png)
+![Coursera-translate-matrix](https://cdn.imshuai.com/images/2018/05/Coursera-translate-matrix.png)
 
 # 主要内容总结
 
@@ -25,7 +25,7 @@ Andrew Ng在Coursera上的[Machine Learning](https://www.coursera.org/learn/mach
 教学内容是全英文的，但视频有中文字幕。但并不推荐看中文字幕，建议还是使用英文字幕。主要是：所有文字材料都是英文的，要用两套术语来回切换很别扭；另外，也便于以后深入学习，英文的术语基本是统一的，但中文翻译就比较多。
 
 视频我要吐槽的是字幕位置太坑爹了，会挡着PPT的内容，比如：
-![transcript-on-lecture](/content/images/2018/05/transcript-on-lecture.png)
+![transcript-on-lecture](https://cdn.imshuai.com/images/2018/05/transcript-on-lecture.png)
 所以，能听懂是多么的重要啊。
 
 编程作业使用MATLAB或Octave（可理解为开源版Matlab，语法兼容）完成。2018年以前提供的是本地试用版的MATLAB，2018年之只能用online版，不如前者方便；所以我索性就用了开源的Octave。
@@ -43,7 +43,7 @@ Andrew Ng在Coursera上的[Machine Learning](https://www.coursera.org/learn/mach
 
 另外不得不说，国外的数学教学很重视Intuition直觉的培养，人对已概念要有感性的理解，首先要觉得make sense，才能高效的学习。纵观Andrew Ng的课程，几乎每个课程都会先讲概念，然后再补一堂XXX intuition.随便拿第一期的课程感受一下：Cost Function本身讲8分钟，接下来补了两个视频将Intuition，一共19分钟！Gradient Descent也补了11分钟的Intuition！
 
-![coursera-intuition](/content/images/2018/05/coursera-intuition.png)
+![coursera-intuition](https://cdn.imshuai.com/images/2018/05/coursera-intuition.png)
 
 ## Week 2
 本周，分为2大部分：
@@ -109,6 +109,6 @@ Andrew Ng在Coursera上的[Machine Learning](https://www.coursera.org/learn/mach
 
 最后晒一下我的证书
 
-![coursera-certificate](/content/images/2018/05/coursera-certificate.jpeg)
+![coursera-certificate](https://cdn.imshuai.com/images/2018/05/coursera-certificate.jpeg)
 
 

@@ -25,7 +25,7 @@ tags:
 
 ## Neural Network Representation
 
-![Screen-Shot-2018-06-13-at-08.20.29](/content/images/2018/06/Screen-Shot-2018-06-13-at-08.20.29.jpg)
+![Screen-Shot-2018-06-13-at-08.20.29](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-08.20.29.jpg)
 
 1. Neural Network的组成：一个input layer，多个hidden layer，一个output layer
 2. training set作为输入层，即第0层，因此有 \\(X = a^{\[0\]}\\)
@@ -38,10 +38,10 @@ tags:
 # Computing a Neural Network's Output
 
 每个neuron的计算分为两步：z计算出线性组合，a计算激活函数：
-![Screen-Shot-2018-06-13-at-08.28.31](/content/images/2018/06/Screen-Shot-2018-06-13-at-08.28.31.jpg)
+![Screen-Shot-2018-06-13-at-08.28.31](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-08.28.31.jpg)
 
 每层的计算向量化（注意这里只是一个数据样本x的情况，后面会讲如何扩展为m个数据样本的情况）：
-![Screen-Shot-2018-06-13-at-08.32.51](/content/images/2018/06/Screen-Shot-2018-06-13-at-08.32.51.jpg)
+![Screen-Shot-2018-06-13-at-08.32.51](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-08.32.51.jpg)
 
 
 整理后，向量化的表示：
@@ -63,12 +63,12 @@ $$ a^{[2]} = \sigma(z^{[2]}) $$
 前一节，已经强调了是针对一个training example的向量化，这一节要进一步对所有training example做向量化。
 
 1. 首先，是非向量化的实现，即对m个training example进行迭代如下：
-![Screen-Shot-2018-06-13-at-08.52.47](/content/images/2018/06/Screen-Shot-2018-06-13-at-08.52.47.jpg)
+![Screen-Shot-2018-06-13-at-08.52.47](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-08.52.47.jpg)
 即在上一节的公式上，对x、z、a添加小括号上标。z和a和x的维度是一样的，即和training example对应的，而参数w和b没有training example这一维度，或者说w和b是对所有m个training example计算结果做平均。
 
 2. 向量化
     * 先弄清每个矩阵的维度X,Z以及A。三个变量的维度是一致的，在column方向都表示不同的training example；在row的方向表示不同的neuron：
-    ![Screen-Shot-2018-06-13-at-09.00.15](/content/images/2018/06/Screen-Shot-2018-06-13-at-09.00.15.jpg)
+    ![Screen-Shot-2018-06-13-at-09.00.15](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-09.00.15.jpg)
     * 基于上面对X,Z以及A的定义，有：
     $$ Z^{[1]} = W^{[1]}A^{[0]} + b^{[1]} $$
     $$ A^{[1]} = \sigma(Z^{[1]}) $$
@@ -92,25 +92,25 @@ $$ a^{[2]} = \sigma(z^{[2]}) $$
     * sigmoid function
     $$a = \sigma(z) = \frac{1}{1+e^{-z}}$$
     映射到开区间(0,1)
-    ![sigmoid](/content/images/2018/06/sigmoid.png)
+    ![sigmoid](https://cdn.imshuai.com/images/2018/06/sigmoid.png)
     
     * tanh function: a shift verison a sigmoid function
     $$a = tanh(z) =  \frac{e^{z}-e^{-z}}{e^{z}+e^{-z}}$$
     映射到开区间(-1,1)
-    ![tanh](/content/images/2018/06/tanh.png)
+    ![tanh](https://cdn.imshuai.com/images/2018/06/tanh.png)
     在hidden layer中用tanh代替sigmoid，基本上效果会更好，因为tanh会产生一个均值为0的结果，相当于自动做了中心化处理。
     **Andrew对选用sigmoid还是tanh的建议：hidden layer尽量用tanh而不是sigmoid，output layer根据输出需要可用sigmoid；另外每一层也可以选用不同的activation function。**
     
     * ReLU function
     $$a = max(0,a) $$
-    ![relu](/content/images/2018/06/relu.jpeg)
+    ![relu](https://cdn.imshuai.com/images/2018/06/relu.jpeg)
     sigmoid和tanh共同的不足是：**当z很大或很小时，导数都趋近于0，这会导致梯度下降的速度比较慢**。因此，又引入了ReLU function(**Re**ctified **L**inear **U**nit)，这个名字听起来挺牛逼，但实际表达式很简单，就是将**线性函数小于0的部分做了修正（Rectifed）**，最简单的修正就是直接让其等于0。
     而且Andrew极力推荐ReLU：
         > if you're not sure what to use for your hidden layer, I would just use the relu activation function that's what you see most people using these days. 
     
     ReLU的一个好处是（我也不确定为什么是好处，Andrew只是说 in practice this works just fine）：ReLU在小于0的时候，导数为0。
     ReLU另一个版本叫做Leaky ReLU，即在小于0的部分，修正为一个斜率很小的直线（ReLU修正为了斜率为0的直线）：
-    ![leaky-relu](/content/images/2018/06/leaky-relu.png)
+    ![leaky-relu](https://cdn.imshuai.com/images/2018/06/leaky-relu.png)
     Leaky ReLUE通常比ReLU效果更好，但实践中去不常用（为毛好的东西不用？）。
     相比sigmoid或tanh，**ReLU或Leaky ReLU计算的更快** ，这也很显然，线性函数的导数就是一个常数。
 
@@ -150,17 +150,17 @@ https://math.stackexchange.com/questions/741050/hyperbolic-functions-derivative-
     1. 首先做forward propagation，求解出每一层的输出A
     2. 然后向后，逐层求解对每一层参数的偏导数
 3. 课程里并没有backpropagation的推导，只是给出了结果：
-![grad_summary](/content/images/2018/06/grad_summary.png)
+![grad_summary](https://cdn.imshuai.com/images/2018/06/grad_summary.png)
 Backpropagation具体推导过程，非常推荐这篇文章：[How the backpropagation algorithm works](http://http://neuralnetworksanddeeplearning.com/chap2.html)
 
 ## Backpropagation intuition (optional)
 
 1. 首先用logistic regression解释了backpropagation
 
-![Screen-Shot-2018-06-14-at-20.47.47](/content/images/2018/06/Screen-Shot-2018-06-14-at-20.47.47.jpg)
+![Screen-Shot-2018-06-14-at-20.47.47](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-14-at-20.47.47.jpg)
 
 2. 然后在2 layer Neuro Networks上解释
-![Screen-Shot-2018-06-14-at-20.49.18](/content/images/2018/06/Screen-Shot-2018-06-14-at-20.49.18.jpg)
+![Screen-Shot-2018-06-14-at-20.49.18](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-14-at-20.49.18.jpg)
 
 ## Random Initialization
 
@@ -187,7 +187,7 @@ $$ W^{[1]} = np.random.randn((2,2))  * 0.01$$
 
 
 
-![Screen-Shot-2018-06-12-at-18.20.12](/content/images/2018/06/Screen-Shot-2018-06-12-at-18.20.12.jpg)
+![Screen-Shot-2018-06-12-at-18.20.12](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-12-at-18.20.12.jpg)
 
 1. 这位就是大名鼎鼎的花书[*Deep Learning*](http://www.deeplearningbook.org/)的作者，原以为是个白胡子老头，没想到竟然是个85后。
 2. 学习了Andrew Ng 的 Machine Learning 开始对AI感兴趣。

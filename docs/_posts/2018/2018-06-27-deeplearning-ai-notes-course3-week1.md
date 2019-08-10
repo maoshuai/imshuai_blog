@@ -19,7 +19,7 @@ tags:
 
 比如下面识别猫咪的例子，目前训练的结果可以达到90%的准确率。但如果想进一步提高，有很多待选办法，但应该怎么去选呢？接下来的课程就将介绍Machine Learning Strategy。
 
-![Xnip2018-06-24_21-03-13](/content/images/2018/06/Xnip2018-06-24_21-03-13.jpg)
+![Xnip2018-06-24_21-03-13](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-24_21-03-13.jpg)
 
 另外，需要注意，策略并不是一成不变的：
 It turns out also that **machine learning strategy is changing in the era of deep learning** because the things you could do are now different with deep learning algorithms than with previous generation of machine learning algorithms.
@@ -49,17 +49,17 @@ If it doesn’t perform well, the development test set is not set correctly or t
 
 2. Precision（精确率）、Recall（召回率）以及F1 Score
 对于一个分类问题，根据预测值和实际值会形成下面四种组合情况：
-![Xnip2018-06-25_20-42-10](/content/images/2018/06/Xnip2018-06-25_20-42-10.jpg)
+![Xnip2018-06-25_20-42-10](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-25_20-42-10.jpg)
 >怎么理解四种情况的名称？
 第一个是True或False，表示预测是否正确；第二个是预测值，positive表示预测的是1，negative表示预测是0。
 比如False postive，positive表示预测的是1，而False表示预测不正确；因此就是实际值是0，而预测值是1。
 
 在上面的区分表上，定义Precision和Recall如下：
 * Precesion
-![Xnip2018-06-25_20-47-46](/content/images/2018/06/Xnip2018-06-25_20-47-46.jpg)
+![Xnip2018-06-25_20-47-46](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-25_20-47-46.jpg)
 precision用文字表示就是：在所有预测为1的样本中（不管是否真的是1），真的是1的比例。或者说positive检测结果的准确的概率。
 * Recall
-![Xnip2018-06-25_20-48-11](/content/images/2018/06/Xnip2018-06-25_20-48-11.jpg)
+![Xnip2018-06-25_20-48-11](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-25_20-48-11.jpg)
 recall用文字表示就是：在所有真的是1的样本中，被算法预测为1的比例。或者说positive样本被算法检测到的概率。
 
 无论precision还是recall，分子都是TP，分母也都包含TP；precision的分母是TP+FP，而Recall的分母是TP+FN。
@@ -79,7 +79,7 @@ $$accuracy=\frac{TP+TN}{TP+TN+FP+FN}$$
 将所有关心的东西综合为一个单值指标并不容易。
 
 举个例子，如下是针对猫咪识别的二元分类，三种分类器的准确率和运行时间如下：
-![Xnip2018-06-25_21-23-08](/content/images/2018/06/Xnip2018-06-25_21-23-08.jpg)
+![Xnip2018-06-25_21-23-08](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-25_21-23-08.jpg)
 
 除了准确率外，还要考虑算法耗时，毫无疑问是越准要好，越快越好，但这两个指标怎么结合呢？比如这样：
 $$cost = accuracy - 0.5 * time$$
@@ -89,7 +89,7 @@ maximize accuracy
 s.t. running time <=100ms
 
 如此，accuracy就变成了**optimizing metric**，而running time则是**satisfying metric**，statisfying metric只要达到标准即可，而optimizing metric则追求更好。一般的，选择一项metric作为optimizing metric，其他的则设置为satisfying metric：
-![Xnip2018-06-26_08-09-36](/content/images/2018/06/Xnip2018-06-26_08-09-36.jpg)
+![Xnip2018-06-26_08-09-36](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_08-09-36.jpg)
 
 ## 2-2 Train/dev/test distributions
 如何设置Train/dev/test集，很大程度上影响了机器学习的速度。
@@ -106,11 +106,11 @@ The guidelines to help set up your dev and test sets are changing in the Deep Le
 
 早期机器学习的建议划分比例：
 
-![Xnip2018-06-26_08-29-51](/content/images/2018/06/Xnip2018-06-26_08-29-51.jpg)
+![Xnip2018-06-26_08-29-51](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_08-29-51.jpg)
 
 在早期，数据量比较小的情况下，上面是划分比例是合理的。**但到深度学习下的Big Data情况下，Dev/Test比例做了很大压缩**：
 
-![Xnip2018-06-26_08-32-25](/content/images/2018/06/Xnip2018-06-26_08-32-25.jpg)
+![Xnip2018-06-26_08-32-25](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_08-32-25.jpg)
 
 因为在Big Data情况下（比如100万），即便是1%的比例，也有很大的数据集（比如1万条数据）供测试，也是big enough，绰绰有余。
 
@@ -119,16 +119,16 @@ The guidelines to help set up your dev and test sets are changing in the Deep Le
 如果发现设定目标和实际期望不符，那就调整目标。
 
 举个例子：设计一个算法，筛选猫咪的图片给爱猫人士。最初设定的metric是classification error，并得到两个算法的结果如下：
-![Xnip2018-06-26_20-19-01](/content/images/2018/06/Xnip2018-06-26_20-19-01.jpg)
+![Xnip2018-06-26_20-19-01](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_20-19-01.jpg)
 
 单从错误率指标看，A算法比B算法要好。但因为某种原因，A算法会出现不少色情（pornographic）图片。B算法的错误率高，但却没有色情图片。从这个角度看，B算法更好，但metric却没正确反映。因此要调整metric或者dev/test set。
 
 原始的metric如下：
-![Xnip2018-06-26_20-31-28](/content/images/2018/06/Xnip2018-06-26_20-31-28.jpg)
+![Xnip2018-06-26_20-31-28](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_20-31-28.jpg)
 函数统计了错误分类的比例。问题：在于，metric平等的对待了色情和非色情图片，**一种解决的办法是引入权重，增加对识别出色情图片的惩罚**，首先定义权重w：
-![Xnip2018-06-26_20-33-43](/content/images/2018/06/Xnip2018-06-26_20-33-43.jpg)
+![Xnip2018-06-26_20-33-43](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_20-33-43.jpg)
 将权重增加到error函数中
-![Xnip2018-06-26_20-34-10](/content/images/2018/06/Xnip2018-06-26_20-34-10.jpg)
+![Xnip2018-06-26_20-34-10](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_20-34-10.jpg)
 相当于错判一个porn要比错判一个非色情图片的代价差10倍，
 
 
@@ -156,7 +156,7 @@ The guidelines to help set up your dev and test sets are changing in the Deep Le
 * 构建machine learning的流程中，如果尝试做人类能做的事情，会非常有效。
 
 在接近human-level performance之前，算法提高的很快，但超过之后提高速度逐渐下降。并且存在一个理论上的上界（Bayes optimal error，这是由数据本身的noise决定的）：
-![Xnip2018-06-26_20-13-46](/content/images/2018/06/Xnip2018-06-26_20-13-46.jpg)
+![Xnip2018-06-26_20-13-46](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_20-13-46.jpg)
 
 之所以会产生这种前后反差，是因为：
 1. human-level performance其实已经足够好了，本身就很接近Bayes optimal error。因此留给算法再提升的空间非常有限。
@@ -170,7 +170,7 @@ The guidelines to help set up your dev and test sets are changing in the Deep Le
 使用human-level performance作为Bayes optimal error的近似值，据此去考察一个算法的表现，以及是需要降低bias还是variance。
 
 比如，识别猫咪的分类算法，有两个场景A和B得到结果如下：
-![Xnip2018-06-26_21-10-35](/content/images/2018/06/Xnip2018-06-26_21-10-35.jpg)
+![Xnip2018-06-26_21-10-35](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_21-10-35.jpg)
 （场景A是比较清晰的图片，人类可以做到1%的错误率；场景B是模糊的图片，即便人也只能做到7.5%的错误率）
 
 虽然两种场景下的算法都得到了相同的Train Error和Dev Error，但对待它们的态度是不一样的。
@@ -193,7 +193,7 @@ human-level performance一般近似看做Bayes optimal error，我们将Training
 在实践中，选择human-level performance并不是唯一标准的，根据不同的场景有不同的考虑。
 
 比如根据X光片做疾病判断为例，不同的人或医生有不用的classification error：
-![Xnip2018-06-26_22-10-42](/content/images/2018/06/Xnip2018-06-26_22-10-42.jpg)
+![Xnip2018-06-26_22-10-42](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-26_22-10-42.jpg)
 
 **如果human-level performance是被当做对Bayes error的近似，则选择所有人类最好的成绩作为human-level performance**，也就是上图的0.5%。
 
@@ -201,7 +201,7 @@ human-level performance一般近似看做Bayes optimal error，我们将Training
 
 3. 另外，只有当你的算法的Train Error和Dev Error都已经接近典型的human-level，考虑不同的human-level才有价值。比如对于上面X光片的例子，有如下三种场景：
 
-![Xnip2018-06-27_20-58-51](/content/images/2018/06/Xnip2018-06-27_20-58-51.jpg)
+![Xnip2018-06-27_20-58-51](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-27_20-58-51.jpg)
 
 * 场景A：算法只做到了Train Error=5%，Dev Error=6%，那无论选择上哪个doctor的结果，差别都不大（选择不同的human-level，avoidable bias不过是从4%和4.5%的差距），而variance只有1%，更应考虑的是怎样降低Train bias。
 * 场景B：算法做到了Train Error=1%，但Dev Error=5%，虽然Train Error已经很接近很逼近Typical doctor了，但Dev error太差了，导致variance高达4%，这个时候考虑哪个doctor做human-level也没有太大意义，更应考虑的是增加降低降低variance。
@@ -219,7 +219,7 @@ human-level performance一般近似看做Bayes optimal error，我们将Training
 
 比如下面的例子：
 
-![Xnip2018-06-27_22-07-45](/content/images/2018/06/Xnip2018-06-27_22-07-45.jpg)
+![Xnip2018-06-27_22-07-45](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-27_22-07-45.jpg)
 
 * 对于场景A，很显然要用Team of Humans作为Human-level Error，同时也很容易判断avoidable bias是0.1%，variance是0.2%，因此算法应着眼于降低variance。
 * 但对于场景B，无论Train Error还是 Dev Error都已超越人类最好水平。**因此Bayes Error应该是小于0.3%的，用0.5%的人类水平已经不能代替Human-level Error了**，至于Bayes Error是多少，可能是0.2%，也可能是0.1%，就无可知晓了。没有足够的信息说明要降低bias还是variance。但这并不是说场景B的模型已无法提高了，而是说常规的办法已经没法知道应该降低bias还是variance。
@@ -242,7 +242,7 @@ human-level performance一般近似看做Bayes optimal error，我们将Training
 
 总结起来，可以分别采取的（正交的）办法有：
 
-![Xnip2018-06-27_22-22-39](/content/images/2018/06/Xnip2018-06-27_22-22-39-1.jpg)
+![Xnip2018-06-27_22-22-39](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-27_22-22-39-1.jpg)
 
 Andrew Ng对本周的课程的评价：Easily learned but hard to master.
 

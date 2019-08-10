@@ -54,7 +54,7 @@ pip install --no-index --find-links=file:/offline_package_dir tensorflow
 
 以[TensorFlow](https://pypi.org/project/tensorflow/#files)为例，PyPI上看到的wheel文件，至少根据OS、Python版本以及CPU架构做了区分：
 
-![Screen-Shot-2018-06-13-at-22.05.38](/content/images/2018/06/Screen-Shot-2018-06-13-at-22.05.38.jpg)
+![Screen-Shot-2018-06-13-at-22.05.38](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-13-at-22.05.38.jpg)
 
 PyPI上package有好几种格式：
 1. 源文件（一般是`.tar.gz`或`.zip`文件，用`pip`安装，与机器架构无关，但某些package可能涉及到C/C++编译）
@@ -87,7 +87,7 @@ No matching distribution found for absl-py>=0.1.6 (from tensorflow)
 ```
 
 这是因为参数`--only-binary=:all:`只下载二进制版，而tensorflow依赖的absl-py在PyPI中只有.tar.gz的源码版，没有二进制版。
-![Screen-Shot-2018-06-14-at-16.02.10](/content/images/2018/06/Screen-Shot-2018-06-14-at-16.02.10.jpg)
+![Screen-Shot-2018-06-14-at-16.02.10](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-14-at-16.02.10.jpg)
 
 那能不能不限制`--only-binary=:all:`？不行，一旦指定具体的架构，就必须设置`--only-binary=:all:`，或者不下载依赖，这是pip install用法的规定，可参考官方Reference： https://pip.pypa.io/en/stable/reference/pip_download/
 

@@ -70,7 +70,7 @@ r = -2 * np.random.rand() -1 # r取值在[-3,-1]的均匀分布
 2. 根据计算资源和数据量，可以采取两种策略来调参
     * Panda（熊猫策略）：对一个模型先后修改参数，查看其表现，最终选择最好的参数。就像熊猫一样，一次只抚养一个后代。
     * Caviar（鱼子酱策略）：计算资源足够，可以同时运行很多模型实例，采用不同的参数，然后最终选择一个好的。类似鱼类，一次下很多卵，自动竞争成活。
-![Xnip2018-06-23_17-02-47](/content/images/2018/06/Xnip2018-06-23_17-02-47.jpg)
+![Xnip2018-06-23_17-02-47](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_17-02-47.jpg)
 
 # 2- Batch Normalization
 ## 2.1- Normalizing activations in a network
@@ -132,7 +132,7 @@ Batch Norm总体上有三个作用：
 
 关于第二点，Batch norm使得后层的hidden layer比初始数据更具鲁棒性。数据样本的变化（比如原本都是黑猫，现在增加了彩色猫），可能导致数据的分布随着变化，即Covariate Shift（协变量），就需要重新训练学习算法，And this is true even if the function, the ground true function, mapping from X to Y, remains unchanged, which it is in this example, because the ground true function is, is this picture a cat or not.
 
-![Xnip2018-06-23_21-41-09](/content/images/2018/06/Xnip2018-06-23_21-41-09-1.jpg)
+![Xnip2018-06-23_21-41-09](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_21-41-09-1.jpg)
 
 What batch norm does, is it reduces the amount that the distribution of these hidden unit values shifts around。BN算法限制了输入数据的变化对当前层依赖的隐藏层输入的分布影响。
 
@@ -150,7 +150,7 @@ What batch norm does, is it reduces the amount that the distribution of these hi
 假设要分类的个数记为\\(C\\)（比如上例中\\(C=4\\)）
 首先，在设计网络时，让最后一层的neuron个数为\\(n^{[L]}=C\\)，每一个neuron输出每一个class的概率，如下图：
 
-![Xnip2018-06-24_10-46-25](/content/images/2018/06/Xnip2018-06-24_10-46-25.jpg)
+![Xnip2018-06-24_10-46-25](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-24_10-46-25.jpg)
 
 为了实现上面的设计，**对最后一层使用Softmax Layer**。
 实现softmarx Layer的关键是activation function改为如下计算方法：
@@ -166,7 +166,7 @@ $$\sum^C_{i=1}a^{[L]}_i = 1$$
 具体来说，就是将每个neuron的z做e的指数，然后用这个结果的**占比**作为a。
 
 举例：
-![Xnip2018-06-24_11-22-41](/content/images/2018/06/Xnip2018-06-24_11-22-41.jpg)
+![Xnip2018-06-24_11-22-41](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-24_11-22-41.jpg)
 对于soft layer的activation function要注意一点：虽然看起来输入是向量，输出的也是向量，但与sigmoid或tanh等不一样。后者，只是vectorization的结果，实际每个neuron的activation计算是相互独立，互不影响的。**但对于soft layer，并不相互独立，输入是整个\\(z^{[L]}\\)因为中间需要对所有的t进行加总，因此任何一个neuron的z值改变，都会影响所有neuron的a值**。
 
 疑问：

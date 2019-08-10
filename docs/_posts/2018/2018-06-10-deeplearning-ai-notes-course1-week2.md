@@ -21,11 +21,11 @@ Basics of Neural Network Programming
 ## Binary Classification
 1. Example: 给一张64x64像素的图片图片，判断是否含有猫
 2. 获取图片的RGB像素值
-![Screen-Shot-2018-06-02-at-17.20.31](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.20.31.jpg)
+![Screen-Shot-2018-06-02-at-17.20.31](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.20.31.jpg)
 3. 并unroll成一个vector \\(X^{(i)}\\)
-![Screen-Shot-2018-06-02-at-17.20.42](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.20.42.jpg)
+![Screen-Shot-2018-06-02-at-17.20.42](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.20.42.jpg)
 4. 所有的vector组成数据集矩阵\\(X\\)
-![Screen-Shot-2018-06-02-at-17.25.21](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.25.21.jpg)
+![Screen-Shot-2018-06-02-at-17.25.21](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.25.21.jpg)
 特别注意，\\(X\\)的行是\\(n\\)，列是\\(m\\)，和Machine learning中的定义正好是转置的关系。这样有个好处，每条测试集在矩阵中都是以列向量的形式存在。
 
 
@@ -38,8 +38,8 @@ Basics of Neural Network Programming
 - 带括号的上标\\(^{(i)}\\)，表示和training example相关的计数
 
 完整的notation，可以参考课程中提供的PDF: *Standard notations for Deep Learning*
-![Screen-Shot-2018-06-10-at-21.21.45](/content/images/2018/06/Screen-Shot-2018-06-10-at-21.21.45.jpg)
-![Screen-Shot-2018-06-10-at-21.21.58](/content/images/2018/06/Screen-Shot-2018-06-10-at-21.21.58.jpg)
+![Screen-Shot-2018-06-10-at-21.21.45](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-21.21.45.jpg)
+![Screen-Shot-2018-06-10-at-21.21.58](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-21.21.58.jpg)
 
 
 6. 使用Python中的reshape方法，整理矩阵的维度。
@@ -47,9 +47,9 @@ Basics of Neural Network Programming
 ## Logistic Regression
 1. 问题描述：
 Logsitic Regression要求输出y不是0就是1。The goal of logistic regression is to minimize the error between its predictions and training data.
-![Screen-Shot-2018-06-02-at-17.37.35](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.37.35.jpg)
+![Screen-Shot-2018-06-02-at-17.37.35](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.37.35.jpg)
 2. sigmoid function
-![Screen-Shot-2018-06-02-at-17.45.47](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.45.47.jpg)
+![Screen-Shot-2018-06-02-at-17.45.47](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.45.47.jpg)
 ==这里有个疑问，为什么sigmoid处理后的值，可以代表y=1概率？==
 参考：[Logistic distribution](https://stats.stackexchange.com/questions/80611/problem-understanding-the-logistic-regression-link-function/80623#80623)
 2. 引入参数w, b，其实就是Machine learning中用的是θ，但DeepLearning中分别用w和b表示。其中w是vector，b是real number
@@ -60,18 +60,18 @@ Logsitic Regression要求输出y不是0就是1。The goal of logistic regression
 ## Logistic Regression Cost Funciton
 
 1. Loss (error) function的定义：
-![Screen-Shot-2018-06-02-at-17.52.42](/content/images/2018/06/Screen-Shot-2018-06-02-at-17.52.42.jpg)
+![Screen-Shot-2018-06-02-at-17.52.42](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.52.42.jpg)
 分成y为0和1两种情况去理解这个函数，**本质上就是对𝑦̂做对数处理**而已。
 因为对数处理后确实**达到了Loss function的要求**（我自己的理解）：1.值域是大于等于0的实数集。 2. 随着𝑦̂ 单调递减。y=𝑦̂ 的时候为0，反之趋向于∞。3. 是参数的凸函数（convex）4. 是y和𝑦̂的函数 
 
 2. 没有使用square error，因为是non-convex，无法使用Gradient Descent算法
 3. Loss function是针对单个training example的，而**Cost function是Loss Function的在所有training example上的均值**。
-![Screen-Shot-2018-06-02-at-18.03.20](/content/images/2018/06/Screen-Shot-2018-06-02-at-18.03.20.jpg)
+![Screen-Shot-2018-06-02-at-18.03.20](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-18.03.20.jpg)
 在Machine learning里，没有引入Loss Function，其实有一个Loss Function，更好理解。
 
 ## Gradient Descent
 Gradient Descent的原理（Intuition）：按梯度最大的方向逼近最小值。
-![Screen-Shot-2018-06-02-at-20.48.07](/content/images/2018/06/Screen-Shot-2018-06-02-at-20.48.07.jpg)
+![Screen-Shot-2018-06-02-at-20.48.07](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-20.48.07.jpg)
 
 Gradient Descent算法步骤：
 1. Initialize \\(w\\), \\(b\\) to zero
@@ -100,7 +100,7 @@ $$dvar = \frac{\partial J}{\partial var}$$
 ## Logistic Regression Gradient Descent
 使用Computation Graph计算
 
-![Screen-Shot-2018-06-04-at-08.26.07](/content/images/2018/06/Screen-Shot-2018-06-04-at-08.26.07.jpg)
+![Screen-Shot-2018-06-04-at-08.26.07](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-08.26.07.jpg)
 
 虽然，测试集是离散的，但并不代表对w的倒数是离散的，这两者没有任何关系。**始终注意：在gradient Descent的时候，x是常量**
 
@@ -116,14 +116,14 @@ Gradient Descent算法过程：
 
 下面的截图就是一个非向量化的实现：
 左边是求导过程，右边是梯度下降过程
-![Screen-Shot-2018-06-04-at-09.02.27](/content/images/2018/06/Screen-Shot-2018-06-04-at-09.02.27.jpg)
+![Screen-Shot-2018-06-04-at-09.02.27](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-09.02.27.jpg)
 
 
 # Python and Vectorization
 ## Vectorization
 1. 什么是Vectorization：将 for loop 尽可能转换为矩阵运算。举例：
 $$z = w^Tx + b$$
-![Screen-Shot-2018-06-04-at-09.13.25](/content/images/2018/06/Screen-Shot-2018-06-04-at-09.13.25.jpg)
+![Screen-Shot-2018-06-04-at-09.13.25](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-09.13.25.jpg)
 
 2. vectorization的好处：conciser code, but faster execution
 一个简单的对比实验：1,000,000大小的两个向量内积计算，for loop要比Vectorization快300倍。
@@ -144,7 +144,7 @@ Both CPU and GPU have parallelization instructions(i.e. SIMD, Signle Instruction
 
 ## Vectorizing logistic Regression
 
-![Screen-Shot-2018-06-04-at-19.50.07](/content/images/2018/06/Screen-Shot-2018-06-04-at-19.50.07.jpg)
+![Screen-Shot-2018-06-04-at-19.50.07](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-19.50.07.jpg)
 
 $$A = \sigma(w^T X + b) = (a^{(1)}, a^{(2)}, ..., a^{(m-1)}, a^{(m)})$$
 
@@ -159,7 +159,7 @@ $$A = \sigma(w^T X + b) = (a^{(1)}, a^{(2)}, ..., a^{(m-1)}, a^{(m)})$$
 
 推导过程
 
-![Screen-Shot-2018-06-09-at-18.35.35](/content/images/2018/06/Screen-Shot-2018-06-09-at-18.35.35.jpg)
+![Screen-Shot-2018-06-09-at-18.35.35](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-09-at-18.35.35.jpg)
 
 最终向量化的形式是：
 
@@ -187,7 +187,7 @@ broadcasting的一个弱点：可能隐藏潜在的错误，比如一个计算�
 
 **rank 1 array问题**：shape是(x,)的数组，既不是行向量，也不是列向量，没法参与正常的矩阵运算，应该总是使用(x,1)或(1,x)的shape来表示向量。但可以通过reshape方法将rank 1 array转换为行向量或列向量。（什么是rank，就是一个数组的维度）
 
-![Screen-Shot-2018-06-10-at-18.03.37](/content/images/2018/06/Screen-Shot-2018-06-10-at-18.03.37.jpg)
+![Screen-Shot-2018-06-10-at-18.03.37](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.03.37.jpg)
 
 ## Quick tour of Jupyter/iPython Notebooks
 
@@ -201,17 +201,17 @@ https://stats.stackexchange.com/questions/80611/problem-understanding-the-logist
 
 Loss function其实就是对概率P(y|x)取对数：
 
-![Screen-Shot-2018-06-10-at-18.28.41](/content/images/2018/06/Screen-Shot-2018-06-10-at-18.28.41.jpg)
+![Screen-Shot-2018-06-10-at-18.28.41](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.28.41.jpg)
 
 Loss function越小，则取到和实际值y的概率越大。
 
 所有样本的Cost function：
 
-![Screen-Shot-2018-06-10-at-18.32.40](/content/images/2018/06/Screen-Shot-2018-06-10-at-18.32.40.jpg)
+![Screen-Shot-2018-06-10-at-18.32.40](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.32.40.jpg)
 
 # Heros of Deep Learning：Pieter Abbeel interview
 
-![Screen-Shot-2018-06-10-at-18.34.23](/content/images/2018/06/Screen-Shot-2018-06-10-at-18.34.23.jpg)
+![Screen-Shot-2018-06-10-at-18.34.23](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.34.23.jpg)
 
 1. Pieter Abbeel专注于deep reinforcement learning.
 

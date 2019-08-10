@@ -17,7 +17,7 @@ tags:
 
 由于他这颓废的发型竟和古巴革命领导人“切格瓦拉”有几分相似，就被人戏谑为“窃格瓦拉”。在网上也算是一号红人了。
 
-![qie-gewara](/content/images/2018/06/qie-gewara.jpg)
+![qie-gewara](https://cdn.imshuai.com/images/2018/06/qie-gewara.jpg)
 
 我们会觉得好笑，觉得是不是精神有问题，也会站在道德制高点指责他
 > 你有手有脚，干点什么不能养活自己？

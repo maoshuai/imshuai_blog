@@ -54,16 +54,16 @@ Deep Learning = training (very large) neural network
 
 What's a neural network?
 * a very **simple** neural network: House Price-size Linear regression（就像一个Lego brick）
-![simple-neural-network](/content/images/2018/05/simple-neural-network.png)
+![simple-neural-network](https://cdn.imshuai.com/images/2018/05/simple-neural-network.png)
 * a **larger** neural network: stacking together many of these Lego bricks。
-![manual-larger-neural-network](/content/images/2018/05/manual-larger-neural-network.png)
+![manual-larger-neural-network](https://cdn.imshuai.com/images/2018/05/manual-larger-neural-network.png)
 
 注意，上图只是一个手工演示的larger neural network，与实际的区别：
 1. hidden layer并不是手工设置的
 2. 每一层都是上一层所有输入的函数
 
 实际的neural network：
-![real-neural-network](/content/images/2018/05/real-neural-network.png)
+![real-neural-network](https://cdn.imshuai.com/images/2018/05/real-neural-network.png)
 
 Neural Network的两个特点；
 1. Neural networks are remarkably good at **figuring out functions that accurately map from x to y**. 
@@ -71,22 +71,22 @@ Neural Network的两个特点；
 
 一个常见的激活函数 ReLU ：
 ReLU function: **Re**ctified **Li**near **U**nits (rectified means: taking a min of zero，原文是taking a *max* of zero，我觉得可能讲反了吧)
-![relu](/content/images/2018/05/relu.png)
+![relu](https://cdn.imshuai.com/images/2018/05/relu.png)
 
 ## Supervised Learning with Neural Network (8min)
 
-截止到目前，**Neural Network的成功应用基本都在Supervised Learning**。比如：Ad，Images vision, Audio to Text, Machine translation, Autonomous Driving![supervised-learning-exmples](/content/images/2018/05/supervised-learning-exmples.png)
+截止到目前，**Neural Network的成功应用基本都在Supervised Learning**。比如：Ad，Images vision, Audio to Text, Machine translation, Autonomous Driving![supervised-learning-exmples](https://cdn.imshuai.com/images/2018/05/supervised-learning-exmples.png)
 
 
 Neural Network examples:
-![](/content/images/2018/07/NeuralNetworkExamples.jpg)
+![](https://cdn.imshuai.com/images/2018/07/NeuralNetworkExamples.jpg)
 
 Structured Data vs Unstructured Data
 
 ## Why is Deeplearning taking off? (8min)
 
 **Scale** drives deep learning progress
-![Screen-Shot-2018-05-28-at-20.42.54](/content/images/2018/05/Screen-Shot-2018-05-28-at-20.42.54.jpg)
+![Screen-Shot-2018-05-28-at-20.42.54](https://cdn.imshuai.com/images/2018/05/Screen-Shot-2018-05-28-at-20.42.54.jpg)
 Scale means: Bigger network and More (labeled) data.
 
 在数据匮乏的时代，算法的性能更依赖于技巧和手工设置的feature (the algorithms is actually not very well defined so if you don't have a lot of training data is often up to your skill at hand engineering features )
@@ -98,17 +98,17 @@ Scale means: Bigger network and More (labeled) data.
 比如：GPU
 * Algorithm
 比如：sigmoid function→ReLU function
-![Screen-Shot-2018-05-28-at-20.53.10](/content/images/2018/05/Screen-Shot-2018-05-28-at-20.53.10.jpg)
+![Screen-Shot-2018-05-28-at-20.53.10](https://cdn.imshuai.com/images/2018/05/Screen-Shot-2018-05-28-at-20.53.10.jpg)
 
 算法必须快，形成一个正循环，快速验证：
-![Screen-Shot-2018-05-28-at-20.54.59](/content/images/2018/05/Screen-Shot-2018-05-28-at-20.54.59.jpg)
+![Screen-Shot-2018-05-28-at-20.54.59](https://cdn.imshuai.com/images/2018/05/Screen-Shot-2018-05-28-at-20.54.59.jpg)
 
 
 # Hero of Deep Learning
 As part of this course by deeplearning.ai, hope to not just teach you the technical ideas in deep learning, but also **introduce you to some of the people, some of the heroes in deep learning**.（大概看了一下，后面还会介绍很多大神，这是比之前的Machine Learning增加的特色）
 
 Geoffrey Hinton interview (40min)
-![Geoffrey Hinton interview](/content/images/2018/05/Screen-Shot-2018-05-28-at-20.59.23.jpg)
+![Geoffrey Hinton interview](https://cdn.imshuai.com/images/2018/05/Screen-Shot-2018-05-28-at-20.59.23.jpg)
 
 * God father of deep learning
 * 传奇辗转的求学经历，为研究how does the brain store memories.：
@@ -145,7 +145,7 @@ Geoffrey Hinton interview (40min)
     * My advice is sort of read the literature, but don't read too much of it.Read a little bit of the literature. And notice something that you think everybody is doing wrong, I'm contrary in that sense. You look at it and it just doesn't feel right. And then figure out how to do it right. 
     * Develop and trust your intuitions. When you have what you think is a good idea and other people think is complete rubbish, that's the sign of a really good idea. 
     * **Never stop programming**.
-    ![never-stop-programming](/content/images/2018/05/never-stop-programming.jpg)
+    ![never-stop-programming](https://cdn.imshuai.com/images/2018/05/never-stop-programming.jpg)
 * advice for new grad students
 One good piece of advice for new grad students is, see if you can find an advisor who has beliefs similar to yours. Because if you work on stuff that your advisor feels deeply about, you'll get a lot of good advice and time from your advisor. （这显然就是自己的亲身经历）
 *  I kind of agree with you, **that it's not quite a second industrial revolution, but it's something on nearly that scale**. And there's a huge sea change going on, basically because **our relationship to computers has changed. Instead of programming them, we now show them, and they figure it out**.

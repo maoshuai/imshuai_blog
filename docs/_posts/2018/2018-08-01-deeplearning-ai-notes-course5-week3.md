@@ -31,21 +31,21 @@ seq2seq模型主要来源于如下两篇论文：
 
 通常，我们用\\(x\\)和\\(y\\)将输入和输出表示为序列，如下：
 
-![Xnip2018-07-30_20-03-40](/content/images/2018/07/Xnip2018-07-30_20-03-40.jpg)
+![Xnip2018-07-30_20-03-40](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-30_20-03-40.jpg)
 
 **我们的目标就是，训练一个神经网络，输入序列\\(x\\)，输出序列\\(y\\)。** 首先，我们先创建一个称为**编码器（encoder）** 的RNN（具体可以是GRU或LSTM），并把法语序列输入到该网络。当encoder将所有单词都“吞下”后，在最后的时间步的状态输入到一个称为**解码器（decoder）** 的RNN，该RNN输出翻译后的英语，如下图：
 
-![Xnip2018-07-30_21-04-14](/content/images/2018/07/Xnip2018-07-30_21-04-14.jpg)
+![Xnip2018-07-30_21-04-14](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-30_21-04-14.jpg)
 
 在给出足够的法语和英语对应文本的情况下，这个模型的效果相当不错。该模型简单的使用一个编码网络，将输入的法语编码，然后用一个解码网络生成对应的英语翻译。
 
 和上面非常类似的架构，同时也应用于图像描述（image captioning）。比如，下面输入一张图片，给出图片的描述（即看图说话）：
 
-![Xnip2018-07-30_20-31-42](/content/images/2018/07/Xnip2018-07-30_20-31-42.jpg)
+![Xnip2018-07-30_20-31-42](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-30_20-31-42.jpg)
 
 结合之前我们学习的CNN网络，我们先用CNN对图片进行编码，比如用预训练好的AlexNet得到4096维的编码，然后将编码输入到RNN作为解码器，输出对图像的描述：
 
-![Xnip2018-07-30_21-03-02](/content/images/2018/07/Xnip2018-07-30_21-03-02.jpg)
+![Xnip2018-07-30_21-03-02](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-30_21-03-02.jpg)
 
 上面的图片描述模型，几乎被多篇论文同时提出：
 
@@ -61,7 +61,7 @@ seq2seq翻译模型和先前讨论的语言模型既有些相似，也有很大�
 
 下图是两个模型的对比，我们可以看出机器翻译模型的decoder部分和语言模型十分类似，唯一差别在于，机器翻译的最初输入状态来源于encoder，而语言模型的输入固定为\\(a^{\<0>}\\)。
 
-![Xnip2018-07-30_21-08-46](/content/images/2018/07/Xnip2018-07-30_21-08-46.jpg)
+![Xnip2018-07-30_21-08-46](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-30_21-08-46.jpg)
 
 语言模型计算的是概率：
 
@@ -86,13 +86,13 @@ $$\text{arg} \ \text{max}\_{y^{\<1>}, ..., y^{\<T_y>}}P(y^{\<1>}, ..., y^{\<T_y>
 
 我们还以上面的法语翻译为例，讲解Beam Search的步骤：
 * 首先看第一个单词的条件概率\\(P(\hat y^{\<1>}|x)\\)，并**选择概率最大的3个单词作为候选**，这里个数3称为**集束宽（beam width）**，代表解码器中每个时间步候选的单词个数，记作\\(B\\)。具体上面的例子，可能选到了3个候选单词是：in, jane, september。
-    ![Xnip2018-07-31_09-29-29](/content/images/2018/07/Xnip2018-07-31_09-29-29.jpg)
+    ![Xnip2018-07-31_09-29-29](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-31_09-29-29.jpg)
 * 然后分别考虑第1个单词是上面3个候选单词之一的条件下，第2个单词的概率\\(P(\hat y^{\<2>}|x, \hat y^{\<1>})\\)。比如第一个单词是in的概率\\(P(\hat y^{\<2>}|x, \text{'in'})\\)。然后再选出构成前两个单词概率最大的3个组合，其概率计算为：
     $$P(\hat y^{\<1>}, \hat y^{\<2>}|x) = P(\hat y^{\<1>}|x) P(\hat y^{\<2>}|x, \hat y^{\<1>})$$
     由于\\(B=3\\)，因此我们在这一步会考虑3x10000种组合（第一步对应3个单词，第二步对应词汇表10000个单词），并选择其中概率最大的3个。最终可能的候选是：in september, jane is, jane visits（第一个单词是september的情况已经被剔除了）。我们将30000的搜索范围，收缩为3个候选。
-    ![Xnip2018-07-31_09-30-46](/content/images/2018/07/Xnip2018-07-31_09-30-46.jpg)
+    ![Xnip2018-07-31_09-30-46](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-31_09-30-46.jpg)
 * 第3步和第2步类似，可能继续得到3个候选：in september jane, jane is visiting, jane visits africa
-    ![Xnip2018-07-31_09-26-34](/content/images/2018/07/Xnip2018-07-31_09-26-34.jpg)
+    ![Xnip2018-07-31_09-26-34](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-31_09-26-34.jpg)
     
 特别的，**如果\\(B=1\\)，beam search就退化为了贪心搜索**。
 
@@ -142,7 +142,7 @@ $$\text{arg max} \frac{1}{T_y^\alpha} \sum^{T_y}\_{t=1} \log P( y^{\<t>} | x,  y
 
 下面仍用法语翻译的例子，我们将人类翻译的结果记为\\(y^\*\\)，算法翻译的结果记为\\(\hat y\\)：
 
-![Xnip2018-07-31_21-35-25](/content/images/2018/07/Xnip2018-07-31_21-35-25.jpg)
+![Xnip2018-07-31_21-35-25](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-31_21-35-25.jpg)
 
 虽然对RNN增加训练样本或者增加beam search的参数\\(B\\)对翻译结果总是没有坏处的，但我们要知道瓶颈在哪，才能有的放矢。
 
@@ -173,7 +173,7 @@ TODO:
 
 我们发现，随着句子的增长，Bleu Score开始降低：
 
-![Xnip2018-08-01_08-08-55](/content/images/2018/08/Xnip2018-08-01_08-08-55.jpg)
+![Xnip2018-08-01_08-08-55](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_08-08-55.jpg)
 
 2. Attention model
 
@@ -183,17 +183,17 @@ TODO:
 
 首先，我们使用一个BRNN作为编码器，BRNN输出每个单词丰富的特征：
 
-![Xnip2018-08-01_08-26-52](/content/images/2018/08/Xnip2018-08-01_08-26-52.jpg)
+![Xnip2018-08-01_08-26-52](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_08-26-52.jpg)
 
 然后我们用另外一个单向RNN作为解码器，为了避免两个RNN的激活函数混淆，此处解码器RNN用\\(s\\)表示激活函数。
 
 我们的问题是，解码器的每一个时间步应该查看被翻译语句的哪些部分，即比如\\(s^\<1>\\)应考虑编码器哪些输出。在注意力模型里，我们使用**注意力权重（attention weights）** 来表示对句子每个部分的权重，这个权重记为\\(\alpha^{\<t,t'>}\\)，其中上标含义是，解码器的第\\(t\\)个时间步，对编码器第\\(t'\\)个输出的注意力权重。我们用\\(c\\)表示编码器激活函数在注意力权重加权后的结果，将\\(c\\)输入到解码器用来生成翻译语句，如下图：
 
-![Xnip2018-08-01_18-22-35](/content/images/2018/08/Xnip2018-08-01_18-22-35.jpg)
+![Xnip2018-08-01_18-22-35](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_18-22-35.jpg)
 
 第二个输出也是类似，激活函数\\(s^\<2>\\)的输入来自注意力权重加权的新结果\\(c\\)，当然同时会将上一个时间步输出的翻译结果也加入；以此类推，如下图：
 
-![Xnip2018-08-01_19-59-46](/content/images/2018/08/Xnip2018-08-01_19-59-46.jpg)
+![Xnip2018-08-01_19-59-46](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_19-59-46.jpg)
 
 
 TODO: 注意力模型的思想主要来源论文：[Bahdanau et. al., 2014. Neural machine translation by jointly learning to align and translate]
@@ -204,11 +204,11 @@ TODO: 注意力模型的思想主要来源论文：[Bahdanau et. al., 2014. Neur
 
 上一节介绍了注意力模型的Intuition，现在我们形式化定义。模型和上一节一样，下面是一个BRNN的编码器，上面是一个多对多的RNN解码器，如下图：
 
-![Xnip2018-08-01_20-38-45](/content/images/2018/08/Xnip2018-08-01_20-38-45.jpg)
+![Xnip2018-08-01_20-38-45](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_20-38-45.jpg)
 
 其中每一个输出，单独拿出来如下：
 
-![Xnip2018-08-01_20-54-58](/content/images/2018/08/Xnip2018-08-01_20-54-58.jpg)
+![Xnip2018-08-01_20-54-58](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_20-54-58.jpg)
 
 我们把编码器BRNN的每个单元的前向和后向激活函数分别记为\\(\overrightarrow a^{\<t'>}\\)和\\(\overleftarrow a^{\<t'>}\\)，为了便于说明，我们合并记为\\(a^{\<t'>}\\)，即：
 
@@ -230,13 +230,13 @@ $$ a^{\<t,t'>} = \frac{\text{exp}(e^{\<t,t'>})}{\sum^{T_x}\_{t'=1} \text{exp}(e^
 
 其中\\(e\\)的计算，使用一个小神经网络计算，如下：
 
-![Xnip2018-08-01_20-52-25](/content/images/2018/08/Xnip2018-08-01_20-52-25.jpg)
+![Xnip2018-08-01_20-52-25](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_20-52-25.jpg)
 
 # 2- Speech recognition - Audio data
 ## 2.1- Speech recognition
 语音识别问题，就是将一段音频片段，自动转换为文字，seq2seq模型也可以应用于此。
 
-![Xnip2018-08-01_21-01-06](/content/images/2018/08/Xnip2018-08-01_21-01-06.jpg)
+![Xnip2018-08-01_21-01-06](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_21-01-06.jpg)
 
 语音识别问题，在早期是通过音位（phonemes）来构建的，需要手工工程设计的基本单元（hand-engineered basic units of cells）。我们会将单词拆分为基本的音位，如the拆分为th和e的音，而quick拆分为k w i k四个音。语音学家认为用户音位表示法（phonemes representations）是做语音识别的好办法。
 
@@ -244,7 +244,7 @@ $$ a^{\<t,t'>} = \frac{\text{exp}(e^{\<t,t'>})}{\sum^{T_x}\_{t'=1} \text{exp}(e^
 
 当然，我们可以使用attention model训练语音识别：
 
-![Xnip2018-08-01_21-14-21](/content/images/2018/08/Xnip2018-08-01_21-14-21.jpg)
+![Xnip2018-08-01_21-14-21](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_21-14-21.jpg)
 
 还有一种方法效果非常不错，它使用了CTC（Connectionist Temporal Classification）损失函数。下面简要介绍：
 
@@ -252,7 +252,7 @@ $$ a^{\<t,t'>} = \frac{\text{exp}(e^{\<t,t'>})}{\sum^{T_x}\_{t'=1} \text{exp}(e^
 
 我们将用一个输入和输出大小相同的RNN（这里使用单向RNN说明，实践中会用BRNN）：
 
-![Xnip2018-08-01_21-36-38](/content/images/2018/08/Xnip2018-08-01_21-36-38.jpg)
+![Xnip2018-08-01_21-36-38](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_21-36-38.jpg)
 
 需要注意的是，输入的时间步通常会比输出的时间步大很多。举个例子，10秒钟的音频，如果用100Hz采样，则每秒就会产生100个样本，于是10秒的音频，会产生1000个输入，但输出的字符肯定没有这么多。CTC的做法是，允许RNN产生类似如下的输出：
 
@@ -274,9 +274,9 @@ paper参考：[Graves et al., 2006. Connectionist Temporal Classification: Label
 
 现在有一个这样的RNN结构，我们要做的就是把一个音频片段计算出它的声谱图特征（spectrogram features），得到特征向量\\(x^{\<1>}, x^{\<2>}, x^{\<3>}, ...\\)，然后输入到RNN中，最后要做的就是定义目标标签\\(y\\)。假如某一点是出现了触发词，那么在这之前的标签都设置为0，而这一点的设置为1；如果过了一段时间，触发词再次被说了一次，再次把这个点设置为1。
 
-![Xnip2018-08-01_21-54-41](/content/images/2018/08/Xnip2018-08-01_21-54-41.jpg)
+![Xnip2018-08-01_21-54-41](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_21-54-41.jpg)
 
-![Xnip2018-08-01_21-53-37](/content/images/2018/08/Xnip2018-08-01_21-53-37.jpg)
+![Xnip2018-08-01_21-53-37](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-01_21-53-37.jpg)
 
 
 上面的算法有一个明显的缺点是，构建了一个**很不平衡的训练集**，即0比1要多得多。但有一个简单粗暴的办法可以解决，是的训练更容易。我们在一个时间步上输出1后，在变回0之前多输出几次1，或者在固定的一段时间内输出多个1.
@@ -287,4 +287,4 @@ deeplearning.ai课程结束了！与开篇的AI is the new electricity的口号�
 
 > Deep learning is a super power! If that isn't a superpower I don't know what is.
 
-![](/content/images/2018/08/DL-IS-SUPERPOWER.jpg)
+![](https://cdn.imshuai.com/images/2018/08/DL-IS-SUPERPOWER.jpg)

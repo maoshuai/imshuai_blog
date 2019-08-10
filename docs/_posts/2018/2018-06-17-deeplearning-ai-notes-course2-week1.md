@@ -46,7 +46,7 @@ Bias：偏差，High bias: underfitting；说明算法比数据简单，不足�
 Variance：方差，High variance: overfitting；说明算法超过了数据的实际复杂性，甚至将一些随机因素过度解释为了数据规律。
 
 直观的含义：
-![Screen-Shot-2018-06-17-at-17.39.30](/content/images/2018/06/Screen-Shot-2018-06-17-at-17.39.30.jpg)
+![Screen-Shot-2018-06-17-at-17.39.30](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-17-at-17.39.30.jpg)
 
 如何衡量是bias还是variance：**对比Train set error和dev set error以及base error的关系**。
 下表是判断依据（括号内的百分数是举例值，假设base error接近0%的error）
@@ -67,7 +67,7 @@ Variance：方差，High variance: overfitting；说明算法超过了数据的�
 ## 1.3- Basic Recipe for Machine Learning
 
 解决Bias/Variance的一般步骤：
-![basic-recipe-for-ml2](/content/images/2018/06/basic-recipe-for-ml2.png)
+![basic-recipe-for-ml2](https://cdn.imshuai.com/images/2018/06/basic-recipe-for-ml2.png)
 
 1. 针对bias和variance要选择对应的解决方法。
 2. 在早期的ML，强调bias variance trade-off；但在现代deep learning，**可以通过加大Neural Network或增加更多数据，在分别解决High bias和High variance的时候，并不会影响彼此。** 这也是deep learning在supervised learning如此成功的重要原因。
@@ -82,7 +82,7 @@ Variance：方差，High variance: overfitting；说明算法超过了数据的�
 3. **我的理解：之所以会有过拟合问题，本质上是数据存在一定的随机性干扰（即在主要的规律外，还有一定的随机因素干扰了数据，而这些随机因素被算法当成规律学习了），而中和这种随机性的办法就是在算法中也增加一些“干扰”，这个“干扰”就是Regularization。**
 
 下图是是否做了regularization的对比举例，直观上，regularization 让decision boundary更平滑了：
-![Xnip2018-06-18_10-34-31](/content/images/2018/06/Xnip2018-06-18_10-34-31.jpg)
+![Xnip2018-06-18_10-34-31](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-18_10-34-31.jpg)
 
 ## 2.1- L2 Regularization
 
@@ -111,7 +111,7 @@ L2-regularization relies on the **assumption that a model with small weights is 
 加入λ设置的很大，那么整个函数J其实对norm部分更为敏感（因为即norm部分的数值比较大），为了让J更小，就倾向于让W向零靠近；W靠近0的后果是，很多neural起的作用变小了，极限情况下甚至退化为logistic regression。
 
 另外，过大的λ，导致W偏小，同时让activation function（比如tanh）处于偏于线性的部分，有**简化**的趋势：
-![Screen-Shot-2018-06-17-at-20.26.22](/content/images/2018/06/Screen-Shot-2018-06-17-at-20.26.22.jpg)
+![Screen-Shot-2018-06-17-at-20.26.22](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-17-at-20.26.22.jpg)
 
 **L2 regularization的不足**：要通过不断的选用不同的λ进行测试，计算量加大了。
 
@@ -137,7 +137,7 @@ Drop-out on the first and third hidden layers:
 
 3. implementing dropout("Inverted dropout")
 illustrate with 3rd layer, 以0.8的概率保留neuron（keep_prob=0.8）
-![Screen-Shot-2018-06-17-at-20.47.54](/content/images/2018/06/Screen-Shot-2018-06-17-at-20.47.54.jpg)
+![Screen-Shot-2018-06-17-at-20.47.54](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-17-at-20.47.54.jpg)
 3. 在test time，不需要做regularization
 4. dropout intuition
 Can’t rely on any one feature, so have to spread out weights. And by spreading all the weights, this will tend to have an effect of **shrinking the squared norm of the weights**. And so, similar to what we saw with L2 regularization.
@@ -148,7 +148,7 @@ Can’t rely on any one feature, so have to spread out weights. And by spreading
 ## 2.3- Other regularization methods
 1. Data augmentation
 通过对已有数据的人工加工，形成更多的训练数据，变相实现了增加数据量。比如对已有图片的翻转、裁剪形成新的数据。
-![Screen-Shot-2018-06-17-at-21.47.41](/content/images/2018/06/Screen-Shot-2018-06-17-at-21.47.41.jpg)
+![Screen-Shot-2018-06-17-at-21.47.41](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-17-at-21.47.41.jpg)
 
 2. Early stopping
 在观察training set error的同时，将dev set error也输出观察。通常dev set error会先下降再上升。因此在这个点提前停止会得到一个相对好的结果。
@@ -163,7 +163,7 @@ Can’t rely on any one feature, so have to spread out weights. And by spreading
 注意：train set和dev/test set应该用一样的normalizing方法。
 2. why normalize inputs?
 让每个参数的范围一致，这样在做gradient descent的时候，所有参数下降的速率相似；如果速度不一致的话，很可能有些参数已经下降完成了，而另一些参数还在下降的过程中，就像下图的左边的情况。（我的理解，如果不normalize，就要让每个参数有不一样的Learning rate，才能速度保持一致）
-![Screen-Shot-2018-06-17-at-22.11.53](/content/images/2018/06/Screen-Shot-2018-06-17-at-22.11.53.jpg)
+![Screen-Shot-2018-06-17-at-22.11.53](https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-17-at-22.11.53.jpg)
 
 中心化的作用也是类似，因为在初始化参数的时候，用的是同一个随机分布做的初始化。
 
@@ -175,7 +175,7 @@ Vanishing / Exploding gradients：在层数很深的neural network，可能因�
 ## 3.3- Weight Initialization for Deep Networks
 在之前的课程中提到（shallow neural network），初始化W的时候，会乘一个系数（比如0.01），为了是让W尽量小，尽量使得激活函数出现在有明显梯度的点，但具体多小呢，正是本节要解决的问题。
 但对于DNN，鉴于Vanishing / Exploding gradients问题，**初始化的参数希望让z尽量计算结果接近1。** 由于input是normalize的，因此尽量让w的方差靠近1/n。
-![Xnip2018-06-17_22-50-26](/content/images/2018/06/Xnip2018-06-17_22-50-26.jpg)
+![Xnip2018-06-17_22-50-26](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-17_22-50-26.jpg)
 
 针对tanh activation function，一般为（Xavier initialization）：
 $$W^{[l]} = np.random.randn(shape) *\sqrt{\frac{1}{n^{[l-1]}}}$$
@@ -205,7 +205,7 @@ $$\frac{||d_{approx} - d||\_2}  {||d\_{approx}||\_2 + ||d||\_2}$$
     * dropout regularization不适用，因为J是不稳定的。 
 
 # 4- Heros of Deep Learning: Yoshua Bengio interview
-![Xnip2018-06-17_23-59-19](/content/images/2018/06/Xnip2018-06-17_23-59-19.jpg)
+![Xnip2018-06-17_23-59-19](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-17_23-59-19.jpg)
 
 1. Yoshua Bengio 是 Ian Goodfellow 的导师，也是 *Deep learning* 这本书的的第二作者。
 2. When I started my graduate studies in 1985, I started reading neural net papers, and that's where I got all excited, and it became really a passion.

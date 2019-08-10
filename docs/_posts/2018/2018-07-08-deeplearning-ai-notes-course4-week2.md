@@ -34,7 +34,7 @@ tags:
 
 1998年发表，用来识别32x32大小的灰度手写数字，架构如下：
 
-![Xnip2018-07-06_08-26-13](/content/images/2018/07/Xnip2018-07-06_08-26-13.jpg)
+![Xnip2018-07-06_08-26-13](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-06_08-26-13.jpg)
 
 * Height和Weight不断减小，channel在增加。
 * 拥有60k个参数，而今天的Neural Network通常有10M到100M个参数。
@@ -58,7 +58,7 @@ paper阅读：
 
 2012年发表，以 Alex Krizhevsky 命名，作者还包括Geoffrey Hinton。架构如下：
 
-![Xnip2018-07-06_08-58-27](/content/images/2018/07/Xnip2018-07-06_08-58-27.jpg)
+![Xnip2018-07-06_08-58-27](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-06_08-58-27.jpg)
 
 * 目标是将ImageNet图片做1000个分类
 * 与LeNet-5类似，但拥有60M个参数
@@ -75,7 +75,7 @@ paper阅读：
 
 2015年发表，架构如下：
 
-![Xnip2018-07-06_09-13-50](/content/images/2018/07/Xnip2018-07-06_09-13-50.jpg)
+![Xnip2018-07-06_09-13-50](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-06_09-13-50.jpg)
 
 * VGG-16中16的含义是16个有参数的layer。
 * 只有两个典型单元（CONV=3×3filter, s=1, same；MAX-POOL=2×2, s=2），超参较少，简化了神经网络的架构，设计上和很规律：Height不断减倍，而filter不断加倍。
@@ -92,7 +92,7 @@ paper参考：[Simonyan & Zisserman 2015. Very deep convolutional networks for l
 ## 1.3- ResNets
 **超大型深度神经难以训练，因为会出现梯度消失和梯度爆炸问题（vanishing and exploding gradient），导致训练超大型神经网络非常困难**。在反向传播的过程中，越是前层网络，叠加相乘的权重越多，因此越是前层网络的梯度消失现象越严重（极少情况下，也为出现严重的梯度爆炸）。下图显示，不同层的梯度下降的速度，越是前层下降越看。
 
-![vanishing_grad_kiank](/content/images/2018/07/vanishing_grad_kiank.jpg)
+![vanishing_grad_kiank](https://cdn.imshuai.com/images/2018/07/vanishing_grad_kiank.jpg)
 
 **ResNets（Residual Network）使用short cut的方法（也称skip connection），解决了训练超大型Neural Network的问题**。
 
@@ -100,7 +100,7 @@ paper参考：[Simonyan & Zisserman 2015. Very deep convolutional networks for l
 
 下图是一个一般的Neural Network（相对于ResNets，也称为**Plain Network**）
 
-![Xnip2018-07-07_12-52-25](/content/images/2018/07/Xnip2018-07-07_12-52-25.jpg)
+![Xnip2018-07-07_12-52-25](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_12-52-25.jpg)
 
 forward计算过程是一层接着一层顺序的进行，ResNets称之为**Main Path**，即是：
 
@@ -115,11 +115,11 @@ $$a^{[l+2]} = g(z^{[l+2]})$$
 
 Residual block，则是在Main Path之外，**将\\(a^{[l]}\\)的值直接加入到\\(a^{[l+2]}\\)的运算中，即\\(a^{[l+2]} = g(z^{[l+2]}+a^{[l]})\\)** ， 称之为short cut或skip connection，如下图：
 
-![Xnip2018-07-07_18-10-26](/content/images/2018/07/Xnip2018-07-07_18-10-26.jpg)
+![Xnip2018-07-07_18-10-26](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_18-10-26.jpg)
 
 上面包含short cut的layer在一起组成了一个**Residual block**，多个Residual Block则构成了ResNets，如下图，是一个ResNet，共有5个Residual block：
 
-![Xnip2018-07-07_18-16-56](/content/images/2018/07/Xnip2018-07-07_18-16-56.jpg)
+![Xnip2018-07-07_18-16-56](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_18-16-56.jpg)
 
 
 
@@ -128,7 +128,7 @@ Residual block，则是在Main Path之外，**将\\(a^{[l]}\\)的值直接加入
 
 理论上，随着layer的增加，Neural Network的Training error的趋势是降低；**但现实情况是，Plain Network会先下降再上升，而ResNet则不会出现这种情况**。所以会形成下面的趋势图：
 
-![Xnip2018-07-07_18-26-48](/content/images/2018/07/Xnip2018-07-07_18-26-48.jpg)
+![Xnip2018-07-07_18-26-48](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_18-26-48.jpg)
 
 因此即便训练几百层甚至上千层的Neural Network，ResNet依然不会出现Training Error上升的情况。相比Plain Network，ResNet可以训练更多层的神经网络。
 
@@ -139,11 +139,11 @@ Paper参考：[He et al., 2015. Deep residual networks for image recognition](ht
 
 看一个例子，对于一个大型Neural Network如下：
  
- ![Xnip2018-07-07_21-49-03](/content/images/2018/07/Xnip2018-07-07_21-49-03.jpg)
+ ![Xnip2018-07-07_21-49-03](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_21-49-03.jpg)
 
 在此基础上，增加一个Residual block，如下：
 
-![Xnip2018-07-07_21-49-44](/content/images/2018/07/Xnip2018-07-07_21-49-44.jpg)
+![Xnip2018-07-07_21-49-44](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_21-49-44.jpg)
 
 
 
@@ -169,11 +169,11 @@ $$a^{[l+2]} = g(a^{[l]}) = ReLU(a^{[l]})= a^{[l]}$$
 
 下图是ResNet论文中将一个Plain Network转换成ResNet的例子：
 
-![Xnip2018-07-07_22-23-20](/content/images/2018/07/Xnip2018-07-07_22-23-20.jpg)
+![Xnip2018-07-07_22-23-20](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-07_22-23-20.jpg)
 
 下面是作业中的例子：
 
-![Xnip2018-07-09_21-14-42](/content/images/2018/07/Xnip2018-07-09_21-14-42.jpg)
+![Xnip2018-07-09_21-14-42](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-09_21-14-42.jpg)
 
 这里的short cut也跨越了3层。
 
@@ -182,11 +182,11 @@ $$a^{[l+2]} = g(a^{[l]}) = ReLU(a^{[l]})= a^{[l]}$$
 
 1x1 指的是filter的维度是1x1，下图是一个6x6的矩阵和一个1x1的filter做卷积，显然结果矩阵仅相当于将输入矩阵每个元素乘以2，并没有什么实质用途：
 
-![Xnip2018-07-08_11-34-06](/content/images/2018/07/Xnip2018-07-08_11-34-06.jpg)
+![Xnip2018-07-08_11-34-06](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_11-34-06.jpg)
 
 但矩阵和filter如果有多个channel，则情况有所不同：
 
-![Xnip2018-07-08_11-36-29](/content/images/2018/07/Xnip2018-07-08_11-36-29.jpg)
+![Xnip2018-07-08_11-36-29](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_11-36-29.jpg)
 
 此时，**1x1 Convolutions相当于在channel之间形成FC**：即输入矩阵每个位置的元素在filter之间组成了一个向量（上图蓝色volume中的黄色部分），和多层channel的1x1 filter（实际上也是一个向量）做线性组合，再将结果应用激活函数（如ReLU），这个操作过程和一般NN中的一层是一样的。因此，**1x1 Convolutions也称为Network in Networks**。如果有多个1x1 Convolutions，则输出矩阵也是多个channel的。
 
@@ -207,7 +207,7 @@ paper参考：[Lin et al., 2013. Network in network](https://arxiv.org/pdf/1312.
 
 下图显示了，在一个layer里同时应用了1x1, 3x3, 5x5的filter以及Max Pooling，然后把所有结果堆在一起：
 
-![Xnip2018-07-08_12-28-52](/content/images/2018/07/Xnip2018-07-08_12-28-52.jpg)
+![Xnip2018-07-08_12-28-52](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_12-28-52.jpg)
 
 主要思想是：**与其从众多filter中选择一个，不如将所有的filter都加入，并将输出连接在一起，让网络自己学习用应该哪些filter**。某种角度看，相当于把filter size这个超参交给网络自己学习。
 
@@ -219,14 +219,14 @@ paper参考：[Szegedy et al. 2014. Going deeper with convolutions](https://www.
 
 Inception network带来的一个问题是，大幅增加计算量。仅以上面例子中3x3 filter部分计算，计算乘法的次数达到：28x28x32x5x5x192，大概为120M：
 
-![Xnip2018-07-08_14-56-59](/content/images/2018/07/Xnip2018-07-08_14-56-59.jpg)
+![Xnip2018-07-08_14-56-59](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_14-56-59.jpg)
 
 
 3. **1x1 convolution降低计算量**
 
 但如果在上面的例子中间加一层1x1 Convolution（下图黄色部分），则计算量可以显著下降：
 
-![Xnip2018-07-08_14-59-08](/content/images/2018/07/Xnip2018-07-08_14-59-08.jpg)
+![Xnip2018-07-08_14-59-08](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_14-59-08.jpg)
 
 同样最后输出28x28x32的volume，但计算量是：28x28x16x1x1x192 + 28x28x32x5x5x16，算下来大概10M，相比原先120M，降低了10倍左右。
 
@@ -243,7 +243,7 @@ Inception network带来的一个问题是，大幅增加计算量。仅以上面
 
 将1x1 Convolution和Inception结合在一起形成如下网络：
 
-![Xnip2018-07-08_15-33-54](/content/images/2018/07/Xnip2018-07-08_15-33-54.jpg)
+![Xnip2018-07-08_15-33-54](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_15-33-54.jpg)
 
 * 一般的CONV layer一般在前面增加一个1x1 CONV，降低计算量
 * Max Pooling要使用SAME CONV保证维度一致，并在之后使用1x1 CONV降低channel
@@ -253,14 +253,14 @@ Inception network带来的一个问题是，大幅增加计算量。仅以上面
 
 Inception Network，即将Inception Module重复多次。形成如下的形式：
 
-![Xnip2018-07-08_15-40-49](/content/images/2018/07/Xnip2018-07-08_15-40-49.jpg)
+![Xnip2018-07-08_15-40-49](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_15-40-49.jpg)
 
 * 比如红框里面圈出的就是一个Inception Block。
 * 最后几层还是FC layer加softmax layer 
 
 另外，在中间的隐藏层，还会引出几个FC layer加softmax layer，称之为**side-branches**，使用隐藏层直接做预测，比如下图。
 
-![](http://imshuai.com/content/images/2018/07/Xnip2018-07-08_15-43-32-1.jpg)
+![](http://imshuai.comhttps://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_15-43-32-1.jpg)
 
 Side-branches，在预测输出上表现也不差；同时还能起到regularization的作用，抑制overfitting。
 
@@ -270,7 +270,7 @@ Inception Network也发展出了很多版本，比如结合Skip Connection。
 
 另外，为什么取名叫“Inception Network”？Inception的paper也做了说明，是取自电影《盗梦空间》（*Inception*）的梗（meme），意味 *We need to go deeper*（http://knowyourmeme.com/memes/we-need-to-go-deeper）
 
-![a88](/content/images/2018/07/a88.jpg)
+![a88](https://cdn.imshuai.com/images/2018/07/a88.jpg)
 
 # 2- Practical advices for using ConvnNets
 
@@ -317,11 +317,11 @@ Data Augmentation是增加训练数据的一种方法。下面介绍几种Data A
 * Shearing
 * Local warping
 
-![Xnip2018-07-08_16-59-09](/content/images/2018/07/Xnip2018-07-08_16-59-09.jpg)
+![Xnip2018-07-08_16-59-09](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_16-59-09.jpg)
 
 2. Color shifting
 
-![Xnip2018-07-08_16-52-55](/content/images/2018/07/Xnip2018-07-08_16-52-55.jpg)
+![Xnip2018-07-08_16-52-55](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_16-52-55.jpg)
 
 关于Color shifting，有一种更复杂的办法是PCA Color Augmentation（在AlexNet中有介绍）
 
@@ -338,7 +338,7 @@ Data Augmentation是增加训练数据的一种方法。下面介绍几种Data A
 
 **数据量越大，用的算法也更简单，hand-engineering或hack的成分更少**；相反**数据不足的情况下，hand-engineering或hack的成分更大，也更有效**。即形成了下面的特点：
 
-![Xnip2018-07-08_17-38-38](/content/images/2018/07/Xnip2018-07-08_17-38-38.jpg)
+![Xnip2018-07-08_17-38-38](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_17-38-38.jpg)
 
 
 Computer vision的数据集还是相对较小，特别是Computer Vision还需要训练出一个相当复杂的函数。尤其是Object Detection，标注成本很大，因此数据集更小。因此，直到现在，Computer Vision还需要很多hand-engineering。

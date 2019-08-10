@@ -54,7 +54,7 @@ tensorboard --logdir="./graphs"
 
 `tensorboard`命令是随TensorFlow安装自带的，上面的命令会在默认的6006端口启动了一个HTTP服务，读取`./graphs`目录下的event文件。浏览器打开http://localhost:6006 , 即可看到TensorBoard的界面，类似如下：
 
-![Xnip2018-08-16_08-44-24](/content/images/2018/08/Xnip2018-08-16_08-44-24.jpg)
+![Xnip2018-08-16_08-44-24](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-16_08-44-24.jpg)
 
 关于TensorBoard更多内容，请参考官网：https://www.tensorflow.org/guide/graph_viz
 
@@ -70,7 +70,7 @@ writer = tf.summary.FileWriter('./graphs', tf.get_default_graph())
 writer.close()
 ```
 
-![Xnip2018-08-16_08-48-44](/content/images/2018/08/Xnip2018-08-16_08-48-44.jpg)
+![Xnip2018-08-16_08-48-44](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-16_08-48-44.jpg)
 
 
 我们可以在代码里通过`name`参数，指定每个node的名字：
@@ -85,7 +85,7 @@ with tf.Session() as sess:
 	print(sess.run(x)) # >> 5
 ```
 
-![Xnip2018-08-16_08-49-55](/content/images/2018/08/Xnip2018-08-16_08-49-55.jpg)
+![Xnip2018-08-16_08-49-55](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-16_08-49-55.jpg)
 
 最后说明一下，上面只是介绍了TensorBoard的可视化功能，但其功能远不仅如此，它将是我们常用的工具。
 
@@ -113,7 +113,7 @@ b = tf.constant([[0, 1], [2, 3]], name='b')
 
 `tf.constant`定义了一个返回固定值的operation。有有点绕的地方是：`tf.constant()`方法的返回值还是`tf.Tensor`，可以理解为operation是在`tf.constant()`的内部定义了，但返回的是operation的输出，即`tf.Tensor`，我们通过[TensorFlow的开源代码](https://github.com/tensorflow/tensorflow/blob/r1.10/tensorflow/python/framework/constant_op.py)可以大概窥探：
 
-![Xnip2018-08-19_17-44-59](/content/images/2018/08/Xnip2018-08-19_17-44-59.jpg)
+![Xnip2018-08-19_17-44-59](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-19_17-44-59.jpg)
 
 ### 2.1.1- 快捷方法生成常见constant
 除了上面标准的定义constant的方法，对于一些常见的constant（比如比如全零，全一），与NumPy类似，tf也提供了一些同名方法，快速生成某类tensor，
@@ -231,13 +231,13 @@ with tf.Session() as sess:
 
 常见的operation：
 
-![Xnip2018-08-08_22-42-58](/content/images/2018/08/Xnip2018-08-08_22-42-58.jpg)
+![Xnip2018-08-08_22-42-58](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-08_22-42-58.jpg)
 
 值得注意都是，从上表看出`tf.Variable`属于一个operation
 
 其中的算数运算如下，和NumPy非常类似：
 
-![Xnip2018-08-16_09-15-27](/content/images/2018/08/Xnip2018-08-16_09-15-27.jpg)
+![Xnip2018-08-16_09-15-27](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-16_09-15-27.jpg)
 
 更多数学操作，请参考：https://www.tensorflow.org/api_guides/python/math_ops
 
@@ -351,7 +351,7 @@ with tf.Session() as sess:
 	print(sess.graph.as_graph_def())
 ```
 
-![Xnip2018-08-19_17-14-00](/content/images/2018/08/Xnip2018-08-19_17-14-00.jpg)
+![Xnip2018-08-19_17-14-00](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-19_17-14-00.jpg)
 
 关于常量的使用，有两点指导意见：
 * 仅对基本数据类型使用constant
@@ -391,7 +391,7 @@ x.assign_add(...)
 
 通过TensorBoard可以看出，一个Variable是一个子图：
 
-![Xnip2018-08-12_20-59-59](/content/images/2018/08/Xnip2018-08-12_20-59-59.jpg)
+![Xnip2018-08-12_20-59-59](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-12_20-59-59.jpg)
 
 
 ### 2.5.2- Variable初始化
@@ -640,11 +640,11 @@ lazy loading是一种常见的错误。
 
 比如下面的做法是正常的loading
 
-![Xnip2018-08-13_20-31-54](/content/images/2018/08/Xnip2018-08-13_20-31-54.jpg)
+![Xnip2018-08-13_20-31-54](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-13_20-31-54.jpg)
 
 下面这个做法是lazy loading
 
-![Xnip2018-08-13_20-32-32](/content/images/2018/08/Xnip2018-08-13_20-32-32.jpg)
+![Xnip2018-08-13_20-32-32](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-13_20-32-32.jpg)
 
 虽然两段程序的运行结果看似一样，后者好像还省了一行代码，但后者不断的在循环内**创建了多个add节点**，造成graph的定义膨胀（想象一下循环的是100万次，则代价非常大）。
 
@@ -686,7 +686,7 @@ node {
 * 将op的定义和运行区分开来。
 * 使用Python的property保证function仅在第一次调用时加载。比如下面的做法：
 
-![Xnip2018-08-13_20-46-12](/content/images/2018/08/Xnip2018-08-13_20-46-12.jpg)
+![Xnip2018-08-13_20-46-12](https://cdn.imshuai.com/images/2018/08/Xnip2018-08-13_20-46-12.jpg)
 
 lazy loading的更多内容，可参考：https://danijar.com/structuring-your-tensorflow-models/
 

@@ -13,7 +13,7 @@ tags:
 
 最有意思的是，一头奶牛挡在了车前面，导游司机大叫道“Holy Cow”：
 
-![holy-cow](/content/images/2019/01/holy-cow.jpg)
+![holy-cow](https://cdn.imshuai.com/images/2019/01/holy-cow.jpg)
 
 我也和全车的人一起大笑起来，这还真是地地道道的“Holy Cow”。
 

@@ -87,7 +87,7 @@ var ap = new APlayer({
         title: '名义8小时',                                          // Required, music title
         author: ' 朗读者：顾唐散人',                          // Required, music author
         url: 'http://ok4jsyu7n.bkt.clouddn.com/content/auido/2017/05/more-than-8-hours-v2.mp3',  // Required, music url
-        pic: 'http://ok4jsyu7n.bkt.clouddn.com/content/images/touxiang200705.jpgface-coolart-360x360.jpg',  // Optional, music picture
+        pic: 'http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/touxiang200705.jpgface-coolart-360x360.jpg',  // Optional, music picture
       
     }
 });

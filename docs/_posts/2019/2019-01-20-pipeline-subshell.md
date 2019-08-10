@@ -82,7 +82,7 @@ echo "total file num: $i"
 ```
 
 但得到的结果如下：
-![Screen-Shot-2019-01-20-at-11.30.39](/content/images/2019/01/Screen-Shot-2019-01-20-at-11.30.39.jpg)
+![Screen-Shot-2019-01-20-at-11.30.39](https://cdn.imshuai.com/images/2019/01/Screen-Shot-2019-01-20-at-11.30.39.jpg)
 
 虽然while循环内变量i在递增，但while之外变量i还是保持为0，似乎while循环内的改变不起作用。
 

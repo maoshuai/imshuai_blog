@@ -64,7 +64,7 @@ Caused by: org.elasticsearch.hadoop.rest.EsHadoopNoNodesLeftException: Connectio
 ### 不完美的grep -A n
 当然grep也有一个好用的功能，显示匹配行的上下文，比如`grep -A 5  ERORR test.log`，搜索结果如下：
 
-![grep1](/content/images/2019/01/grep1.jpg)
+![grep1](https://cdn.imshuai.com/images/2019/01/grep1.jpg)
 
 但还是有两个问题：
 * 首先，第2和3行的日志是不相关的，但因为在第一行ERROR日志的5行之内，也被显示了。

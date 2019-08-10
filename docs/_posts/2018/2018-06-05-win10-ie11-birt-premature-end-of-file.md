@@ -14,7 +14,7 @@ tags:
 
 首先查看了一下报错，只是弹窗：
 
-![PrematureEOF](/content/images/2018/06/PrematureEOF.jpg)
+![PrematureEOF](https://cdn.imshuai.com/images/2018/06/PrematureEOF.jpg)
 
 首先打开浏览器开发者模式，查看发现网络请求frameset返回500 Internal Server Error，因此问题转移到后台，通过比对同一个操作的正常和异常的日志，发现异常情况下后台无法正常解析，会把整个SOAP报文作为一个字段解析。因此怀疑前台传递的请求报文有问题，对比报文格式，没有发现任何问题。
 

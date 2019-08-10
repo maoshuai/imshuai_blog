@@ -41,8 +41,8 @@ $$y'=a^x\ln{a}$$
 
 所以，都说指数增长很快，那到底有多快，到底是哪种快？——**任意阶导数大于零的快**。这，才是指数函数的真正可怕之处，丧心病狂啊。
 
-![指数函数](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/02/exponential_function.gif)
+![指数函数](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/02/exponential_function.gif)
 
 <div id='wx_logo' style='margin:0 auto;display:none;'>
-<img src='http://ok4jsyu7n.bkt.clouddn.com/content/images/touxiang200705.jpgface-coolart-360x360.jpg'/>
+<img src='http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/touxiang200705.jpgface-coolart-360x360.jpg'/>
 </div>

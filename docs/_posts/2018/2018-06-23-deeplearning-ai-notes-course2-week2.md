@@ -33,7 +33,7 @@ tags:
 6. epoch：当所有批次都循环完成了，即全部m个数据集都参与过了计算，这叫一个epoch。整个算法在epoch层还会做循环，迭代很多次epoch。
 7. 在大数据下，基本上必然要采用min-batch gradient descent。
 8. 相比而言，mini-batch gradient descent的迭代过程会比较震荡。
-![Xnip2018-06-20_20-38-43](/content/images/2018/06/Xnip2018-06-20_20-38-43.jpg)
+![Xnip2018-06-20_20-38-43](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-20_20-38-43.jpg)
 11. 不同mini-batch size（批次大小，即一个批次包含的样本数）的区别：
     * gradient descent可以认为是mini-batch size是m的mini-batch gradient descent。噪声较小，但一次下降的计算速度太慢。
     * 如果mini-batch size = 1，则每次只用一个样本做梯度下降，则变成 stochastic gradient descent （随机梯度下降）。噪声太大，且失去了vectorization加速。
@@ -49,7 +49,7 @@ Exponentially weighted averages（指数加权平均），在统计学也称作E
 ### Exponentially weighted averages概念举例：
 
 下图蓝色点是伦敦某段时间每日温度值\\(\theta_t\\)，而红色是加权平均后的\\(v_t\\)，
-![Xnip2018-06-20_20-58-12](/content/images/2018/06/Xnip2018-06-20_20-58-12.jpg)
+![Xnip2018-06-20_20-58-12](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-20_20-58-12.jpg)
 具体的加权平均方法是：每天的温度值加权值\\(v_t\\)设置为前一天的温度加权值\\(v_{t-1}\\)和当天的温度实际值\\(\theta_{t}\\)做加权平均：
 $$v_t = \beta v_{t-1} + (1-\beta) \theta_{t}$$
 
@@ -58,7 +58,7 @@ $$v_t = \beta v_{t-1} + (1-\beta) \theta_{t}$$
 1. 曲线越平滑
 2. 曲线会比实际值向右偏移
 
-![Xnip2018-06-20_21-11-20](/content/images/2018/06/Xnip2018-06-20_21-11-20.jpg)
+![Xnip2018-06-20_21-11-20](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-20_21-11-20.jpg)
 
 比如图中，绿色的β就比红色的β大。β越大代表历史数据的权重越大，稳定性越好，同样也更迟钝。
 
@@ -105,7 +105,7 @@ $$v := \beta v + (1 - \beta)\theta_t$$
 ### Bias correction in exponentially weighted averages
 
 由于计算\\(v_1\\)的时候，并没有历史值做加权，这个时候令其前一个加权值\\(v_0 = 0\\)，则会导致\\(v_1 = (1-\beta)v_0 + \beta \theta_1 = \beta \theta_1\\)，这个值会远小于\\(\theta_1\\)，进而\\(v_2\\)也会偏小，依次类推，**在靠近前面的值会出现显著的小于实际值的情况：**
-![Xnip2018-06-21_08-45-18-1](/content/images/2018/06/Xnip2018-06-21_08-45-18-1.jpg)
+![Xnip2018-06-21_08-45-18-1](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-21_08-45-18-1.jpg)
 
 图中紫色部分的前端会明显的小于实际值。显然这是不合理的，需要修正。修正的方法是原来的计算值做如下操作：
 $$v_t:= \frac{v_t}{1-\beta^t}$$
@@ -122,7 +122,7 @@ $$v_t = \frac{\beta v_{t-1} + (1 - \beta)\theta_t}{{1-\beta^t}}$$
 In one sentence, the basic idea is to compute **an exponentially weighted average of your gradients**, and then use that gradient to update your weights instead.
 
 1. 问题背景：
-    ![Xnip2018-06-22_08-31-00](/content/images/2018/06/Xnip2018-06-22_08-31-00.jpg)
+    ![Xnip2018-06-22_08-31-00](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-22_08-31-00.jpg)
     * 某个方向（属性范围较小的，如上图蓝色曲线的垂直方向）出现震荡，会让梯度下降速度会变慢（Just **slowly oscillate toward the minimum**. And this up and down oscillations **slows down gradient descent** and prevents you from using a much larger learning rate.）
     * 然而，又不能通过加大learning rate解决，因为这样会在出现overshooting（如上图左边的紫色曲线）。
     * 因此，在不同的参数上，希望速度不一样，比如上图垂直方向希望慢一点（避免震荡），而水平方向希望快一点（加快到optima）。基于此就有了Gradient descent with momentum。
@@ -207,7 +207,7 @@ $$v_{dW} = 0, s_{dW} = 0, v_{db} = 0, s_{db} = 0$$
 ## 1-6 Learning rate decay
 为什么要做learning rate decay？
 较大的learning rate虽然在算法开始阶段会加快收敛速度，但在收敛接近到优化点的时候，算法会在优化点附近震荡，如下图：
-![Xnip2018-06-23_15-20-05](/content/images/2018/06/Xnip2018-06-23_15-20-05.jpg)
+![Xnip2018-06-23_15-20-05](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_15-20-05.jpg)
 
 如何做learning rate decay？
 **思路很简单，就是引入一个函数，让α随着迭代（比如min-batch的epoch）递减**。为此可以采用的decay函数有：
@@ -229,16 +229,16 @@ $$v_{dW} = 0, s_{dW} = 0, v_{db} = 0, s_{db} = 0$$
 
 直觉上，人们认为梯度下降的主要问题是收敛到local optima，如下图：
 
-![Xnip2018-06-23_15-32-07](/content/images/2018/06/Xnip2018-06-23_15-32-07.jpg)
+![Xnip2018-06-23_15-32-07](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_15-32-07.jpg)
 
 长期以来，这也是人们“直觉的误解”，但在高维空间里，其实local optima并不常见。原因就是在高维空间，**所有维度同时得到同方向倒数（都是凹函数）为0的概率极低**。更常见的情况是收敛到了鞍点（saddle），即某些维度取的是最小值，某些取的是最小值。
 
-![Xnip2018-06-23_15-42-07](/content/images/2018/06/Xnip2018-06-23_15-42-07.jpg)
+![Xnip2018-06-23_15-42-07](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_15-42-07.jpg)
 
 所有，担心收敛到local optima，真是人们想多了，实际上并没有想象的那么多local optima。在高维空间，几乎不太可能被困在一个local optima，这是一个好消息。
 
 令人意外的是，这样一个误解，竟然在最近不久才被人们认识到。这部分可以参考我找的资料：https://www.zhihu.com/question/68109802
 
 但梯度下降的真正挑战是高原问题（Problem of plateaus），即在广阔的高原上，梯度下降算法下降太慢。而Adam算法正好可以解决这个问题，在该加速的时候加速。
-![Xnip2018-06-23_15-48-50](/content/images/2018/06/Xnip2018-06-23_15-48-50.jpg)
+![Xnip2018-06-23_15-48-50](https://cdn.imshuai.com/images/2018/06/Xnip2018-06-23_15-48-50.jpg)
 

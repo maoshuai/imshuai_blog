@@ -32,7 +32,7 @@ tags:
 
 与one-hot不同，我们将每个单词按照**多维特征**进行定义，比如下图所示，一共有4个属性（实际应用会更多）：性别、是否为皇室、年龄、是否为食品。每个单词分别从这4个属性给出与这些属性的相关度。**那么任何一个单词就可以用一个4维的特征向量表示**，比如Man表示为(-1, 0.01, 0.03, 0.09)。
 
-![Xnip2018-07-24_19-31-52](/content/images/2018/07/word-embedding.jpg)
+![Xnip2018-07-24_19-31-52](https://cdn.imshuai.com/images/2018/07/word-embedding.jpg)
 
 此时，可以清晰的看到Apple和Orange极为相似，上面的例子就很容易使得算法在第二句话也填入单词juice。
 
@@ -46,7 +46,7 @@ tags:
 
 算法可以在高维空间学习出单词的特征，比如300维。而t-SNE是一种使用2维可视化词嵌入的方法，比如形成下图：
 
-![Xnip2018-07-24_19-49-27](/content/images/2018/07/Xnip2018-07-24_19-49-27.jpg)
+![Xnip2018-07-24_19-49-27](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-24_19-49-27.jpg)
 
 让我们直观的感受到，词嵌入将一些概念相似的单词映射为了相似的特征向量。
 
@@ -62,7 +62,7 @@ tags:
 
 我们根据orange farmer可以判断出Sally Johnson是一个人名，我们的RNN模型，通过one-hot向量表示法，也学习到了这一点（1表示人名）：
 
-![Xnip2018-07-24_20-12-36](/content/images/2018/07/Xnip2018-07-24_20-12-36.jpg)
+![Xnip2018-07-24_20-12-36](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-24_20-12-36.jpg)
 
 如果我们改用词嵌入法作为RNN的输入训练的模型，在遇到新的输入，比如：
 
@@ -90,7 +90,7 @@ durian和cultivator可能在我们的命名实体识别的训练集里样本很�
 
 之前CNN的课程，我们学习了Siamese做人脸编码，然后用人脸编码判断两张图片的人脸相似性。
 
-![Xnip2018-07-24_20-49-20](/content/images/2018/07/Xnip2018-07-24_20-49-20.jpg)
+![Xnip2018-07-24_20-49-20](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-24_20-49-20.jpg)
 
 词嵌入很像之前我们学习的face encoding，这里的术语embedding和encoding的含义上是类似的，但两者的差别是词嵌入面对的词汇是有限的，而人脸几乎是无限的。
 （我的理解：为什么可以embedding？因为词汇是有限的。但为什么人脸也可以encoding，虽然人脸是无限的，但人脸的基本特征是有限的，在这一点上两者是相通的。某种角度，可以将词嵌入看成浅层网络。）
@@ -101,7 +101,7 @@ durian和cultivator可能在我们的命名实体识别的训练集里样本很�
 词嵌入还可以帮助实现**类比推理（analogy reasoning）**。还是以之前的数据为例：
 
 
-![Xnip2018-07-24_19-31-52](/content/images/2018/07/Xnip2018-07-24_19-31-52.jpg)
+![Xnip2018-07-24_19-31-52](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-24_19-31-52.jpg)
 
 比如我们提出一个问题：Man之于Woman，相当于King之于什么？我们很容易回答出是Queen。而词嵌入，可以实现这个类比推理过程。
 
@@ -178,7 +178,7 @@ paper参考：：[Mikolov et. al., 2013, Linguistic regularities in continuous s
 
 当我们使用算法学习词嵌入时，实际上学习的是一个**嵌入矩阵（Embedding matrix）**，记为\\(E\\)。假如词汇表的大小是10000个单词，词嵌入的特征是300维，则嵌入矩阵是一个300x10000的矩阵。
 
-![Xnip2018-07-24_21-45-23](/content/images/2018/07/Xnip2018-07-24_21-45-23.jpg)
+![Xnip2018-07-24_21-45-23](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-24_21-45-23.jpg)
 
 词汇表中第\\(i\\)个单词的one-hot向量为\\(o_i\\)，则对应的词向量为：
 
@@ -199,19 +199,19 @@ $$e_i = E \cdot o_i$$
 
 如下图，我们根据前面的单词预测最后一个单词是什么，每个单词下面的数字是其在词汇表里的序号。
 
-![Xnip2018-07-25_08-22-42](/content/images/2018/07/Xnip2018-07-25_08-22-42.jpg)
+![Xnip2018-07-25_08-22-42](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-25_08-22-42.jpg)
 
 首先，我们将每个单词用one-hot向量表示（假如词汇表是10000个单词，则每个one-hot向量是10000维）：
 
-![Xnip2018-07-25_08-24-46](/content/images/2018/07/Xnip2018-07-25_08-24-46.jpg)
+![Xnip2018-07-25_08-24-46](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-25_08-24-46.jpg)
 
 然后，将所有one-hot向量和一个矩阵\\(E\\)相乘，得到新的向量\\(e\\)（即\\(e_i = E \cdot o_i\\)）。这里的\\(E\\)就是我们要学习出的嵌入矩阵，在模型中是要学习的参数。这里我们假设嵌入后的词向量是300维，即\\(E\\)的维度是300x10000，每个\\(e_i\\)是300维
 
-![Xnip2018-07-25_08-28-50](/content/images/2018/07/Xnip2018-07-25_08-28-50.jpg)
+![Xnip2018-07-25_08-28-50](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-25_08-28-50.jpg)
 
 然后把向量\\e\\)输入到一个神经网络，最后通过softmax输出10000维（和词汇表大小一样）。如果上面的训练样本里最后一个单词是juice，则让softmax目标输出也是juice。
 
-![Xnip2018-07-25_08-32-43](/content/images/2018/07/Xnip2018-07-25_08-32-43.jpg)
+![Xnip2018-07-25_08-32-43](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-25_08-32-43.jpg)
 
 通过输入大量的训练数据（即一部分单词和对应的目标单词，context target pair），使用梯度下降和反向传播算法可以训练出嵌入矩阵\\(E\\)
 
@@ -229,7 +229,7 @@ paper参考：
 
 前面的做法是，Context为前面4个单词（a glass of orange），而target是紧跟着的1个单词（juice）。
 
-![Xnip2018-07-25_08-48-59](/content/images/2018/07/Xnip2018-07-25_08-48-59.jpg)
+![Xnip2018-07-25_08-48-59](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-25_08-48-59.jpg)
 
 这对构建语言模型来说是很合理的，但如果不是为了构建语言模型，而**仅仅为了学习词嵌入矩阵**，context可以有更多选择：
 * 左右相邻的4个单词，比如a glass of orange和to go along with
@@ -279,7 +279,7 @@ $$L(\hat y, y) = -\sum^{10000}\_{i=1}y_i \log\hat y_i$$
 
 上面的模型有一个主要的缺点是：softmax的计算量太大，每次要计算概率都要计算整个词汇表10000个单词的求和，如果词汇表再大，比如扩充到10万、100万，计算会变得更慢。其中一种解决办法就是分级softmax分类器（Hierarchical Softmax Classifier）。即不是一下子确定属于词汇表中的哪一个，而是若干层的二分类器，先确定是前5000个，还是后5000个，以此类推。
 
-![Xnip2018-07-26_21-31-52](/content/images/2018/07/Xnip2018-07-26_21-31-52.jpg)
+![Xnip2018-07-26_21-31-52](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-26_21-31-52.jpg)
 
 3. context的抽样
 
@@ -300,13 +300,13 @@ paper参考：[Mikolov et. al., 2013. Efficient estimation of word representatio
 
 * 首先我们产生一个正样本（Positive Example），正样本的生成方法和skip-gram中类似，选择一个context单词，在一个windows大小附近随机选择一个target单词。比如上例语句中的orange和juice，我们把正样本标记为1。
 * 然后使用相同的context，生成负样本（Negative Example），负样本的对应的单词从词汇表里随机选取，比如生成一个负样本orange-king，并将负样本标记为0。同样的方法，生成更多更多的负样本，可能是：orange-book, orange-the, orange-or。由于是随机选择的，我们总认为是负样本，**因此即便上面的orange-or的例子，or其实是Orange的target，我们依然标记为0**。最终形成如下记录：
-![Xnip2018-07-27_08-55-09](/content/images/2018/07/Xnip2018-07-27_08-55-09.jpg)
+![Xnip2018-07-27_08-55-09](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-27_08-55-09.jpg)
 
 一个正样本，会选择多个负样本，其个数记为\\(k\\)，在较小数据集下\\(k\\)通常推荐取5-20，如果数据集较大，则\\(k\\)取值较小，比如2-5。
 
 我们要构造的监督学习是，输入context-word对，输出word是否为对应的target，即context-word构成监督学习的x，而target标签构成y。即区分出两种单词对分布，一种是从句子里选择的context-target，一种是随机的从词汇表里选择的词汇对。我们用\\(c\\)代表context，用\\(t\\)代表word，用\\(y\\)代表target标签：
 
-![Xnip2018-07-28_18-09-48](/content/images/2018/07/Xnip2018-07-28_18-09-48.jpg)
+![Xnip2018-07-28_18-09-48](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-28_18-09-48.jpg)
 
 我们将定义一个逻辑回归模型，跟定输入\\(c\\)和\\(t\\)的条件下，\\(y=1\\)的概率：
 
@@ -316,7 +316,7 @@ $$P(y=1 | c, t) = \sigma(\theta_t^Te_c)$$
 
 网络结构如下：
 
-![Xnip2018-07-29_11-14-15](/content/images/2018/07/Xnip2018-07-29_11-14-15.jpg)
+![Xnip2018-07-29_11-14-15](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_11-14-15.jpg)
 
 
 对于嵌入向量\\(e\\)，对应了10000个可能的逻辑回归分类问题，其中就有上述正负抽样的单词，比如juice和king。每个二元逻辑分类用来判断word是否是context-target对。
@@ -370,11 +370,11 @@ $$e_w^{(final)} = \frac{e_w+\theta_w}{2}$$
 
 下面是一个情感分类的例子，通过客户的评论x，判断客户对服务的打分y。可以用于判断人们的评价。
 
-![Xnip2018-07-29_16-34-06](/content/images/2018/07/Xnip2018-07-29_16-34-06.jpg)
+![Xnip2018-07-29_16-34-06](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_16-34-06.jpg)
 
 我们需要创建一个模型，实现x到y的映射，一种简单的模型如下：
 
-![Xnip2018-07-29_16-40-16](/content/images/2018/07/Xnip2018-07-29_16-40-16.jpg)
+![Xnip2018-07-29_16-40-16](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_16-40-16.jpg)
 
 首先将所有单词通过嵌入矩阵\\(E\\)转换为词向量，然后间词向量相加或平均，然后通过一个softmax层，输出1-5的评分。但这个模型有个缺点，是**没有考虑到单词的顺序**，对于包含了多个正面词汇的负面评价，可能得到相反的预测，比如下面的句子，虽然有多个good，但其实是完全的负面评价。
 
@@ -382,7 +382,7 @@ $$e_w^{(final)} = \frac{e_w+\theta_w}{2}$$
 
 为此，我们可以使用RNN改进，如下图：
 
-![Xnip2018-07-29_16-45-34](/content/images/2018/07/Xnip2018-07-29_16-45-34.jpg)
+![Xnip2018-07-29_16-45-34](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_16-45-34.jpg)
 
 将单词转化为词向量后，输入到一个many-to-one的RNN网络，然后通过softmax分类。
 
@@ -410,10 +410,10 @@ $$e_w^{(final)} = \frac{e_w+\theta_w}{2}$$
     因此在整个300维的嵌入空间上，我们可以得到偏见的方向和非偏见的方向。假如认为偏见方向是1维（实际上可能不止），其他299维是非偏见方向。
     
 * 中立（Neutralization）。即对于所有定义上与性别无关的单词（比如doctor、babysitter），将它们投影到偏见方向上，并在这个方向上消除。
-    ![Xnip2018-07-29_20-31-08](/content/images/2018/07/Xnip2018-07-29_20-31-08.jpg)
+    ![Xnip2018-07-29_20-31-08](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_20-31-08.jpg)
 
 * 均衡（Equalization）。即对另外一些内含有性别的单词（比如grandfather、girl、boy、she、he），我们希望词向量上的差别仅仅在于性别方向。
-    ![Xnip2018-07-29_20-37-29](/content/images/2018/07/Xnip2018-07-29_20-37-29.jpg)
+    ![Xnip2018-07-29_20-37-29](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-29_20-37-29.jpg)
 
 最后，还有一个细节是，如何选择那些单词应该是中立的单词，论文的作者是通过训练一个分类器尝试解决。
 

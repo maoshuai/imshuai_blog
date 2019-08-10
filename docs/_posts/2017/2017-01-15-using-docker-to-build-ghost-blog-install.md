@@ -25,7 +25,7 @@ Ghost是一款年轻而轻量的博客系统，使用Node.js技术实现。相�
 ## 下载Ghost的Docker镜像
 执行命令`docker pull ghost`，拉取最新的Ghost官方镜像，成功后执行`docker images`查看到已拉取的镜像：
 
-![docker images](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.09.45.png)
+![docker images](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.09.45.png)
 
 ## 启动容器
 启动容器需要注意以下几点：
@@ -42,25 +42,25 @@ Ghost是一款年轻而轻量的博客系统，使用Node.js技术实现。相�
 
 执行`docker ps`查看：
 
-![docker ps](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.16.11.png)
+![docker ps](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.16.11.png)
 
 查看本机的/root/ghost/ghost_config目录，可以看到自动生成了配置文件：
-![ghost config](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.18.57.png)
+![ghost config](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.18.57.png)
 
 # Ghost后台
 安装完毕后，在浏览器里运行查看，可以看到Ghost的默认首页。url后添加/ghost，进入后台管理界面，首次进入需要创建博客账户：
 
-![Ghost Register](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.24.07.png)
+![Ghost Register](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.24.07.png)
 
 进入后台，界面非常简洁：
-![Ghost Admin Panel](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.26.48.png)
+![Ghost Admin Panel](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.26.48.png)
 阅读默认的“Welcome to Ghost”，学习一下基本的Markdown语法，即可以开始Ghost博客之旅。
 
 # 其他注意
 
 ## 设置博客的url地址
 容器默认配置的url地址是localhost:2368，部署到服务器后，会导致某些链接不可用。需要到Ghost的配置目录，修改config.js文件development节点（Ghost默认运行在development环境），修改url为正确的地址：
-![](http://ok4jsyu7n.bkt.clouddn.com/content/images/2017/01/-----2017-01-15-19.30.36.png)
+![](http://ok4jsyu7n.bkt.clouddn.comhttps://cdn.imshuai.com/images/2017/01/-----2017-01-15-19.30.36.png)
 
 ## 时区设置
 对于部署在海外服务器上的用户来说，时区可能不正确，到Ghost的后台Panel点击General页签可以设置

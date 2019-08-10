@@ -14,19 +14,19 @@ tags:
 
 这是harbor的结果：
 
-![harbor](/content/images/2019/05/harbor.jpg)
+![harbor](https://cdn.imshuai.com/images/2019/05/harbor.jpg)
 
 而这是bay的结果：
 
-![bay](/content/images/2019/05/bay.jpg)
+![bay](https://cdn.imshuai.com/images/2019/05/bay.jpg)
 
 你立即感受到了区别，前者停满了船只，更像是一个充满人气的码头，而后者则表现出一种大自然的景观。你甚至无需知道他们的翻译，下次你就能恰当的使用这两个单词了。
 
 再举个例子，wallet和purse好像都是钱包，但搜一下图片，一目了然：
 
-![Screen-Shot-2019-05-13-at-21.49.21](/content/images/2019/05/Screen-Shot-2019-05-13-at-21.49.21.jpg)
+![Screen-Shot-2019-05-13-at-21.49.21](https://cdn.imshuai.com/images/2019/05/Screen-Shot-2019-05-13-at-21.49.21.jpg)
 
-![purse](/content/images/2019/05/purse.jpg)
+![purse](https://cdn.imshuai.com/images/2019/05/purse.jpg)
 
 再配合词典：
 

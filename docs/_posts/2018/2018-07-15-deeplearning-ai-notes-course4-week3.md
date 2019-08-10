@@ -22,7 +22,7 @@ tags:
 * Classification with localization：判断图片是否包含某物，以及某物的边框。
 * Detection：图片中包含多个属于不同类别的对象，识别出包含的所有对象，以及其边框。
 
-![Xnip2018-07-11_21-39-23](/content/images/2018/07/Xnip2018-07-11_21-39-23-1.jpg)
+![Xnip2018-07-11_21-39-23](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_21-39-23-1.jpg)
 
 其中前两个问题通常在图片中央有一个目标对象。
 
@@ -36,7 +36,7 @@ tags:
 
 目标的具体位置，可以用**边框（bounding box）** 来表示， **bounding box即一个定位物体的矩形框**，如下图：
 
-![Xnip2018-07-10_21-19-48](/content/images/2018/07/Xnip2018-07-10_21-19-48.jpg)
+![Xnip2018-07-10_21-19-48](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-10_21-19-48.jpg)
 
 框住汽车的bounding box可以用四个数字表示：
 * \\(b_x\\): 物体中心点的x坐标
@@ -47,7 +47,7 @@ tags:
 
 其中坐标系一般选择左上角为原点，右下角为(1,1)，如下图：
 
-![Xnip2018-07-10_21-30-07](/content/images/2018/07/Xnip2018-07-10_21-30-07.jpg)
+![Xnip2018-07-10_21-30-07](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-10_21-30-07.jpg)
 
 上图可能的值是\\(b_x=0.5\\)， \\(b_y=0.7\\)， \\(b_w=0.4\\)， \\(b_h=0.3\\)。
 
@@ -55,11 +55,11 @@ tags:
 
 Classification问题，最终通过softmax输出one-hot向量，表示属于哪个类型的对象，比如一个路面识别四种类型（1-行人 2-车辆 3-摩托车 4-背景）的Classification的卷积网络如下：
 
-![Xnip2018-07-11_21-48-30](/content/images/2018/07/Xnip2018-07-11_21-48-30.jpg)
+![Xnip2018-07-11_21-48-30](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_21-48-30.jpg)
 
 Classification with localization则在上述基础上，增加bounding box坐标的输出：
 
-![Xnip2018-07-11_21-50-17](/content/images/2018/07/Xnip2018-07-11_21-50-17.jpg)
+![Xnip2018-07-11_21-50-17](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_21-50-17.jpg)
 
 3. Defining the target label y
 
@@ -140,11 +140,11 @@ Localization给出了bounding box的坐标，更一般的，可以让卷积网�
 
 比如面部识别，可以输出的Landmark有：眼睛、嘴巴、鼻子等轮廓上关键点的坐标，根据需要识别的精度，调整需要输出的关键坐标点个数。
 
-![Xnip2018-07-11_22-02-48](/content/images/2018/07/Xnip2018-07-11_22-02-48.jpg)
+![Xnip2018-07-11_22-02-48](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_22-02-48.jpg)
 
 又比如肢体动作识别：
 
-![Xnip2018-07-11_22-08-03](/content/images/2018/07/Xnip2018-07-11_22-08-03.jpg)
+![Xnip2018-07-11_22-08-03](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_22-08-03.jpg)
 
 
 每个landmark用两个数字表示，比如\\((l_{1x},l_{1y})\\)表示第一个关键点的x和y坐标。
@@ -158,7 +158,7 @@ Landmark Detection的应用：面部识别、动作捕捉、AR。
 1. **Closely cropped images**
 假如要做的Car Detection，首先用**closely cropped images**（即紧贴着对象裁剪的图片）训练一个卷积网络，可以识别closely cropped images是否是汽车图片。
 
-![Xnip2018-07-11_22-17-02](/content/images/2018/07/Xnip2018-07-11_22-17-02.jpg)
+![Xnip2018-07-11_22-17-02](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_22-17-02.jpg)
 
 此卷积网络用于下面的sliding windows detection。
 
@@ -169,7 +169,7 @@ Landmark Detection的应用：面部识别、动作捕捉、AR。
 * 每次window扫过的区域，使用之前根据closely cropped images训练好的卷积网络，识别区域内是否有目标对象。
 * 不断增大window的大小，重复上面的操作。最后可能在某一个大小的window，在某个位置输出包含目标对象，这个位置的window就是目标对象的bounding box。
 
-![Xnip2018-07-11_22-23-50](/content/images/2018/07/Xnip2018-07-11_22-23-50.jpg)
+![Xnip2018-07-11_22-23-50](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-11_22-23-50.jpg)
 
 Sliding windows的主要缺点：
 * 计算量巨大，因为要用不同大小的window，对整个图片不同位置做检测。window的大小和步长的大小选择对计算量影响也很大。
@@ -184,13 +184,13 @@ Sliding windows的主要缺点：
 
 下图中上半部分，最后两层是FC layer，输出是softmax。下半部分是将**FC layer解释为Conv layer**的示意。
 
-![Xnip2018-07-12_08-26-14](/content/images/2018/07/Xnip2018-07-12_08-26-14.jpg)
+![Xnip2018-07-12_08-26-14](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_08-26-14.jpg)
 
 **可以看出，当filter的大小和输入图片的大小一致，则ConvNet本质上就是FC**。所以，这里所谓的转换成Conv Layer，只不过是观察和理解的角度不一样。
 
 **但一旦将FC转换为Conv后，有个好处是，你就不再受限于FC了，比如一旦FC前面的矩阵维度扩充了，Conv后的维度也可以跟着扩充**。比如上面的输入矩阵如果改成16x16，其他参数都不变，则如下：
 
-![Xnip2018-07-12_09-00-04](/content/images/2018/07/Xnip2018-07-12_09-00-04.jpg)
+![Xnip2018-07-12_09-00-04](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_09-00-04.jpg)
 
 可以看出最后几层就变成了2x2的矩阵了，而FC是做不到的！下面将会用到这个特性。
 
@@ -199,17 +199,17 @@ Sliding windows的主要缺点：
 假如sliding window的Convnet架构如下（即用于检测closely cropped images中是否包含目标）：
 输入一个14x14x3的图片，输出是否包含4种类型的目标。其中最后几个FC Layer是通过ConvNet实现的。另外图中的volume只画了正面，没有画channel维度。
 
-![Xnip2018-07-12_18-01-28](/content/images/2018/07/Xnip2018-07-12_18-01-28.jpg)
+![Xnip2018-07-12_18-01-28](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_18-01-28.jpg)
 
 假如被测图片是一个16x16x3的图片（即要用slide window切分的，这里为了说明，维度比较小，实际上被测图片一般比slide window要大很多，黄色部分是比window大的区域），如果按步长2进行窗口滑动，一共可以滑动出4个窗口区域。
 
-![Xnip2018-07-12_18-10-06](/content/images/2018/07/Xnip2018-07-12_18-10-06.jpg)
+![Xnip2018-07-12_18-10-06](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_18-10-06.jpg)
 
 如果使用Sliding windows detection，需要切分出4个图片，**分别**放到ConvNet里去检测。可以看出**4个window截取的区域是有重合数据的，这造成了ConvNet的4次计算有重复计算量**。而Convolutional Implementation of Sliding Windows则可以**共享这部分重复计算**，从而大幅降低整体计算量。
 
 具体做法是，将被测图片直接输入到sliding window的Convnet中（相同的卷积网络和参数）：
 
-![Xnip2018-07-12_18-15-15](/content/images/2018/07/Xnip2018-07-12_18-15-15.jpg)
+![Xnip2018-07-12_18-15-15](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_18-15-15.jpg)
 
 **由于FC层是用ConvNet实现的，所以FC层和最后的输出会变成多维（这里是2x2），而2x2的4个数据对应的就是被测图片被sliding window切分的4个区域的预测输出**。
 
@@ -220,7 +220,7 @@ Sliding windows的主要缺点：
 
 下面是更大的输入图片的例子：
 
-![Xnip2018-07-12_18-25-36](/content/images/2018/07/Xnip2018-07-12_18-25-36.jpg)
+![Xnip2018-07-12_18-25-36](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_18-25-36.jpg)
 
 
 但此方法还是有一个缺点：bounding box并不准确，毕竟bounding box是由sliding window决定的。
@@ -234,7 +234,7 @@ paper参考：[Sermanet et al., 2014, OverFeat: Integrated recognition, localiza
 
 1. YOLO的基本过程：
     * 没有sliding window，而是将图片拆分为若干个grid（比如示例中拆分为3x3，共9个grid；实际操作会拆分更多）
-    ![Xnip2018-07-12_22-06-59](/content/images/2018/07/Xnip2018-07-12_22-06-59.jpg)
+    ![Xnip2018-07-12_22-06-59](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_22-06-59.jpg)
     * 对每个grid应用Classification with localization算法（前面章节提到的），训练数据和算法的输出包含了目标的bounding box坐标的向量，比如：
     $$
      \\left[
@@ -282,13 +282,13 @@ Andrew Ng建议：YOLO的paper是最难的paper之一，阅读要有心理准备
 ## 1.6- Intersection Over Union
 如何检验目标检测算法给出的bounding box的效果呢？比如下图红色是汽车实际的bounding box，紫色是算法给出的bounding box，如何量化这个效果呢？
 
-![Xnip2018-07-12_22-23-42](/content/images/2018/07/Xnip2018-07-12_22-23-42.jpg)
+![Xnip2018-07-12_22-23-42](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_22-23-42.jpg)
 
 一个很自然的想法是看两个bounding box的重合度，具体可以用交集和并集的比值评判。比如下图黄色阴影部分是两个bounding box的交集（即重合部分），而绿色部分是两个bounding box的并集。IoU（Intersection Over Union）即这两个部分面积之比：
 
 $$IoU = \frac{\text{Intersection}}{\text{Union}}$$
 
-![Xnip2018-07-12_22-26-11](/content/images/2018/07/Xnip2018-07-12_22-26-11.jpg)
+![Xnip2018-07-12_22-26-11](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-12_22-26-11.jpg)
 
 IoU 的值介于0到1之间，越接近1表示目标的定位越准确，IoU惯例上用>=0.5表示“正确”定位的阈值，或根据情况设置这个阈值。
 
@@ -298,11 +298,11 @@ IoU 的值介于0到1之间，越接近1表示目标的定位越准确，IoU惯�
 
 比如用YOLO算法，将下图划分为19x19个grid，图中有两辆车，绿色点和黄色点是实际的目标中心点，但与之相邻的几个grid可能也会报告自己的\\(p_c\\)值很大，找到了目标。
 
-![Xnip2018-07-13_08-11-28](/content/images/2018/07/Xnip2018-07-13_08-11-28.jpg)
+![Xnip2018-07-13_08-11-28](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-13_08-11-28.jpg)
 
 最终检测的结果可能是如下多个bounding box（数字是检测出的\\(p_c\\)值）：
 
-![Xnip2018-07-13_08-15-27](/content/images/2018/07/Xnip2018-07-13_08-15-27.jpg)
+![Xnip2018-07-13_08-15-27](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-13_08-15-27.jpg)
 
 很自然的想法是，将识别了**同一个物体**的grid，取\\(p_c\\)值最大的grid。想法虽然很对，但关键点是**怎么知道哪些grid识别了同一个物体呢**，如上图有两个汽车，怎么将\\(p_c\\)值是0.8和0.9的两个grid找出？Non-max Suppression的步骤是：
 1. 首先丢弃所有\\(p_c\\)值小于0.6（该阈值可调整）的grid。（\\(p_c\\)太小的，很可能是识别了一些边边角角，可以直接丢弃）
@@ -324,7 +324,7 @@ non-max的意思就是输出最大可能性的grid，并抑制与其有重叠的
 ## 1.8- Anchor Boxes
 到目前，我们的算法中一个grid只能检测一个物体，如果要想在一个grid里检测多个物体怎么办？比如下图，汽车和人的中心点是重合的。
 
-![Xnip2018-07-13_09-05-45](/content/images/2018/07/Xnip2018-07-13_09-05-45.jpg)
+![Xnip2018-07-13_09-05-45](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-13_09-05-45.jpg)
 
 根据之前定义的输出向量y，算法在此gird输出目标类型的时候只能选择一种。
 
@@ -345,7 +345,7 @@ $$
 
 Anchor Boxes的思想是，预定义两个形状不同的称作Anchor Box的矩形。 将要预测的两个对象分别关联到两个Anchor Box上。（实践中，会定义多个Anchor Box，这里只用2个作说明 ）
 
-![Xnip2018-07-13_11-27-56](/content/images/2018/07/Xnip2018-07-13_11-27-56.jpg)
+![Xnip2018-07-13_11-27-56](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-13_11-27-56.jpg)
 
 首先将输出的label定义为两个部分（上下两部分的元素和无Anchor box的定义是一样的）：
     $$
@@ -419,11 +419,11 @@ $$
 
 首先构建training set，人工查看3x3的grid，对每个grid给出标注值y：
 
-![Xnip2018-07-15_11-10-14](/content/images/2018/07/Xnip2018-07-15_11-10-14.jpg)
+![Xnip2018-07-15_11-10-14](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-15_11-10-14.jpg)
 
 设计的ConvNet，输出volume则是3x3x16，通过这个ConvNet可以输出每个grid的预测值。
 
-![Xnip2018-07-15_11-13-00](/content/images/2018/07/Xnip2018-07-15_11-13-00.jpg)
+![Xnip2018-07-15_11-13-00](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-15_11-13-00.jpg)
 
 然后通过Non-max Suppression，产生最后的预测值。
 
@@ -433,7 +433,7 @@ $$
 
 R-CNN（Regions with CNNs）的思想是，通过Segmentation algorithm算法（即产生最右面的色块图）找出候选区域，只对有可能出现目标的色块进行检测，输出label和bounding box。相比sliding window的逐行逐列，减少了检测量。
 
-![Xnip2018-07-15_12-04-15](/content/images/2018/07/Xnip2018-07-15_12-04-15.jpg)
+![Xnip2018-07-15_12-04-15](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-15_12-04-15.jpg)
 
 但**R-CNN运算很慢**，衍生出了改良算法：
 * Fast R-CNN：使用Convolutional Implementation of Sliding Windows去识别候选区域。

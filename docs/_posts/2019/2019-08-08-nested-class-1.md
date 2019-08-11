@@ -12,6 +12,7 @@ tags:
 我们几乎每天都在定义class，除了熟练的新建一个`.java`文件，写上`public class MyClass{}`之外，还会碰到一些看起来很奇怪的类定义？没错，它们就是：**嵌套类、内部类、局部类、匿名类、lambda等**，下面我们就各个击破吧！
 
 # 什么是嵌套类
+
 Java Tutorial里给出的定义是：
 > The Java programming language allows you to define a class **within another class.** Such a class is called a nested class.
 
@@ -530,5 +531,5 @@ public class VariableCapture {
 
 > 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第4期：定义class的骚姿势——从嵌套类到lambda（上）》](https://zhuanlan.zhihu.com/p/77270861)。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NTE1OTEzNV19
+eyJoaXN0b3J5IjpbMTE1MzQ0MjQxLDExNzUxNTkxMzVdfQ==
 -->

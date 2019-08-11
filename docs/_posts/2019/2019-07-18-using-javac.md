@@ -2,13 +2,11 @@
 layout: post
 class: post-template
 navigation: True
-title: 第1期：抛开IDE，了解一下javac如何编译【转】
+title: 第1期：抛开IDE，了解一下javac如何编译
 date: '2019-7-25 20:25:23'
 tags:
 - Java与Linux学习周刊
 ---
-
-> 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第1期：抛开IDE，了解一下javac如何编译》](https://zhuanlan.zhihu.com/p/74229762)。以下为正文：
 
 IDE或maven等工具已将Java程序的编译代劳。但工具越高级，隐藏的细节就越多，一旦出现问题就懵逼，归根到底还是基础概念不牢靠。返璞归真，回到最原始的地方`javac`，会让问题豁然开朗。下面就一步一步演示用`javac`和`java`徒手编译运行一个常规工程。
 
@@ -375,5 +373,11 @@ javac [ options ] [ sourcefiles ] [ classes] [ @argfiles ]
 1. https://docs.oracle.com/javase/8/docs/technotes/tools/unix/javac.html
 2. https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
 3. https://docs.oracle.com/javase/8/docs/technotes/tools/unix/classpath.html
-3. https://docs.oracle.com/javase/tutorial/getStarted/problems/index.html
-1. http://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html
+4. https://docs.oracle.com/javase/tutorial/getStarted/problems/index.html
+5. http://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html
+
+
+> 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第1期：抛开IDE，了解一下javac如何编译》](https://zhuanlan.zhihu.com/p/74229762)。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDQ2MTQ0MTgwXX0=
+-->

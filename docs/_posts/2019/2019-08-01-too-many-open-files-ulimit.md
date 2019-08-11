@@ -1,4 +1,3 @@
-
 ---
 layout: post
 class: post-template
@@ -208,5 +207,5 @@ ulimit -n 1000 # 同时将nofiles的hard和soft值设置为1000
 
 > 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第3期：Too many open files以及ulimit的探讨》](https://zhuanlan.zhihu.com/p/75897823)。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY0Nzk0NTYyXX0=
+eyJoaXN0b3J5IjpbNTYwNDU3MDA4LDM2NDc5NDU2Ml19
 -->

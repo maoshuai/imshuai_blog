@@ -14,6 +14,7 @@ tags:
 # 什么是嵌套类
 
 Java Tutorial里给出的定义是：
+
 > The Java programming language allows you to define a class **within another class.** Such a class is called a nested class.
 
 非常简单，如果一个类**定义在了另外一个类内部**，就是嵌套类（Netsted Class），比如像这样，`NestedClass`就是一个嵌套类。
@@ -531,5 +532,6 @@ public class VariableCapture {
 
 > 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第4期：定义class的骚姿势——从嵌套类到lambda（上）》](https://zhuanlan.zhihu.com/p/77270861)。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MzQ0MjQxLDExNzUxNTkxMzVdfQ==
+eyJoaXN0b3J5IjpbLTEzMTM0OTA3MjEsMTE1MzQ0MjQxLDExNz
+UxNTkxMzVdfQ==
 -->

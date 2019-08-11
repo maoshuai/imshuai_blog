@@ -3,7 +3,7 @@ layout: post
 class: post-template
 navigation: True
 title: 第4期：定义class的骚姿势——从嵌套类到lambda（上）
-date: '2019-7-25 20:25:23'
+date: '2019-8-8 20:25:23'
 tags:
 - Java与Linux学习周刊
 - Java
@@ -532,6 +532,6 @@ public class VariableCapture {
 
 > 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第4期：定义class的骚姿势——从嵌套类到lambda（上）》](https://zhuanlan.zhihu.com/p/77270861)。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTM0OTA3MjEsMTE1MzQ0MjQxLDExNz
-UxNTkxMzVdfQ==
+eyJoaXN0b3J5IjpbLTEwMDc5NjQ4NTEsLTEzMTM0OTA3MjEsMT
+E1MzQ0MjQxLDExNzUxNTkxMzVdfQ==
 -->

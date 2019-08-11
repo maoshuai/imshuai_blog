@@ -3,13 +3,15 @@
 layout: post
 class: post-template
 navigation: True
-title: 第2期：argument、parameter以及option有什么区别【转】
-date: '2019-7-25 20:25:23'
+title: 第3期：Too many open files以及ulimit的探讨
+date: '2019-8-01 18:25:23'
 tags:
 - Java与Linux学习周刊
 - Java
 - Linux
 ---
+
+> 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第2期：argument、parameter以及option有什么区别？》](https://zhuanlan.zhihu.com/p/75897823)。以下为正文：
 
 `Too many open files`是Java常见的异常，通常是由于系统配置或程序打开过多文件导致。这个问题常常又与`ulimit`的使用相关。关于`ulimit`的用法有不少坑，本文将遇到的坑予以梳理。
 
@@ -206,5 +208,5 @@ ulimit -n 1000 # 同时将nofiles的hard和soft值设置为1000
 * [How and when and where jvm change the max open files value of Linux?](https://stackoverflow.com/questions/30487284/how-and-when-and-where-jvm-change-the-max-open-files-value-of-linux)
 * [Why file-nr and lsof count on open files differs? ](https://unix.stackexchange.com/questions/176967/why-file-nr-and-lsof-count-on-open-files-differs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTQ4Mjg5NTNdfQ==
+eyJoaXN0b3J5IjpbMTYwMTc2MzY2XX0=
 -->

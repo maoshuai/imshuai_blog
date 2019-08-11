@@ -2,7 +2,7 @@
 layout: post
 class: post-template
 navigation: True
-title: 第2期：argument、parameter以及option有什么区别【转】
+title: 第2期：argument、parameter以及option有什么区别
 date: '2019-7-25 20:25:23'
 tags:
 - Java与Linux学习周刊
@@ -10,7 +10,6 @@ tags:
 - Linux
 ---
 
-> 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第2期：argument、parameter以及option有什么区别？》](https://zhuanlan.zhihu.com/p/74477584)。以下为正文：
 
 日常交流中，我们通常用`参数`一词说明函数或者命令的使用方法，比如：
 * HashMap 可以通过构造函数的 initialCapacity **参数**设置初始容量，我传的 **参数** 是 1000。
@@ -99,3 +98,8 @@ Shell上面的解释，有点太晦涩，而且不实用。倒是Stack Overflow�
 2. [Parameter (computer programming) - Wikipedia](https://en.wikipedia.org/wiki/Parameter_%28computer_programming%29)
 3. [Command-line interface - Wikipedia](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option)
 4. [bash - Difference between terms: “option”, “argument”, and “parameter”? - Stack Overflow](https://stackoverflow.com/questions/36495669/difference-between-terms-option-argument-and-parameter)
+
+> 本文转自我的知乎专栏[《Java与Linux学习周刊》](https://zhuanlan.zhihu.com/java-linux)的[《第2期：argument、parameter以及option有什么区别？》](https://zhuanlan.zhihu.com/p/74477584)。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTg0MjQ4MDQyN119
+-->

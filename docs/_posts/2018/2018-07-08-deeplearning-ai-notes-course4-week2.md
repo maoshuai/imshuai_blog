@@ -260,7 +260,7 @@ Inception Network，即将Inception Module重复多次。形成如下的形式�
 
 另外，在中间的隐藏层，还会引出几个FC layer加softmax layer，称之为**side-branches**，使用隐藏层直接做预测，比如下图。
 
-![](http://imshuai.comhttps://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_15-43-32-1.jpg)
+![](https://cdn.imshuai.com/images/2018/07/Xnip2018-07-08_15-43-32-1.jpg)
 
 Side-branches，在预测输出上表现也不差；同时还能起到regularization的作用，抑制overfitting。
 

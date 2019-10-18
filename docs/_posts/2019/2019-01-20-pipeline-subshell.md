@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 管道与子shell
 date: '2019-01-20 08:33:10'
 tags:

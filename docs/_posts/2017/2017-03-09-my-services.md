@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 我的付费订阅服务
 date: '2017-03-09 00:29:23'
 ---

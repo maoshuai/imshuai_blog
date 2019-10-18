@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 被摁在沙发上放血——如何摆脱电视机的束缚
 date: '2017-05-11 00:39:02'
 tags:

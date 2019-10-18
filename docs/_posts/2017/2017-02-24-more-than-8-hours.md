@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 名义8小时
 date: '2017-02-24 00:50:00'
 tags:

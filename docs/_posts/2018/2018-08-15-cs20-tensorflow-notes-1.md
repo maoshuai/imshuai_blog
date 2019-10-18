@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 斯坦福CS20 TensorFlow学习笔记(1)：Overview of Tensorflow
 date: '2018-08-15 14:16:47'
 tags:

@@ -1,0 +1,263 @@
+<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>==提示：<strong>为方便阅读，《deeplearning.ai深度学习笔记》系列博文已统一整理到 <a href="http://dl-notes.imshuai.com">http://dl-notes.imshuai.com</a></strong>==</p>
+
+<p>Basics of Neural Network Programming</p>
+<h1 id="logistic-regression-as-a-neural-network">Logistic Regression as a Neural Network</h1>
+
+<h2 id="binary-classification">Binary Classification</h2>
+<ol>
+  <li>Example: 给一张64x64像素的图片图片，判断是否含有猫</li>
+  <li>获取图片的RGB像素值
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.20.31.jpg" alt="Screen-Shot-2018-06-02-at-17.20.31" /></li>
+  <li>并unroll成一个vector \(X^{(i)}\)
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.20.42.jpg" alt="Screen-Shot-2018-06-02-at-17.20.42" /></li>
+  <li>
+    <p>所有的vector组成数据集矩阵\(X\)
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.25.21.jpg" alt="Screen-Shot-2018-06-02-at-17.25.21" />
+特别注意，\(X\)的行是\(n\)，列是\(m\)，和Machine learning中的定义正好是转置的关系。这样有个好处，每条测试集在矩阵中都是以列向量的形式存在。</p>
+  </li>
+  <li>DeepLearning常用Notations:
+    <ul>
+      <li>\(m\): number of examples in datasets</li>
+      <li>\(n_x\): input size（即feature的个数）</li>
+      <li>\(n_y\): output size（即分类个数）</li>
+      <li>\(X \in \mathbb{R}^{n_x\times m} \) ：the input matrix</li>
+      <li>\(Y \in \mathbb{R}^{n_y\times m} \) ：the input matrix</li>
+      <li>带括号的上标\(^{(i)}\)，表示和training example相关的计数</li>
+    </ul>
+  </li>
+</ol>
+
+<p>完整的notation，可以参考课程中提供的PDF: <em>Standard notations for Deep Learning</em>
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-21.21.45.jpg" alt="Screen-Shot-2018-06-10-at-21.21.45" />
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-21.21.58.jpg" alt="Screen-Shot-2018-06-10-at-21.21.58" /></p>
+
+<ol>
+  <li>使用Python中的reshape方法，整理矩阵的维度。</li>
+</ol>
+
+<h2 id="logistic-regression">Logistic Regression</h2>
+<ol>
+  <li>问题描述：
+Logsitic Regression要求输出y不是0就是1。The goal of logistic regression is to minimize the error between its predictions and training data.
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.37.35.jpg" alt="Screen-Shot-2018-06-02-at-17.37.35" /></li>
+  <li>sigmoid function
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.45.47.jpg" alt="Screen-Shot-2018-06-02-at-17.45.47" />
+==这里有个疑问，为什么sigmoid处理后的值，可以代表y=1概率？==
+参考：<a href="https://stats.stackexchange.com/questions/80611/problem-understanding-the-logistic-regression-link-function/80623#80623">Logistic distribution</a></li>
+  <li>引入参数w, b，其实就是Machine learning中用的是θ，但DeepLearning中分别用w和b表示。其中w是vector，b是real number</li>
+  <li>这里 𝑦̂ 就是Machine learning里面的hypothesis function: h(θ)</li>
+</ol>
+
+<h2 id="logistic-regression-cost-funciton">Logistic Regression Cost Funciton</h2>
+
+<ol>
+  <li>
+    <p>Loss (error) function的定义：
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-17.52.42.jpg" alt="Screen-Shot-2018-06-02-at-17.52.42" />
+分成y为0和1两种情况去理解这个函数，<strong>本质上就是对𝑦̂做对数处理</strong>而已。
+因为对数处理后确实<strong>达到了Loss function的要求</strong>（我自己的理解）：1.值域是大于等于0的实数集。 2. 随着𝑦̂ 单调递减。y=𝑦̂ 的时候为0，反之趋向于∞。3. 是参数的凸函数（convex）4. 是y和𝑦̂的函数</p>
+  </li>
+  <li>没有使用square error，因为是non-convex，无法使用Gradient Descent算法</li>
+  <li>Loss function是针对单个training example的，而<strong>Cost function是Loss Function的在所有training example上的均值</strong>。
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-18.03.20.jpg" alt="Screen-Shot-2018-06-02-at-18.03.20" />
+在Machine learning里，没有引入Loss Function，其实有一个Loss Function，更好理解。</li>
+</ol>
+
+<h2 id="gradient-descent">Gradient Descent</h2>
+<p>Gradient Descent的原理（Intuition）：按梯度最大的方向逼近最小值。
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-02-at-20.48.07.jpg" alt="Screen-Shot-2018-06-02-at-20.48.07" /></p>
+
+<p>Gradient Descent算法步骤：</p>
+<ol>
+  <li>Initialize \(w\), \(b\) to zero</li>
+  <li>repeat：</li>
+</ol>
+
+<p><script type="math/tex">w\ :=w - w\frac{\partial J( w,b)}{\partial w}</script>
+<script type="math/tex">b\ :=b - b\frac{\partial J( w,b)}{\partial b}</script></p>
+
+<h2 id="derivatives">Derivatives</h2>
+<p>为不了解导数的人介绍导数的直观含义，这里不作说明了。</p>
+
+<h2 id="more-derivative-examples">More Derivative Examples</h2>
+<p>为不了解导数的人介绍导数的直观含义，这里不作说明了。</p>
+
+<h2 id="computation-graph">Computation graph</h2>
+<p>从左到右：计算函数J
+从右到左：计算J对参数w和b导数</p>
+
+<h2 id="derivative-with-a-computation-graph">Derivative with a Computation Graph</h2>
+<ul>
+  <li>其实是就是复合函数的链式法则。</li>
+  <li>计算图左边的变量的偏导数依赖于右边的偏导数，右边的偏导数计算后，可以被左边的计算复用。</li>
+</ul>
+
+<p>在Python中表示偏导数
+<script type="math/tex">dvar = \frac{\partial J}{\partial var}</script></p>
+
+<h2 id="logistic-regression-gradient-descent">Logistic Regression Gradient Descent</h2>
+<p>使用Computation Graph计算</p>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-08.26.07.jpg" alt="Screen-Shot-2018-06-04-at-08.26.07" /></p>
+
+<p>虽然，测试集是离散的，但并不代表对w的倒数是离散的，这两者没有任何关系。<strong>始终注意：在gradient Descent的时候，x是常量</strong></p>
+
+<h2 id="gradient-descent-on-m-examples">Gradient Descent on m Examples</h2>
+<p>Cost Function的偏导是Loss Function偏导的均值：
+<script type="math/tex">\frac{\partial J(w,b)}{\partial w_j} =\frac{1}{m} \sum_{i=1}^{m} \frac{\partial \mathcal{L}(a^{(i)},y^{(i)})}{\partial w_j^{(i)}}</script></p>
+
+<p>Gradient Descent算法过程：</p>
+<ol>
+  <li>求导过程
+ 求导过程又通常是先forward propagation求cost function，然后再backward propagation求到w和b的倒数</li>
+  <li>下降过程
+使用到w和b的导数，迭代做梯度下降过程。</li>
+</ol>
+
+<p>下面的截图就是一个非向量化的实现：
+左边是求导过程，右边是梯度下降过程
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-09.02.27.jpg" alt="Screen-Shot-2018-06-04-at-09.02.27" /></p>
+
+<h1 id="python-and-vectorization">Python and Vectorization</h1>
+<h2 id="vectorization">Vectorization</h2>
+<ol>
+  <li>
+    <p>什么是Vectorization：将 for loop 尽可能转换为矩阵运算。举例：
+<script type="math/tex">z = w^Tx + b</script>
+<img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-09.13.25.jpg" alt="Screen-Shot-2018-06-04-at-09.13.25" /></p>
+  </li>
+  <li>
+    <p>vectorization的好处：conciser code, but faster execution
+一个简单的对比实验：1,000,000大小的两个向量内积计算，for loop要比Vectorization快300倍。
+在DeepLearning时代，vectorization是一项重要的技能。</p>
+  </li>
+  <li>
+    <p>SIMD
+Both CPU and GPU have parallelization instructions(i.e. SIMD, Signle Instruction Multiple Data)</p>
+  </li>
+</ol>
+
+<h2 id="more-vectorization-examples">More vectorization Examples</h2>
+<ol>
+  <li>原则：whenever possible, avoid explict for-loops</li>
+  <li>使用Element wised的矩阵运算，将函数作用在每个矩阵元素上，比如：
+    <ul>
+      <li>np.exp()</li>
+      <li>np.log()</li>
+      <li>np.abs()</li>
+      <li>np.maxium()</li>
+      <li>1/v</li>
+      <li>v**2</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="vectorizing-logistic-regression">Vectorizing logistic Regression</h2>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-04-at-19.50.07.jpg" alt="Screen-Shot-2018-06-04-at-19.50.07" /></p>
+
+<script type="math/tex; mode=display">A = \sigma(w^T X + b) = (a^{(1)}, a^{(2)}, ..., a^{(m-1)}, a^{(m)})</script>
+
+<p>（我始终觉得A应该小写，毕竟还是一个行向量）</p>
+
+<p>个人经验：</p>
+<ol>
+  <li>首先，熟悉每个变量的记号和维度，必要的话，可以画出来，更直观。</li>
+  <li>先从一个样本做向量化，再把m个样本的操作向量化。</li>
+  <li>for-loop里面是循环乘法，则向量化一定是一个乘法形式，若对于不确定乘法的左右关系，是否需转置，可以根据目标变量的维度推测。或者先乘起来，再根据目标变量看是否要转置。</li>
+</ol>
+
+<h2 id="vectorizing-logistic-regressions-gradient-output">Vectorizing Logistic Regression’s Gradient Output</h2>
+
+<p>推导过程</p>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-09-at-18.35.35.jpg" alt="Screen-Shot-2018-06-09-at-18.35.35" /></p>
+
+<p>最终向量化的形式是：</p>
+
+<p><script type="math/tex">\frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T</script>
+<script type="math/tex">\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})</script></p>
+
+<h2 id="broadcasting-in-python">Broadcasting in Python</h2>
+<p>在matlab和Python中，都默认支持不同维度的变量做element-wised的计算（+-x/等）。所谓<strong>Broadcasting</strong>其实就是高纬度数组和低纬度数组计算时，将低维的变量<strong>通过复制的方式向高维扩展维度</strong>，再做运算。但要注意：</p>
+<ol>
+  <li>低纬度数组与高纬度共有的维度，元素个数必须一样，比如一个shape是(5,3)的数组可以和一个shape是(5,)的数组相加，但不能和一个(4,)的数组相加。</li>
+  <li>维度相同的数组的数组，是不能broadcasting的，比如一个shape是(5,3)的数组和一个shape是(5,2)的数组运算，后者是无法broadcasting的</li>
+  <li>某个维度的个数是1，等同于这个维度不存在，可以broadcasting，比如shape是(5,3)和(5,1)的数组可以运算。</li>
+</ol>
+
+<p>总的来说，就是broadcasting要做某个维度的复制，必须在赋值的时候行得通。比如shape是(5,3)和shape是(5,2)的数组运算，后者要将2复制为3是行不通的，因为存在两行，那取哪一行？</p>
+
+<p>Andrew的一个经验：如果对某个数组的shape不确定，可以用reshape显式的调用一下，确保维度正确。</p>
+
+<p>补充：numpy中，类似sum的函数，经常涉及axis参数，可以取值为0或1，甚至其他。经常记不住，这里我查了了一下，是这样的（<a href="https://stackoverflow.com/questions/17079279/how-is-axis-indexed-in-numpys-array">原文</a>）：</p>
+<ol>
+  <li><strong>axis的数字，和数组的shape参数的索引是对应的</strong>。比如一个数组的shape是(5,6)，则代表5个row，6个column。即在shape中，row和column的个数的索引是0和1。也就第1个坐标，在shape中的第一个元素，<strong>索引是0，代表row的方向</strong>；第2个坐标，在shape中的第2个元素，<strong>索引是1，代表row的方向</strong>。</li>
+  <li>对于sum函数，axis指的是sum“<strong>沿着</strong>”的方向，经过计算，这个方向的维度因为求和后就消失了，比如sum(axis=0)代表是沿着“row”方向进行求和，</li>
+  <li>当然axis可以是一个tupe，那就相当于沿着多个多个方向求和。</li>
+  <li>sum如果不传入axis参数，默认是对所有维度求和。</li>
+</ol>
+
+<h2 id="a-note-on-pythonnumpy-vectors">A note on python/numpy vectors</h2>
+<p>broadcasting的一个弱点：可能隐藏潜在的错误，比如一个计算中本来要去两个运算的数组维度一样，如果没有broadcasting，就会直接报错；而broadcasting允许可继续执行。</p>
+
+<p><strong>rank 1 array问题</strong>：shape是(x,)的数组，既不是行向量，也不是列向量，没法参与正常的矩阵运算，应该总是使用(x,1)或(1,x)的shape来表示向量。但可以通过reshape方法将rank 1 array转换为行向量或列向量。（什么是rank，就是一个数组的维度）</p>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.03.37.jpg" alt="Screen-Shot-2018-06-10-at-18.03.37" /></p>
+
+<h2 id="quick-tour-of-jupyteripython-notebooks">Quick tour of Jupyter/iPython Notebooks</h2>
+
+<p>这部分，也可以参考我之前的文章：《<a href="/jupyter-notebook-introduction-configuration/">Jupyter Notebook简介和配置说明</a>》</p>
+
+<h2 id="explanation-of-logistic-regression-cost-function-optional">Explanation of logistic regression cost function (optional)</h2>
+<p>计算结果𝑦̂代表了给定样本x，y=1的概率，即𝑦̂=P(y=1|x)</p>
+
+<p>但为什么可以对应到概率呢？参考：为什么sigmoid可以代表概率，涉及Logistic distribution
+https://stats.stackexchange.com/questions/80611/problem-understanding-the-logistic-regression-link-function/80623#80623</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Loss function其实就是对概率P(y</td>
+      <td>x)取对数：</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.28.41.jpg" alt="Screen-Shot-2018-06-10-at-18.28.41" /></p>
+
+<p>Loss function越小，则取到和实际值y的概率越大。</p>
+
+<p>所有样本的Cost function：</p>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.32.40.jpg" alt="Screen-Shot-2018-06-10-at-18.32.40" /></p>
+
+<h1 id="heros-of-deep-learningpieter-abbeel-interview">Heros of Deep Learning：Pieter Abbeel interview</h1>
+
+<p><img src="https://cdn.imshuai.com/images/2018/06/Screen-Shot-2018-06-10-at-18.34.23.jpg" alt="Screen-Shot-2018-06-10-at-18.34.23" /></p>
+
+<ol>
+  <li>
+    <p>Pieter Abbeel专注于deep reinforcement learning.</p>
+  </li>
+  <li>advice for people entrying AI
+    <ul>
+      <li>A good time to enter AI. High demand.</li>
+      <li>Not just read things or watch videos but <strong>try things out</strong>.</li>
+      <li>With frameworks like <strong>TensorFlow, Chainer, Theano, PyTorch and so forth</strong>, it’s very easy to get going and get something up and running very quickly.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Andrew Ng: We live in good times. If people want to learn.</p>
+  </li>
+  <li>what are the things that deep reinforcement learning is already working really well at?
+    <ul>
+      <li>learning to play games from pixels</li>
+      <li>robot inventing walking, running, standing up with a single algorithm.</li>
+    </ul>
+  </li>
+</ol>
+

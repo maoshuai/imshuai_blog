@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 使用MathJax在Ghost博客插入数学公式
 date: '2017-01-21 02:53:03'
 tags:

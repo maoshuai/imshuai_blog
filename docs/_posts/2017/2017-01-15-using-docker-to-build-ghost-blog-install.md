@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 使用Docker构建Ghost博客(1/2)：安装

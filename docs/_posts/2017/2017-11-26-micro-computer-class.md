@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 微机兴趣班
 date: '2017-11-26 11:10:41'
 tags:

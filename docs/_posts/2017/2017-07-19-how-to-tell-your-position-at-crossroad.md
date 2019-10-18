@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 怎样向专车司机准确描述十字路口位置
 date: '2017-07-19 00:31:19'
 tags:

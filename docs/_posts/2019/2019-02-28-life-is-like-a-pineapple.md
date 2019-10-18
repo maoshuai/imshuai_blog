@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 人生就像一个菠萝
 date: '2019-02-28 15:00:58'
 tags:

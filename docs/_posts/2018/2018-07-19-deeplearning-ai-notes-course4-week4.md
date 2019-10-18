@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 'deeplearning.ai深度学习笔记（Course4 Week4）：Special applications: Face recognition
   & Neural style transfer'
 date: '2018-07-19 13:27:45'

@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 诡异的现象：df报文件系统满，但du看差别很大
 date: '2017-08-08 08:25:44'
 tags:

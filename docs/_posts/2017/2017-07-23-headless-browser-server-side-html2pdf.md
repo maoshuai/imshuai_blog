@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Headless Browser与服务器端HTML转PDF
 date: '2017-07-23 13:23:32'
 ---

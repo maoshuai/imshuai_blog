@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course1 Week1）：Introduction to deep learnring
 date: '2018-05-28 13:22:09'
 tags:

@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第4期：定义class的骚姿势——从嵌套类到lambda（上）

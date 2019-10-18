@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 从窃格瓦拉到三和大神
 date: '2018-06-03 09:08:39'
 tags:

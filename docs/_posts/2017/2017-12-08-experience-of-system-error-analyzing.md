@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 一次系统查错经验总结
 date: '2017-12-08 12:25:06'
 tags:

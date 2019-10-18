@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第3期：Too many open files以及ulimit的探讨

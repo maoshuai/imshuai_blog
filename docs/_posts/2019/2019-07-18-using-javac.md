@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第1期：抛开IDE，了解一下javac如何编译

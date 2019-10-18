@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 闲谈Markdown
 date: '2018-09-07 13:08:08'
 tags:

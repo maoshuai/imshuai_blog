@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 'deeplearning.ai深度学习笔记（Course4 Week2）：Deep convolutional models: case studies'
 date: '2018-07-08 09:57:30'
 tags:

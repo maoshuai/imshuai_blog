@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 近期做面试官的总结
 date: '2017-06-14 11:06:56'
 tags:

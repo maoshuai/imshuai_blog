@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 爸爸妈妈和父亲母亲
 date: '2017-09-04 14:51:36'
 tags:

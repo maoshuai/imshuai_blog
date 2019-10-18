@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: Holy Cow和Mix and Match

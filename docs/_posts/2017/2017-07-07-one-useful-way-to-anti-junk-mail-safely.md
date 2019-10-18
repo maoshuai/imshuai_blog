@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 放心实用的个人反垃圾邮件方法
 date: '2017-07-07 13:51:10'
 tags:

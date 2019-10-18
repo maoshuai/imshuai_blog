@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course4 Week1）：Foundations of Convolutional Neural Networks
 date: '2018-07-04 14:29:48'
 tags:

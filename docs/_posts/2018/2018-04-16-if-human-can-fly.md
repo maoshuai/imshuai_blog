@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 假如人会飞
 date: '2018-04-16 04:12:03'
 ---

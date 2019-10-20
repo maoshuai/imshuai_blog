@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: Holy Cow和Mix and Match
@@ -10,6 +9,9 @@ tags:
 ---
 
 去年11月份去了趟夏威夷玩耍，最大的感受是英语派上用场了，和去日本的时候感受大不相同，那时候对方经常会被逼到找中国人过来。对比后，才感受到了“自由”。
+
+<!--more-->
+
 
 期间我参加了当地的哈纳公路一日游，同车的都是native speaker，听着导游司机一路叨逼叨的不停，时而介绍风景，时而开开玩笑，竟然也听得懂了。
 

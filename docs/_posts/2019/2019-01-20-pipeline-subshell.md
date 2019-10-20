@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 管道与子shell
 date: '2019-01-20 08:33:10'
 tags:
@@ -7,6 +6,9 @@ tags:
 ---
 
 最近写一个shell脚本，遇到了一个奇怪的现象，经过一番查询发现之前没有注意过的陷阱：Shell（至少是Bash）会将管道运算符的前后命令放到子shell里执行。这将导致：看似在一个脚本的变量，出现改动后没效果的现象。下面是问题背景，关于此问题可以直接跳到“问题”一节查看。
+
+<!--more-->
+
 # 背景
 用nmon监控机器的CPU等数据，若要转换成可视化图表，可以使用IBM提供的[nmon Excel宏](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power+Systems/page/nmon_analyser)来生成。但要借助Excel生成，不方便批量处理，太麻烦了。若是能用命令行生成网页，直接在服务器上看就好了。
 

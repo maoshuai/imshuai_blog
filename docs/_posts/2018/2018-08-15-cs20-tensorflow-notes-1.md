@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 斯坦福CS20 TensorFlow学习笔记(1)：Overview of Tensorflow
 date: '2018-08-15 14:16:47'
 tags:
@@ -11,6 +10,9 @@ tags:
 Google官方的介绍是：
 
 >TensorFlow™ is an open source software library for high performance numerical computation. 
+
+<!--more-->
+
 
 TensorFlow最早起源于Google内部的机器学习工具，而TensorFlow则是该工具于2015年11月的开源实现（剥离了Google内部代码的依赖）。
 

@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Python pip离线安装package方法总结（以TensorFlow为例）
 date: '2018-06-14 09:54:00'
 tags:
@@ -10,6 +9,10 @@ tags:
 Python环境安装package，一般采用`pip`命令在线从PyPI是安装，这也是最方便的途径。但在某些情况下，**要为一台离线的机器（比如在内网运行的一台生产服务器）安装package**，根本就连不上PyPI。当然，大厂一般都有内网PyPI代理，只要改一下`--index-url`参数即可；但若代理也没有，只能**手工将所有依赖到的package离线下载下来，放到offline的机器上安装**。
 
 下面是说明了整个探索过程。最终总结的方法，直接看文末的“推荐方法”即可。
+
+
+<!--more-->
+
 
 # 心路历程
 

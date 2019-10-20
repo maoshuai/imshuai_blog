@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: React技术栈学习路线图
 date: '2017-05-27 06:21:05'
 tags:
@@ -7,6 +6,10 @@ tags:
 ---
 
 最近，项目上使用React构建前台，我突击了一下相关的知识，暂时搭建了一个简单的开发环境，总结了期间的学习资料，如下：
+
+
+<!--more-->
+
 
 # 传统前端基础
 

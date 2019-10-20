@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week1）：Practical aspects of deep learning
 date: '2018-06-17 15:40:17'
 tags:
@@ -22,6 +21,10 @@ tags:
     * 标准化输入（Normalizing ）
     * 梯度消失和梯度爆炸问题（Vanishing/Exploding Gradient）以及缓解方法
     * 验证梯度计算是否正确。
+
+
+<!--more-->
+
 
 # 1- Setting up your Machine Learning Application
 ## 1.1- Train / Dev / Test sets

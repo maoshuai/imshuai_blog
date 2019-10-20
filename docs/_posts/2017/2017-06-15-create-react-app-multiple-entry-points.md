@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 修改create-react-app支持多入口
 date: '2017-06-15 11:59:53'
 tags:
@@ -7,6 +6,9 @@ tags:
 ---
 
 使用Facebook官方脚手架[create-react-app](https://github.com/facebookincubator/create-react-app)创建React应用，默认只能生成一个SPA，入口是index.html。虽然，SPA的页面切换可以使用前台路由框架方便（比如React-Router）实现，这也是SPA的推荐做法；但某些情况下，仍要将页面切分为多个页面，或者在同一个工程开发多个SPA，比如一个是面向客户的SPA，一个是后台管理的SPA。
+
+
+<!--more-->
 
 (==For English readers at article bottom==)
 

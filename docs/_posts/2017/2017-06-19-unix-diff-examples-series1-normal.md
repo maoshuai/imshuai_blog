@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 超详细举例看懂Unix的diff格式(1/3)：diff的常规模式
 date: '2017-06-19 12:28:19'
 tags:
@@ -7,6 +6,9 @@ tags:
 ---
 
 在使用git的过程中，难免会用到git diff命令，用于比较文件差异。但初学者对这个命令的输出格式几乎都是一脸懵逼，需仔细研究一番。
+
+<!--more-->
+
 
 我读过阮一峰的[《读懂diff》](http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html)，收获颇大，但还是写了本文。一来，阮一峰文章中的举例过于简单和特殊，有些问题没有解释清楚；二来，也是自己的一份总结。
 

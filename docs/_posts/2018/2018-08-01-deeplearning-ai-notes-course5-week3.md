@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course5 Week3）：Sequence models & Attention mechanism
 date: '2018-08-01 14:02:34'
 tags:
@@ -13,6 +12,9 @@ tags:
 </script>
 
 本周是deeplearning.ai系列的最后一节课，以机器翻译为例，介绍了seq2seq模型，扩展分析了beam search、bleu score和attention model。最后简要介绍了语音识别和触发词检测。
+
+<!--more-->
+
 
 # 1- Various sequence to sequence architectures
 ## 1.1- Basic Models

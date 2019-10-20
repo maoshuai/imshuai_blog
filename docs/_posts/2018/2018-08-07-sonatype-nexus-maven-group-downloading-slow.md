@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Sonatype Nexus maven私服group仓库构件下载缓慢问题
 date: '2018-08-07 02:22:09'
 tags:
@@ -7,6 +6,9 @@ tags:
 ---
 
 部门内供大家使用的maven私服，下载构件的速度越来越慢了，很多同事频繁反映打个包光下载构件就要一个小时，苦不堪言。
+
+<!--more-->
+
 
 私服上是建立了一个group仓库，聚合了包括maven官方中央仓库、私服的release、snapshot、thirdparty等仓库。然后将group仓库的地址提供给所有开发人员使用。**并且这台maven私服是无法访问外网的**。
 

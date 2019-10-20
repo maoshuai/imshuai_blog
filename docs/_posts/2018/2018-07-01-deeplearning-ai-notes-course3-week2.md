@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course3 Week2）：ML Strategy (2)
 date: '2018-07-01 06:42:26'
 tags:
@@ -11,6 +10,10 @@ tags:
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 本周继续介绍了机器学习的策略。包括如何做错误分析，如何处理training与dev/test分布不一致的情况，以及最新发展的迁移学习、多任务学习以及end-to-end学习。
+
+
+<!--more-->
+
 
 # 1- Error Analysis
 ## 1.1- Carrying out error analysis

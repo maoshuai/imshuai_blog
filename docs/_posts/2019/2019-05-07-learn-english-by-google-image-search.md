@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 使用Google图片搜索学英语
@@ -9,6 +8,9 @@ tags:
 ---
 
 学习英文单词，经常困惑一些近义词，尤其是翻译成中文都差不多的情况，真是傻傻分不清楚。最近我发现如果用Google图片搜索，直接搜这个单词，经常一下子就醍醐灌顶了。
+
+<!--more-->
+
 
 比如harbor 和 bay，前者翻译为“海港”，后者翻译成“海湾”，到底有什么区别呢？google一下：
 

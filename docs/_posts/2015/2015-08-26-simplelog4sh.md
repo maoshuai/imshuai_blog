@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 简单shell日志框架simpleLog4sh
@@ -10,6 +9,8 @@ tags:
 
 simpleLog4sh是我从之前写的shell脚本里提取的shell日志工具类。简单改进以后，形成极为简单的shell日志框架。目前发布在GitHub上： 
 [https://github.com/maoshuai/simpleLog4sh](https://github.com/maoshuai/simpleLog4sh)
+
+<!--more-->
 
 # 简介
 **simpleLog4sh**是一个极为简单的shell日志框架，甚至不应该叫日志框架。  

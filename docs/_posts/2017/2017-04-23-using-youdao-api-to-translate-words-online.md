@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 使用有道API在线批量翻译单词
 date: '2017-04-23 13:41:22'
 tags:
@@ -8,6 +7,10 @@ tags:
 ---
 
 之前，我已经确立了[英语学习方针](/make-english-the-first-reading-lanuage/)，接下来第一个关键目标，就是词汇量突破到7000这一分水岭。
+
+
+<!--more-->
+
 
 有网友从COCA上已提取了7000个最常用的英文单词，我根据自身情况，筛选出自己不熟悉的4000个单词，并整理到了Excel中按计划背诵。
 

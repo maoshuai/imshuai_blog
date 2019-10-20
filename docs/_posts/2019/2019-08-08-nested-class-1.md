@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第4期：定义class的骚姿势——从嵌套类到lambda（上）
@@ -11,6 +10,9 @@ tags:
 
 我们几乎每天都在定义class，除了熟练的新建一个`.java`文件，写上`public class MyClass{}`之外，还会碰到一些看起来很奇怪的类定义？没错，它们就是：**嵌套类、内部类、局部类、匿名类、lambda等**，下面我们就各个击破吧！
 
+
+<!--more-->
+
 # 什么是嵌套类
 
 Java Tutorial里给出的定义是：
@@ -19,7 +21,7 @@ Java Tutorial里给出的定义是：
 
 非常简单，如果一个类**定义在了另外一个类内部**，就是嵌套类（Netsted Class），比如像这样，`NestedClass`就是一个嵌套类。
 
-```Java
+```java
 class OuterClass {
     class NestedClass {
     }
@@ -41,7 +43,7 @@ class OuterClass {
 
 进一步，**内部类又可以分为：局部类、匿名类、lambda表达式**。下面是一个例子，囊括了所有种类的嵌套类：
 
-```Java
+```java
 // file: AllNestedClass.java
 package com.imshuai.javalinux.w4;
 public class AllNestedClass {
@@ -86,7 +88,7 @@ class NonPublic{
 
 静态嵌套类的基本形式是：1. 定义为外部类的一个成员。2. 通过static修饰。比如下面的例子：
 
-```Java
+```java
 class OuterClass {
     static class StaticNestedClass {
     }
@@ -98,7 +100,7 @@ class OuterClass {
 ## 无法直接访问外部类实例成员
 和静态方法或静态变量一样，静态嵌套类是**类成员**，因此静态外部类**不能直接访问外部类的实例方法或变量**，这一点很像静态方法，比如：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.staticnested;
 public class OuterClass {
 	public String outerName = "outerName";
@@ -116,7 +118,7 @@ public class OuterClass {
 
 但静态嵌套类可以通过**创建外部类的实例**访问外部类的实例变量：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.staticnested;
 public class OuterClass {
 	public String outerName = "outerName";
@@ -131,7 +133,7 @@ public class OuterClass {
 
 同时，静态嵌套类还是有**嵌套类的优待**的：**可以访问外部类实例的private成员**，比如上面的`outerName`修改为`private`，`StaticNetstedClass.print()`一样可以访问：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.staticnested;
 public class OuterClass {
 
@@ -149,7 +151,7 @@ public class OuterClass {
 
 嵌套类在引用时，需要通过外部类实现。下面是在外部引用和实例化静态类的例子：
 
-```Java
+```java
 // 无法直接判断OuterClass是报名还是外部类
 import com.imshuai.javalinux.w4.staticnested.OuterClass.StaticNetstedClass;
 public class Main {
@@ -164,7 +166,7 @@ public class Main {
 
 不过，更清晰的表示是带上`OuterClass.`作为自己的前缀，就像这样：
 
-```Java
+```java
 package com.imshuai.javalinux.w4;
 import com.imshuai.javalinux.w4.staticnested.OuterClass;
 public class Main {
@@ -180,7 +182,7 @@ public class Main {
 
 我们知道一个普通类一般只能被声明为`public`或`package`访问权限。而在外部类的管理下，静态嵌套类的访问权限，完全由外部类说的算。这就带来了一个有意思的结果：**静态嵌套类可以是private、protected、public或package的**。比如下面，`StaticNetstedClass`声明为`protected`，因此只能由`OuterClass`自己或其子类声明和使用：
 
-```Java
+```java
 public class OuterClass {
 	private String outerName = "outerName";
 	// 只有OuterClass的子类可以声明和使用
@@ -216,7 +218,7 @@ public class OuterClass {
 
 我们先研究一般内部类，即被定义为外部类非static成员的内部类。其基本形式是：
 
-```Java
+```java
 public class OuterClass {
 	public class InnerClass{
 	}
@@ -227,7 +229,7 @@ public class OuterClass {
 
 我先定义过一个简单的外部类和内部类：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.inner;
 public class OuterClass {
 	public class InnerClass{
@@ -237,7 +239,7 @@ public class OuterClass {
 
 下面是实例化的步骤：
 
-```Java
+```java
 package com.imshuai.javalinux.w4;
 import com.imshuai.javalinux.w4.inner.OuterClass;
 public class Main {
@@ -254,7 +256,7 @@ public class Main {
 
 如果硬改成像嵌套静态类那样直接实例化，编译会有如下报错：
 
-```Java
+```java
 /* 编译报错:
 - No enclosing instance of type OuterClass is accessible. 
 Must qualify the allocation with an enclosing instance of type
@@ -270,7 +272,7 @@ OuterClass.InnerClass innerObject = new OuterClass.InnerClass();
 
 我觉得很牵强，其实Oracle的Java Tutorial并没有说清楚。不过我觉得这可能只是人为限制，因为**我们可以让内部类通过继承一个含有static成员或方法的父类突破这一限制**（如下例），既然可以通过继承调用静态方法，为什么不能直接包含静态方法呢？
 
-```Java
+```java
 package com.imshuai.javalinux.w4.inner;
 class StaticParent{
     // 父类加一个static方法
@@ -295,7 +297,7 @@ public class InnerClassStatic{
 
 但仍存在一个例外是，**内部类可以定义常量。所谓常量即static final修饰的原始数据类型或String**，它们都是可以在编译期计算出来，又编译器并做代码替换。比如下面是可行的：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.inner;
 public class StaticFinalConstantMember {
 	class Inner{
@@ -312,7 +314,7 @@ public class StaticFinalConstantMember {
 
 和实例变量或实例方法一样，内部类与外部类的实例相关联，并且可以**直接访问外部类的实例变量或实例方法**。
 
-```Java
+```java
 package com.imshuai.javalinux.w4.inner;
 public class OuterClass {
 	private String name = "Jack";
@@ -331,7 +333,7 @@ public class OuterClass {
 
 内部类如果定义了和外部类一样的变量名，则在内部类中也会出现变量名覆盖现象（shadowing），如果需要访问外部类的变量，则**需要通过外部类的类名进行区分**，比如下面的例子：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.inner;
 public class ShadowTest {
 	public int x = 0;
@@ -356,7 +358,7 @@ public class ShadowTest {
 方法参数、内部类以及外部类都有相同变量名`x`。此时直接写`x`代表最近的定义，即方法参数；`this`指代内部类；而外部类的`x`，需要增加类名`ShadowTest`再加上`this`。
 
 所以，**类名+this+变量名的形式才是实例成员的完全体**，即便没有冲突你可以这样写，就是太啰罢了：
-```Java
+```java
 public class ThisTest {
 	
 	private String name;
@@ -370,7 +372,7 @@ public class ThisTest {
 
 除了上面将内部类定义在class内，还可以**定义在代码段里（比如方法体内），称作局部类（Local Class）**。下面代码中`PhoneNumber`就是一个局部类的例子，它定义在了`validatePhoneNumber`的方法体内：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.lcoal;
 public class LocalClassExample {
 	private static String regularExpression = "[^0-9]";
@@ -409,7 +411,7 @@ public class LocalClassExample {
 
 上面的代码，局部类`PhoneNumber`，封装了对电话号码的格式验证的逻辑。那为什么使用局部类呢？想象一下，如果验证电话号码的逻辑不用局部类，可以怎么实现？最常规的办法就是将逻辑抽象成一个private方法供`validatePhoneNumber`调用，比如这样：
 
-```Java
+```java
 package com.imshuai.javalinux.w4.lcoal;
 
 public class LocalClassExampleOtherwise {
@@ -462,7 +464,7 @@ Java为什么要这样限制局部类呢？这是因为**局部类的生命周�
 
 我们先定义一个接口：
 
-```Java
+```java
 public interface TestInterface{
 	public void internalTestFunction();
 }
@@ -470,7 +472,7 @@ public interface TestInterface{
 
 然后在一个方法内定义局部类，实现上述接口，通过方法将局部类的实例返回，并在main函数访问：
 
-```Java
+```java
 public class VariableCapture {
 	public static TestInterface testFunction () {
 		int value = 3;

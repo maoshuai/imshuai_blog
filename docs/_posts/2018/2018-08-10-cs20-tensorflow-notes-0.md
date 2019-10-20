@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 斯坦福CS20 TensorFlow学习笔记(0)：开篇
 date: '2018-08-10 06:23:43'
 tags:
@@ -9,6 +8,9 @@ tags:
 ---
 
 在学习完Andrew Ng的经典课程deeplearning.ai之后，再接再厉，开始学习TensorFlow的征程。
+
+<!--more-->
+
 
 TensorFlow作为目前最火的开源机器学习框架，不可忽视。学习第一个问题就是，**用什么课程或图书学习**，咨询了老司机，我暂定参考以下面几份材料：
 

@@ -1,10 +1,13 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 优秀链接
 date: '2017-05-03 14:49:09'
 ---
 
 这里收集了我喜欢的优秀链接。
+
+
+<!--more-->
+
 
 ## 个人
 * [阮一峰网络日志](http://www.ruanyifeng.com/blog/)

@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week2）：Optimization algorithms
 date: '2018-06-23 07:55:06'
 tags:
@@ -11,6 +10,7 @@ tags:
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
 # 1- Optimization algorithms
 应用Machine learning是一项非常经验性（empirical）的过程，需要训练很多模型，然后找出效果最好的。因此，训练的速度够快是至关重要的。
 
@@ -22,6 +22,9 @@ tags:
     * Learning rate decay
 
 另外，在最后说明了梯度下降的主要问题不是local optima问题，而是plateaus问题。
+
+
+<!--more-->
 
 ## 1-1 Mini-batch gradient descent
 1. Vectorization本身已经很大程度提升了gradient descent的速度，但之前介绍的是最基本的gradient descent算法（即batch gradient descent） **要遍历所有m个数据样本才会做一次梯度下降** 。随着m的增大，这个过程会很慢，一次梯度下降的成本变得很大。

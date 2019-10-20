@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 使用Dropbox API备份Ghost博客
 date: '2017-01-18 14:10:39'
 tags:
@@ -9,6 +8,9 @@ tags:
 ---
 
 在之前的文章，[《使用Docker构建Ghost博客(2/2)：备份和更新》](/using-docker-to-build-ghost-blog-update_backup/) 已经介绍了如何定时备份 Ghost 博客数据到本地的一个.tar.gz文件。
+
+<!--more-->
+
 
 但严格来说，这种备份不是很有效，毕竟在同一台服务器。因此，最好的办法是寻找==一个异地备份==。
 

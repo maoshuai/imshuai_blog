@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 使用MathJax在Ghost博客插入数学公式
 date: '2017-01-21 02:53:03'
 tags:
@@ -11,6 +10,10 @@ tags:
 </script>
 
 Markdown文档，没有办法直接书写数学公式。好在有很多方案可以将LaTeX语法的公式渲染出来。
+
+
+<!--more-->
+
 
 
 [MathJax](https://www.mathjax.org)™，是一个优秀的JavaScript数学公式生成引擎，可以在浏览器中，对输入的数学公式进行漂亮的渲染，比如这样：

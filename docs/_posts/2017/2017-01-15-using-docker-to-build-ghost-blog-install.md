@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 使用Docker构建Ghost博客(1/2)：安装
@@ -10,6 +9,10 @@ tags:
 ---
 
 Ghost是一款年轻而轻量的博客系统，使用Node.js技术实现。相比WordPress的大而全，Ghost要清新的多，后台简洁，并提供了完整的Markdown编辑器进行博客创作。
+
+
+<!--more-->
+
 总结来说，Ghost的优点：
 
 * 可使用轻量的SQLite作为数据库，对于小型博客，维护起来更方便（同时也支持MySql）

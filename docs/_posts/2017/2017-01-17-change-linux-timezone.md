@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Linux查看和修改时区
 featured: true
 date: '2017-01-17 14:23:47'
@@ -9,6 +8,10 @@ tags:
 ---
 
 对于部署在海外的Linux服务器来说，拿到的机器时区和本地并不一样，导致运行在上面的应用也面临时区问题。所以有必要修改系统本地时区。
+
+<!--more-->
+
+
 
 ### 1. 查看时区
 查看当前生效的时区，可以简单的通过`date`命令查看当前时间：

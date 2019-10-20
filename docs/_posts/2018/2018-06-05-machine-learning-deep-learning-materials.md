@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 机器学习/深度学习资料（持续更新）
 date: '2018-06-05 14:00:46'
 tags:
@@ -10,6 +9,11 @@ tags:
 ---
 
 这篇博文，收集一些机器学习/深度学习的资料，以及学习路径。
+
+
+<!--more-->
+
+
 # 学习资料
 ## 机器学习
 1. Machine Learning (Coursera)，免费，【可能需翻墙】: 

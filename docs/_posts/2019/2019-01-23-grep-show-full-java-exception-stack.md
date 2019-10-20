@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: grep日志：Java Exception异常堆栈显示不全问题
 date: '2019-01-23 14:10:44'
 tags:
@@ -8,6 +7,9 @@ tags:
 ---
 
 在某些情况下，我们会用`grep`搜索Java应用的报错日志，通常错误是以一个异常堆栈的形式呈现。`grep`有个一个尴尬：**由于换行，与关键字相关的Exception异常堆栈，grep后就看不到了，而异常堆栈又是我们最关心的内容**。
+
+<!--more-->
+
 
 比如下面的test.log日志（摘自 https://unix.stackexchange.com/questions/361389/how-can-i-do-a-stack-trace-using-grep-and-regex/496220#496220） ：
 

@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 'deeplearning.ai深度学习笔记（Course4 Week4）：Special applications: Face recognition
   & Neural style transfer'
 date: '2018-07-19 13:27:45'
@@ -14,6 +13,9 @@ tags:
 </script>
 
 本周介绍了CNN的两个特殊应用：人脸识别、图片风格转移。前者，着重于使用Siamese Network通过triplet loss或binary Classification解决了人脸识别的One Shot Learning问题。后者，通过构建Content Cost和Style Cost实现风格转移。另外还将卷积推广到了1D和3D数据。
+
+<!--more-->
+
 
 ## 1- Face Recognition
 ## 1.1- What is face recognition?

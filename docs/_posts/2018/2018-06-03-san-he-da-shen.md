@@ -1,11 +1,15 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 从窃格瓦拉到三和大神
 date: '2018-06-03 09:08:39'
 tags:
 - thinking
 - writing
 ---
+
+> 每当你觉得你想要批评什么人的时候，你要记住并不是所有人都有你拥有的那些条件。
+
+<!--more-->
+
 
 # 窃格瓦拉
 无意中又看到了某偷电瓶车的被关看守所的视频，语出惊人，每次看都忍不住笑：

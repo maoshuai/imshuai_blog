@@ -1,10 +1,13 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Headless Browser与服务器端HTML转PDF
 date: '2017-07-23 13:23:32'
 ---
 
 最近的项目，要求生成PDF格式的报告书供客户下载或直接发送到Email地址。而且，报告书含有很多图表，基本上是前台HTML页面看到的一样。
+
+
+<!--more-->
+
 
 这个是一个报表生成的需求，首先从实现的位置看，有两种方案：
 

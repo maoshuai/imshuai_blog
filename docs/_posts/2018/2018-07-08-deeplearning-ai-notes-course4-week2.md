@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 'deeplearning.ai深度学习笔记（Course4 Week2）：Deep convolutional models: case studies'
 date: '2018-07-08 09:57:30'
 tags:
@@ -15,6 +14,10 @@ tags:
 本周主要包含两部分：
 1. CNN模型案例研究：LeNet-5、AlexNet、VGG-16、ResNets、1x1 CONV、Inception Network。
 2. CNN的实践建议：迁移学习、数据增强。
+
+
+<!--more-->
+
 
 ## 1- Case studies
 ## 1.1- Why look at case studies?

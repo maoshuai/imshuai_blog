@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第3期：Too many open files以及ulimit的探讨
@@ -11,6 +10,9 @@ tags:
 ---
 
 `Too many open files`是Java常见的异常，通常是由于系统配置或程序打开过多文件导致。这个问题常常又与`ulimit`的使用相关。关于`ulimit`的用法有不少坑，本文将遇到的坑予以梳理。
+
+
+<!--more-->
 
 # Too many open files异常
 下面是Java在系统超过最大打开文件数时的异常堆栈：

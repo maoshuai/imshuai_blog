@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: Jupyter Notebook简介和配置说明
 date: '2017-08-31 13:54:39'
 tags:
@@ -7,6 +6,10 @@ tags:
 ---
 
 学习Python的时候，为了快速验证我们学习的知识点，可以用Python自带的python命令进入REPL交互界面，输入Python语句。但实在不方便：
+
+
+<!--more-->
+
 
 1. 命令行环境，输错了一句就要重来（比如def一个函数）
 2. 如果某段逻辑写的有误，需要重新执行一遍所有代码。

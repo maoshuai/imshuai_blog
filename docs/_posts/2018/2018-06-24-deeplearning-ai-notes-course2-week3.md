@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course2 Week3）：Hyperparameter tuning, Batch Normalization
   and Programming Frameworks
 date: '2018-06-24 09:17:17'
@@ -14,6 +13,10 @@ tags:
 </script>
 
 本周介绍了深度学习超参的调优方法，Batch Norm算法、Softmax实现多元分类。并以tensorflow介绍了deep learing框架。
+
+<!--more-->
+
+
 # 1- Hyperparameter tuning
 ## 1.1- Turning process
 1. 到目前为止，我们接触到的hyperparameter有：

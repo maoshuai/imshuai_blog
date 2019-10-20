@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 吐槽：macOS拙劣的窗口管理
 date: '2017-06-16 11:55:49'
 tags:
@@ -7,6 +6,10 @@ tags:
 ---
 
 虽然macOS在不少方面比Windows设计的更优秀，尤其是Unix血统+软硬件完美的结合，对设计师和码农来说，堪称完美，但——
+
+
+<!--more-->
+
 
 macOS在窗口管理上的反人类设定，至今仍让我无法释怀，不得不吐槽一下。
 

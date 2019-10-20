@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: deeplearning.ai深度学习笔记（Course4 Week1）：Foundations of Convolutional Neural Networks
 date: '2018-07-04 14:29:48'
 tags:
@@ -10,6 +9,9 @@ tags:
 
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 本周讲述了CNN的基础。从边界检测引入卷积运算，并将2D卷积运算延伸到3D中的multi-filter，最后以LeNet-5架构为例整体介绍了CNN。
+
+<!--more-->
+
 # 1- Convolutional Neural Networks
 ## 1.1- Computer Vision
 

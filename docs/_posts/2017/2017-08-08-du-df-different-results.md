@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 诡异的现象：df报文件系统满，但du看差别很大
 date: '2017-08-08 08:25:44'
 tags:
@@ -7,6 +6,10 @@ tags:
 ---
 
 今天在处理一个问题，最后发现是文件系统满（file system full）造成的，`df`看一下，果然`/opt`文件系统的Use%变成了100%。于是马上到`/opt`目录下用du命令看一下是哪个地方出现了大文件把文件系统撑爆了：`du -sm | sort -nr`
+
+
+<!--more-->
+
 
 `/opt`目录分配了30G的空间，我看了一下前几名的占用也不过10G左右。进一步，直接执行`du -sh /opt` 发现`/opt`目录的文件总和也不过12G，这就奇怪了，莫非18G被系统吃了？？？
 

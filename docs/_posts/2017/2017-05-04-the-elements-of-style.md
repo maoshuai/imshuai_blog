@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: The Elements of Style写作原则
 date: '2017-05-04 10:30:27'
 tags:
@@ -9,6 +8,9 @@ tags:
 ---
 
 根据财新**王烁**的推荐，我读了一本关于Plain English写作的书：[*The elements of Style*《风格的要素》](https://www.amazon.com/Elements-Style-William-Strunk-ebook/dp/B005IT0V8O/ref=mt_kindle?_encoding=UTF8&me=)，现将书中提到的18个准则摘抄如下（中括号里面，是我的总结）：
+
+
+<!--more-->
 
 
 

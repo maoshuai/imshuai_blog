@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 闲谈Markdown
 date: '2018-09-07 13:08:08'
 tags:
@@ -8,6 +7,8 @@ tags:
 
 文档通常有两种格式保存：[纯文本](https://en.wikipedia.org/wiki/Plain_text)和[富文本](https://en.wikipedia.org/wiki/Rich_Text_Format)。  
 纯文本，即**文件的内容就是要表达的文字内容**，没有格式、布局以及图片等嵌入对象，易于读取，典型代表是各种源代码文件。富文本，有复杂的格式和布局，甚至嵌入对象，一般是二进制文件，需要专用软件读取和生成，典型代表是word文档和PDF文档。
+
+<!--more-->
 
 纯文本和富文本可有特点。后者功能复杂，但一般不中立，依赖于平台和软件。前者表现力较差，但在准确性、分享性和中立性上较好。  
 因此，直到现在，像RFC这样的标准文档，还仍以纯文本作为其规范。虽然同是提供纯文本和PDF文件两种格式，但PDF格式被标注为**非规范（non-normative）**：

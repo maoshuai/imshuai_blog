@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 'WIN10 IE11 下BIRT报表报org.xml.sax.SAXParseException: Premature end of file.'
 date: '2018-06-05 07:50:20'
 tags:
@@ -7,6 +6,9 @@ tags:
 ---
 
 今天项目组反馈，BIRT做的报表到WIN10环境兼容性测试时有个奇怪的问题，查了一个星期还没解决。现象如下：
+
+<!--more-->
+
 
 在WIN7下用IE8无论连接UAT服务器WAS还是本地JBOSS都没有问题。在WIN10的IE11兼容模式下，连接UAT服务器就报“org.xml.sax.SAXParseException: Premature end of file”，奇怪的是连接JBOSS就不报错。
 

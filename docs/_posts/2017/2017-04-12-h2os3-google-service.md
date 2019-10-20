@@ -1,10 +1,12 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 氢OS3.0开启Google服务
 date: '2017-04-12 09:25:51'
 ---
 
 一加氢OS升级到3.0版本后，基本上和氧OS已融合。底层都是基于Android7.0，并且在UI和操作逻辑上几乎一致，唯一区别仅在搭载的APP上了。
+
+<!--more-->
+
 
 最大的差别自然是，氧OS预装了Google服务和Google全家桶；同时，不含电话号码识别等中国本地化的东西。另外，氧OS也不支持通话录音。
 

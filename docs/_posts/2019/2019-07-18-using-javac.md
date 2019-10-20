@@ -1,5 +1,4 @@
 ---
-layout: post
 class: post-template
 navigation: True
 title: 第1期：抛开IDE，了解一下javac如何编译
@@ -9,6 +8,10 @@ tags:
 ---
 
 IDE或maven等工具已将Java程序的编译代劳。但工具越高级，隐藏的细节就越多，一旦出现问题就懵逼，归根到底还是基础概念不牢靠。返璞归真，回到最原始的地方`javac`，会让问题豁然开朗。下面就一步一步演示用`javac`和`java`徒手编译运行一个常规工程。
+
+
+<!--more-->
+
 
 # Hello World练个手
 

@@ -1,5 +1,4 @@
 ---
-layout: postclass: post-templatenavigation: True
 title: 吴恩达deeplearning.ai学完总结
 date: '2018-08-02 13:27:16'
 tags:
@@ -10,6 +9,9 @@ tags:
 ---
 
 经过两个月的努力，终于将吴恩达的深度学习入门课程学完了。算是入门深度学习了，但师傅领进门，修行看个人。下面谈一谈我的学习总结。
+
+<!--more-->
+
 
 ## 感想
 

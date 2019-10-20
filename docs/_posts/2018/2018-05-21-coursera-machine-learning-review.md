@@ -9,6 +9,10 @@ tags:
 
 Andrew Ng在Coursera上的[Machine Learning](https://www.coursera.org/learn/machine-learning)可以算是Coursera的镇店之宝。我从今年3月份才正式学习，经过两个月的努力终于刷完了11个week的课程。
 
+
+<!--more-->
+
+
 # 课程难度
 课程是极为基础的入门课程，无需对机器学习有任何基础。理解偏导数和矩阵的基本运算，基本就没问题了。对于偏导数的部分更是只借用这个概念，而不涉及任何推导。
 

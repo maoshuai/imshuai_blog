@@ -7,6 +7,9 @@ tags:
 
 使用Facebook官方脚手架[create-react-app](https://github.com/facebookincubator/create-react-app)创建React应用，默认只能生成一个SPA，入口是index.html。虽然，SPA的页面切换可以使用前台路由框架方便（比如React-Router）实现，这也是SPA的推荐做法；但某些情况下，仍要将页面切分为多个页面，或者在同一个工程开发多个SPA，比如一个是面向客户的SPA，一个是后台管理的SPA。
 
+
+<!--more-->
+
 (==For English readers at article bottom==)
 
 我搜索了一下，网上确实有不少人有类似需求：[Possible to have multiple entry points? #1079](https://github.com/facebookincubator/create-react-app/issues/1079)，官方给出的回答是：

@@ -8,6 +8,10 @@ tags:
 
 最近在使用React实现公司一套系统的前端。控件库，看中了蚂蚁金服的[Ant Design](https://ant.design)。
 
+
+<!--more-->
+
+
 脚手架使用的是React官方的[create-react-app](https://github.com/facebookincubator/create-react-app)，创建完成后，引入了Ant Design。在我自己的笔记本调试的都很好，但放到公司的开发机器上，发现图标资源都无法加载。马上看了一下浏览器的资源请求情况，果然，Ant Design默认使用的是阿里的CDN。
 
 公司是内网环境，显然是行不通的。官方文档果然给出了[本地部署的提示](https://ant.design/components/icon-cn/#本地部署)。

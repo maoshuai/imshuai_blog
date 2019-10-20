@@ -11,6 +11,10 @@ tags:
 
 本周继续介绍了机器学习的策略。包括如何做错误分析，如何处理training与dev/test分布不一致的情况，以及最新发展的迁移学习、多任务学习以及end-to-end学习。
 
+
+<!--more-->
+
+
 # 1- Error Analysis
 ## 1.1- Carrying out error analysis
 如果你的机器学习算法表现还不好，那么手工去分析算法犯的错误，可以给下一步改进算法提供线索，这个过程即**error analysis**

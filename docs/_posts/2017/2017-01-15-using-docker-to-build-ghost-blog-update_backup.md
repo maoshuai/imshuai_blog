@@ -8,6 +8,8 @@ tags:
 
 上一篇[使用Docker构建Ghost博客(1/2)：安装](/using-docker-to-build-ghost-blog-install/)，我们通过Docker已经完成了Ghost博客系统的安装，本文将介绍如何对Ghost博客进行更新和备份。
 
+<!--more-->
+
 ### 1.备份Ghost博客
 #### 1.1 手动备份
 部署Ghost的时候，很重要的一点是：将容器中Ghost的配置目录映射到本机目录。这样在更新Ghost镜像的时候，博客的数据和配置可以直接保留。

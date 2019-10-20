@@ -14,6 +14,10 @@ tags:
 * Importing data
 * Lazy loading
 
+
+<!--more-->
+
+
 # 1- Visualize it with TensorBoard
 TensorFlow提供了可视化graph的工具TensorBoard，之前我们看到的graph示意图就是TensorBoard生成的，下面介绍其使用方法。
 

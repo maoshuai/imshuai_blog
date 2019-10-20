@@ -14,6 +14,10 @@ tags:
 
 ==提示：**为方便阅读，《deeplearning.ai深度学习笔记》系列博文已统一整理到 [http://dl-notes.imshuai.com](http://dl-notes.imshuai.com)**==
 
+
+<!--more-->
+
+
 Basics of Neural Network Programming
 # Logistic Regression as a Neural Network
 

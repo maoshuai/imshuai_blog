@@ -13,6 +13,9 @@ tags:
 
 本周介绍了目标检测算法，包括使用bounding box定位，sliding window算法以及YOLO算法。其中YOLO算法涉及IoU、Non-max Suppression、Anchor Boxes。
 
+<!--more-->
+
+
 # 1- Detection Algorithm
 目标检测（Object detection），在近几年发展的很迅猛。**目标检测的第一步是目标定位（Object Localization）**
 

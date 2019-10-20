@@ -5,6 +5,11 @@ tags:
 - thinking
 ---
 
+大熊猫[日食量达10-60公斤](http://panda.china.com.cn/2010-06/29/content_20381363.htm)，有些季节更要在40公斤以上，如此大的食量，几乎相当于体重一半。这使得大熊猫每天要花费十几个小时去不停的吃竹子，才能满足能量需要。对于大熊猫而言，生活就是不停的吃竹子嘛，这是它的常态。
+
+<!--more-->
+
+
 【全文约1000字，1.6分钟读完】
 <div id="player1" class="aplayer" style="margin-bottom: 40px"></div>
 

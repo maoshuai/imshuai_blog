@@ -13,6 +13,9 @@ tags:
 
 介绍了RNN相关的模型，包括基本RNN、GRU、LSTM、BRNN以及深度RNN。顺便介绍了语言模型、采样生成新序列。相比以往，本周信息量极大，整理完后差点要吐-_-||。
 
+<!--more-->
+
+
 # 1- Recurrent Neural Networks
 ## 1.1- Why sequence models
 

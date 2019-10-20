@@ -12,6 +12,10 @@ tags:
 </script>
 
 本周介绍了机器学习的策略。强调了方法的正交性，介绍了单值指标并根据情况调整它，以及通过比较人类水平改进bias或variance。
+
+
+<!--more-->
+
 # 1- Introduction to ML Stratedy
 
 ## 1-1 Why ML Strategy

@@ -22,6 +22,10 @@ tags:
     * 梯度消失和梯度爆炸问题（Vanishing/Exploding Gradient）以及缓解方法
     * 验证梯度计算是否正确。
 
+
+<!--more-->
+
+
 # 1- Setting up your Machine Learning Application
 ## 1.1- Train / Dev / Test sets
 1. Applied ML is a **highly iterative** process

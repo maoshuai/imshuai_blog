@@ -13,6 +13,9 @@ tags:
 
 本周是deeplearning.ai系列的最后一节课，以机器翻译为例，介绍了seq2seq模型，扩展分析了beam search、bleu score和attention model。最后简要介绍了语音识别和触发词检测。
 
+<!--more-->
+
+
 # 1- Various sequence to sequence architectures
 ## 1.1- Basic Models
 

@@ -16,6 +16,10 @@ tags:
 
 但在看英文文档时，经常会交替的出现`argument`，`parameter`以及`option`，尤其是argument和parameter，更让我困惑，应该不只是同义词这么简单吧？于是我特地查阅了一些资料。主要针对Java和Shell下的语义进行了梳理：
 
+
+<!--more-->
+
+
 # Java中的argument和parameter
 Java语境中的argument和parameter，在官方文档中给予了非常明确的说明。Oracle Java官方教程的 [Passing Information to a Method or a Constructor](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html) 一节，提到：
 > Note: Parameters refers to the list of variables **in a method declaration**. Arguments are the **actual values that are passed** in when the method is invoked. When you invoke a method, the arguments used must match the declaration's parameters in type and order.

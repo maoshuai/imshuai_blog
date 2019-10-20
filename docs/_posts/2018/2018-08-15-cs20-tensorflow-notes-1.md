@@ -11,6 +11,9 @@ Google官方的介绍是：
 
 >TensorFlow™ is an open source software library for high performance numerical computation. 
 
+<!--more-->
+
+
 TensorFlow最早起源于Google内部的机器学习工具，而TensorFlow则是该工具于2015年11月的开源实现（剥离了Google内部代码的依赖）。
 
 # 2- 为什么选TensorFlow

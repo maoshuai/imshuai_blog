@@ -15,6 +15,10 @@ tags:
 1. CNN模型案例研究：LeNet-5、AlexNet、VGG-16、ResNets、1x1 CONV、Inception Network。
 2. CNN的实践建议：迁移学习、数据增强。
 
+
+<!--more-->
+
+
 ## 1- Case studies
 ## 1.1- Why look at case studies?
 通过学习案例，建立起对CNN网络的直觉理解。在计算机视觉上适用于一个任务的Neural Network Architecture通常也适用于另外一个任务。并且计算机视觉领域的思想，也可以应用到其他领域。

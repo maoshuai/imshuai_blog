@@ -16,6 +16,10 @@ tags:
 # Shallow Neural Network
 这一周的课程，主要是以Shallow Neural Network（即仅有一层hidden layer）为例介绍Neural Network。
 
+
+<!--more-->
+
+
 ## Neural Networks Overview
 1. 从Logistic Regression过渡到Neural Network。某种意义上看，**Logistic Regression可以看成一个只有一层的neural network，** 即没有hidden layer。
 2. 每一层的计算，类似于Logistic Regression:先计算z，再计算a。然后本层的a再作为下一层的输入计算。

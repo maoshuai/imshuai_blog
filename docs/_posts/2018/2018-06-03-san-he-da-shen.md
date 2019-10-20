@@ -6,6 +6,11 @@ tags:
 - writing
 ---
 
+> 每当你觉得你想要批评什么人的时候，你要记住并不是所有人都有你拥有的那些条件。
+
+<!--more-->
+
+
 # 窃格瓦拉
 无意中又看到了某偷电瓶车的被关看守所的视频，语出惊人，每次看都忍不住笑：
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Nqm8i0PKy4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

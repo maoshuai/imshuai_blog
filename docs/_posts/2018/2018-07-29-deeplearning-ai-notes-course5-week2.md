@@ -13,6 +13,9 @@ tags:
 
 本周从语言模型引入了词嵌入，并介绍了常用的词嵌入算法：Word2vec和GloVe；以及应用案例：情感分类和消除偏见。
 
+<!--more-->
+
+
 # 1- Introduction to Word Embeddings
 ## 1.1- Word Representation
 

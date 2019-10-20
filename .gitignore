@@ -48,3 +48,5 @@ sync_hook.script
 configs
 .folder_filter.config
 .markeditor
+
+docs/.sass-cache

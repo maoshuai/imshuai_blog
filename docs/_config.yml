@@ -1,6 +1,6 @@
-title: 毛帅的Wiki
+title: 毛帅的博客
 description: "{Code, Thoughts, Sharing}"
-url: https://wiki.imshuai.com
+url: https://imshuai.com
 author: 毛帅
 author_avatar_url: /assets/img/avatar.jpg
 email: imshuai67@gmail.com
@@ -10,7 +10,7 @@ keywords:
   - Linux
   - 架构
 
-permalink: /:title.html
+permalink: /:title
 # permalink: /:year/:month/:day/:title.html
 paginate: 7
 paginate_path: "page:num"
@@ -43,7 +43,7 @@ defaults:
       layout: "blog"
 
 series:
-  # 'Effective-C++': '/effective-cpp.html'
+  # 'C++': '/effective-cpp.html'
   # 'Vim-Practice': '/vim-practice.html'
   # 'Git-Workflow': '/git-workflow.html'
 

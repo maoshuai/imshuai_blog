@@ -24,7 +24,7 @@ kramdown:
   input: GFM
   hard_wrap: false
 
-ga: 'UA-91318614-3'
+ga: 'UA-91318614-1'
 twitter_url: https://twitter.com/oneb_it
 
 sass:

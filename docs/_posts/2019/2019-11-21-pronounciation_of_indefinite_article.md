@@ -14,7 +14,7 @@ tags:
 我在2017年之前，从未听到过有人将不定冠词a直接发音为/eɪ/ ！！！
 如果在中学的课堂上有人发音/eɪ/，那个人肯定会被纠正为/ə/。直到我在YouTube上听到越来越多的人直接发音为/eɪ/，才发现这其实是一种用法。比如下面的TED视频，在3:31开始，出现了两次将a发音为/eɪ/，而其他出现的a发音为/ə/：
 
-<iframe width="1001" height="563" src="https://www.youtube.com/embed/RcGyVTAoXEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[How to make stress your friend | Kelly McGonigal](https://youtu.be/RcGyVTAoXEU?t=225)
 
 > You come into the laboratory, and you're told you have to give **a** five-minute impromptu speech on your personal weaknesses to **a** panel of expert evaluators sitting right in front of you, and to make sure you feel the pressure, there are bright lights and a camera in your face...
 

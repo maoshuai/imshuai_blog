@@ -23,6 +23,10 @@ tags:
 
 正如第一次听到发音为/eɪ/时你会不自觉的注意一下。**把不定冠词a发音为这个字母的本音，就是为了强调，强调的对象就是a后面的内容**。在强调的时候，a的发音时常也会明显变长。
 
+下面这个English with Lucy视频更详细的介绍了a/an/the的发音规则，非常推荐：
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3D6PYG_yiuA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 另外一个现象是，**信息量越小的单词，在句子中被分配的发音时间越短**。在刚开始听老外的视频时，总是听不懂，一个重要的原因是像the/a/do/have/will/not等功能性单词，在句子中的发音非常短，而且常常被连读，而初学者通常会均等的分配时间在每一个单词，当遇到native speaker的发音，反而听不懂了。比如can't和can的发音甚至很难区分，而意思却截然不同。
 
 实际上，掌握了这些连读，听力就会上升一个档次，这是提升听力的第一个低垂果实。

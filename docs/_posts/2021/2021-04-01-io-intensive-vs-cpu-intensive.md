@@ -1,7 +1,7 @@
 ---
 class: post-template
 navigation: True
-title: 有道云笔记批量迁移到wiz笔记方案——逃离有道云笔记
+title: 管理者与技术人员：IO密集型vs CPU密集型
 date: '2021-04-01 12:25:23'
 tags:
 - writing

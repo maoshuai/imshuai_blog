@@ -30,7 +30,7 @@ tags:
 下面罗列了几种定义，从不同的角度进行了阐述并发与并行的区别，供参考：
 
 
-* [Stackoverflow]
+* [Stackoverflow](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
 
     Concurrency is when two or more tasks can start, run, and complete in overlapping time **periods**. It doesn't necessarily mean they'll ever both be running at the same instant. For example, multitasking on a single-core machine.
 

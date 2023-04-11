@@ -114,7 +114,7 @@ $$v := \beta v + (1 - \beta)\theta_t$$
 $$v_t:= \frac{v_t}{1-\beta^t}$$
 
 合起来就是：
-$$v_t = \frac{\beta v_{t-1} + (1 - \beta)\theta_t}{{1-\beta^t}}$$
+$$v_t = \frac{\beta v_{t-1} + (1 - \beta)\theta_t}{{1-beta^t}}$$
 
 在t较小的时候，\\(1-\beta\\ \approx 1-\beta^t\\)，也就是加大了\\(\theta_t\\)本身的权重，但当t足够大的时候，这个修正微乎其微，因此只对前面的数据有实际影响。
 
